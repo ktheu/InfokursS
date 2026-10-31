@@ -1,0 +1,24 @@
+\question[4]
+Bestimme, welchen Wert die Variable \texttt{index} nach Ausführung des folgenden Codes hat,
+ und begründe deine Antwort.
+\begin{lstlisting}
+a = [5, 3, 8, 2, 9, 1]
+index = -1
+for i in range(len(a)):
+    if a[i] > 6 and index == -1:
+        index = i
+print(index)
+\end{lstlisting}
+
+\begin{solutionbox}{4cm}
+
+Die Schleife durchsucht die Liste von vorne nach hinten. Sobald
+ein Element groesser als 6 gefunden wird und index noch -1 ist
+(also noch kein Treffer gespeichert wurde), wird der Index
+gemerkt. Da a[2]=8 das erste Element groesser als 6 ist, wird
+index auf 2 gesetzt und bleibt wegen der Bedingung index == -1
+danach unverändert.
+
+Ausgabe: 2
+
+\end{solutionbox}

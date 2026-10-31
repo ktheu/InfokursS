@@ -1,0 +1,16 @@
+\question[3]
+\begin{parts}
+\part Schreibe eine rekursive Funktion \texttt{quersumme(n)}, die die Quersumme einer natürlichen Zahl
+zurückgibt. Tipp: \texttt{n \% 10} ist die letzte Ziffer, \texttt{n // 10} die Zahl ohne die letzte Ziffer.
+\part Gib die Abfolge der rekursiven Aufrufe bei \texttt{quersumme(4711)} an.
+\end{parts}
+\begin{solutionbox}{5cm}
+\begin{lstlisting}
+# a)
+def quersumme(n):
+    if n == 0: return 0
+    return n % 10 + quersumme(n // 10)
+\end{lstlisting}
+b) \texttt{quersumme(4711)}, \texttt{quersumme(471)}, \texttt{quersumme(47)}, \texttt{quersumme(4)},
+\texttt{quersumme(0)}, Ergebnis $1 + 1 + 7 + 4 + 0 = 13$
+\end{solutionbox}

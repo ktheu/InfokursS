@@ -1,0 +1,30 @@
+\question[4]
+Ein Schüler behauptet: ,,Ein Verschlüsselungsverfahren ist nur dann 
+sicher, wenn der Algorithmus, also die genaue Funktionsweise der 
+Verschlüsselung, geheim bleibt. Kennt der Angreifer das Verfahren, ist 
+die Verschlüsselung wertlos.``
+
+Erläutere das Kerckhoffs'sche Prinzip und nimm begründet Stellung zu 
+der Aussage des Schülers.
+
+\begin{solutionbox}{6cm}
+
+Das Kerckhoffs'sche Prinzip besagt, dass die Sicherheit eines 
+Verschlüsselungsverfahrens allein auf der Geheimhaltung des Schlüssels 
+beruhen soll, nicht auf der Geheimhaltung des Algorithmus selbst. Der 
+Algorithmus darf also öffentlich bekannt sein; ein Angreifer, der das 
+Verfahren kennt, aber nicht den Schlüssel, soll den Klartext trotzdem 
+nicht ermitteln können.
+
+Die Aussage des Schülers ist daher nicht richtig. Ein Verfahren, dessen 
+Sicherheit von der Geheimhaltung des Algorithmus abhängt, gilt als 
+unsicher, denn sobald der Algorithmus bekannt wird -- etwa durch 
+Reverse Engineering, Spionage oder Veröffentlichung --, ist das 
+gesamte Verfahren gebrochen und muss durch ein neues ersetzt werden. 
+Zudem lässt sich ein geheimer Algorithmus in der Praxis kaum dauerhaft 
+geheim halten und nicht von unabhängigen Fachleuten auf Schwachstellen 
+überprüfen. 
+
+\end{solutionbox}
+
+

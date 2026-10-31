@@ -1,0 +1,30 @@
+\question[4]
+Gegeben ist der folgende Python-Code:
+
+\begin{lstlisting}
+bonus = 5
+
+def punkte_berechnen(punkte):
+    gesamt = punkte + bonus
+    return gesamt
+
+ergebnis = punkte_berechnen(20)
+print(ergebnis)
+print(bonus)
+print(gesamt)
+\end{lstlisting}
+
+\begin{parts}
+\part Gib alle globalen und alle lokalen Variablen an.
+\part Gib an, was die ersten beiden \texttt{print}-Anweisungen ausgeben.
+\part Die letzte Zeile führt zu einem Fehler. Erläutere mit dem Begriff Gültigkeitsbereich, warum.
+\end{parts}
+
+\begin{solutionbox}{6cm}
+\begin{parts}
+\part Global: \texttt{bonus}, \texttt{ergebnis}. Lokal (in der Funktion): \texttt{punkte}, \texttt{gesamt}.
+\part \texttt{25} und \texttt{5}
+\part \texttt{gesamt} ist eine lokale Variable der Funktion. Ihr Gültigkeitsbereich ist nur die Funktion, und sie existiert
+nur, solange die Funktion ausgeführt wird. Außerhalb ist sie nicht bekannt, deshalb gibt es einen \texttt{NameError}.
+\end{parts}
+\end{solutionbox}

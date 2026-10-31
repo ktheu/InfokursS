@@ -1,0 +1,21 @@
+\question[5]
+Alice möchte Bob eine öffentlich lesbare Nachricht $n$ schicken und diese so \textit{signieren},
+dass Bob sicher sein kann, dass die Nachricht wirklich von Alice stammt und unterwegs nicht
+verändert wurde. Alice und Bob besitzen jeweils ein Schlüsselpaar eines asymmetrischen Verfahrens; zusätzlich ist eine
+kryptographische Hashfunktion $h$ öffentlich bekannt. \\
+a. Beschreibe, welche Schritte Alice ausführt, um zur Nachricht $n$ die Signatur $s$ zu erzeugen. \\
+b. Beschreibe, wie Bob mit Hilfe von $n$ und $s$ prüft, ob die Signatur gültig ist. \\
+c. Begründe, warum ein Angreifer die signierte Nachricht nicht unbemerkt ändern und warum
+er auch keine neue Nachricht im Namen von Alice signieren kann.
+
+\begin{solutionbox}{7cm}
+a. Alice berechnet den Hashwert $h(n)$ der Nachricht und verschlüsselt diesen mit ihrem
+\textit{privaten} Schlüssel. Das Ergebnis ist die Signatur $s$. Sie schickt $n$ und $s$ an Bob. \\
+b. Bob entschlüsselt $s$ mit dem \textit{öffentlichen} Schlüssel von Alice und erhält so den
+von Alice gebildeten Hashwert. Er berechnet selbst $h(n)$ aus der empfangenen Nachricht und
+vergleicht beide Werte. Stimmen sie überein, ist die Signatur gültig. \\
+c. Ändert der Angreifer $n$, so passt der neu berechnete Hashwert $h(n)$ nicht mehr zu dem in
+$s$ verschlüsselten Hashwert (Integrität). Eine passende Signatur zu einer veränderten oder
+neuen Nachricht kann er nicht erzeugen, da er den privaten Schlüssel von Alice nicht kennt
+(Authentizität, Verbindlichkeit).
+\end{solutionbox}

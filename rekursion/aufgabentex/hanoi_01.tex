@@ -1,0 +1,20 @@
+\question[2]
+
+Die rekursive Funktion hanoi wird mit hanoi(4,'s','t','u') aufgerufen.
+Wie heißen der 9. und 10. Aufruf von hanoi? \\
+\begin{lstlisting}
+def hanoi(n, start, ziel, zwischen):
+    if n == 0: return
+    hanoi(n-1,start,zwischen,ziel)
+    print("Scheibe",n,"von",start,"nach",ziel)
+    hanoi(n-1,zwischen,ziel,start)
+\end{lstlisting}
+
+\begin{solutionbox}{6cm}
+    
+\includegraphics[height=4cm]{\pfad/hanoi_01.png}
+\begin{lstlisting}
+9. hanoi(0,'s','t','u')
+10. hanoi(2,'t','u','s')
+\end{lstlisting}
+\end{solutionbox}

@@ -1,0 +1,30 @@
+\question[5]
+Das folgende Programm soll das Alter abfragen und ausgeben, wie alt man nächstes Jahr ist.
+Es enthält zwei Fehler, die mit Datentypen zu tun haben.
+
+\begin{lstlisting}
+alter = input('Wie alt bist du? ')
+naechstes = alter + 1
+print('Nächstes Jahr bist du ' + naechstes + ' Jahre alt.')
+\end{lstlisting}
+
+\begin{parts}
+\part Beschreibe die beiden Fehler und gib ein korrigiertes Programm an.
+\part Was passiert im korrigierten Programm, wenn der Benutzer \texttt{16,5} oder \texttt{sechzehn} eingibt?
+\end{parts}
+
+\begin{solutionbox}{7cm}
+\begin{parts}
+\part \texttt{input()} liefert immer einen String. In Zeile 2 kann man zu einem String keine Zahl addieren
+(\texttt{TypeError}), der String muss zuerst mit \texttt{int()} umgewandelt werden.
+In Zeile 3 wird ein String mit einer Zahl verkettet (\texttt{TypeError}). Python wandelt die Zahl nicht automatisch
+in einen String um, man braucht \texttt{str()} oder einen f-String.
+\begin{lstlisting}
+alter = int(input('Wie alt bist du? '))
+naechstes = alter + 1
+print('Nächstes Jahr bist du ' + str(naechstes) + ' Jahre alt.')
+\end{lstlisting}
+\part In beiden Fällen kann \texttt{int()} den String nicht in eine ganze Zahl umwandeln. Das Programm bricht mit
+einem \texttt{ValueError} ab.
+\end{parts}
+\end{solutionbox}

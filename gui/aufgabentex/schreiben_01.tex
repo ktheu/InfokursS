@@ -1,0 +1,21 @@
+\question[5]
+Schreibe ein Programm mit einem Eingabefeld, einem Knopf und einem Label für die Ausgabe. Nach einem Klick auf den Knopf zeigt das Label die eingegebene
+Temperatur in Grad Celsius in Fahrenheit an. Es gilt $F = C \cdot 1{,}8 + 32$.
+\begin{solutionbox}{7cm}
+\begin{lstlisting}
+import tkinter as tk
+
+def rechnen():
+    c = float(eingabe.get())
+    ausgabe['text'] = c * 1.8 + 32
+
+fenster = tk.Tk()
+eingabe = tk.Entry(fenster)
+eingabe.pack()
+knopf = tk.Button(fenster, text='Umrechnen', command=rechnen)
+knopf.pack()
+ausgabe = tk.Label(fenster, text='')
+ausgabe.pack()
+fenster.mainloop()
+\end{lstlisting}
+\end{solutionbox}

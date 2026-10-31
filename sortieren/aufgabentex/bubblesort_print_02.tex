@@ -1,0 +1,24 @@
+\question[3]
+In unserer Implementierung des Bubblesort-Algorithmus wurde ein print-Statement eingefügt.
+Welche Zahlenfolge wird bei dem angegebenen Aufruf von Bubblesort ausgegeben?
+(Der print-Parameter end=' ' sorgt dafür, dass die Zahlen nicht in einer neuen Zeile, 
+sondern mit blank getrennt ausgegeben werden. )
+
+\begin{lstlisting}
+def bubble_sort(a):
+    getauscht = True
+    while getauscht:
+        getauscht = False
+        for i in range(len(a)-1):
+            if a[i] > a[i+1]:
+                a[i],a[i+1]=a[i+1],a[i]
+                print(a[i],end=' ')   
+                getauscht = True
+                
+bubble_sort([7,4,2,3,1])
+\end{lstlisting}
+\begin{solutionbox}{4cm}
+\begin{lstlisting}
+4 2 3 1 2 3 1 1 1
+\end{lstlisting}
+\end{solutionbox}

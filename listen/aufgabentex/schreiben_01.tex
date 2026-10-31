@@ -1,0 +1,21 @@
+\question[4]
+Schreibe ein Python-Programm, das die Variablen \texttt{name = "Lena"} und
+\texttt{punkte = 87} anlegt und diese mit \texttt{print(..., file=f)} in eine neue
+Datei \texttt{ausgabe.txt} schreibt. Öffne die Datei dazu im Schreibmodus mit
+\texttt{encoding='utf-8'} und schließe sie am Ende.
+
+Erwarteter Inhalt der Datei \texttt{ausgabe.txt}:
+\begin{lstlisting}
+Lena hat 87 Punkte erreicht.
+\end{lstlisting}
+
+\begin{solutionbox}{4cm}
+\begin{lstlisting}
+name = "Lena"
+punkte = 87
+
+f = open('ausgabe.txt', encoding='utf-8', mode='w')
+print(f'{name} hat {punkte} Punkte erreicht.', file=f)
+f.close()
+\end{lstlisting}
+\end{solutionbox}

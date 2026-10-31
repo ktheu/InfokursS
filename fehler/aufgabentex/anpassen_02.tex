@@ -1,0 +1,25 @@
+\question[4]
+Der folgende Code sucht mit linearer Suche das größte Element einer Liste.
+ Passe den Code so an, dass zusätzlich zum größten Wert auch dessen Index ausgegeben wird.
+\begin{lstlisting}
+a = [3, 4, 3, 8, 12, 52, 35, 17, 33]
+best = a[0]
+for x in a:
+    if x > best:
+        best = x
+print(best)
+\end{lstlisting}
+
+\begin{solutionbox}{4cm}
+\begin{lstlisting}
+a = [3, 4, 3, 8, 12, 52, 35, 17, 33]
+best = a[0]
+best_index = 0
+for i in range(len(a)):
+    if a[i] > best:
+        best = a[i]
+        best_index = i
+print(best)
+print(best_index)
+\end{lstlisting}
+\end{solutionbox}

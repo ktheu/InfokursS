@@ -1,0 +1,29 @@
+\question[4]
+Gegeben ist der folgende Java-Code:
+
+\begin{lstlisting}[language=Java]
+int punkte;                  // Zeile 1
+punkte = 10;                 // Zeile 2
+double schnitt = 2.5;        // Zeile 3
+punkte = punkte * 2;         // Zeile 4
+punkte = "zwanzig";          // Zeile 5
+\end{lstlisting}
+
+\begin{parts}
+\part Gib für die Zeilen 1 bis 4 an, ob eine Deklaration, eine Initialisierung oder eine Wertzuweisung vorliegt
+(auch mehreres ist möglich).
+\part Zeile 5 führt zu einem Fehler. Erläutere, warum.
+\part In Python wäre die Wertzuweisung \texttt{punkte = 'zwanzig'} erlaubt. Erläutere den Unterschied zwischen Java und Python.
+\end{parts}
+
+\begin{solutionbox}{6cm}
+\begin{parts}
+\part Zeile 1: Deklaration (Bezeichner \texttt{punkte}, Datentyp \texttt{int}). Zeile 2: Initialisierung.
+Zeile 3: Deklaration und Initialisierung in einem Schritt. Zeile 4: Wertzuweisung.
+\part \texttt{punkte} ist als \texttt{int} deklariert. In Java ist der Datentyp einer Variable fest, ein String passt nicht in eine
+\texttt{int}-Variable. Der Fehler wird schon beim Übersetzen gemeldet.
+\part In Java gehört der Datentyp zur Variable und wird bei der Deklaration festgelegt (statische Typisierung).
+In Python gibt es keine eigene Deklaration, die Variable entsteht bei der ersten Wertzuweisung. Der Datentyp gehört
+zum Wert, deshalb kann eine Variable später einen Wert eines anderen Typs bekommen (dynamische Typisierung).
+\end{parts}
+\end{solutionbox}

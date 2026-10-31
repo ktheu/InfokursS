@@ -1,0 +1,15 @@
+\question[3]
+Die Funktion \texttt{anzahl(a, x)} bekommt eine Liste a (unser Datentyp) und gibt zurück, wie oft x in der Liste vorkommt.
+Benutze nur die Methoden der Liste. Implementiere die Funktion.
+\begin{solutionbox}{4.5cm}
+\begin{lstlisting}
+def anzahl(a, x):
+    n = 0
+    a.reset()
+    while not a.endpos():
+        if a.elem() == x:
+            n += 1
+        a.advance()
+    return n
+\end{lstlisting}
+\end{solutionbox}

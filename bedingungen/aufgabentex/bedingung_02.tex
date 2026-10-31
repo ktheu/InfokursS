@@ -1,0 +1,15 @@
+\question[3]
+Schreibe ein Python-Programm, das die folgenden Anweisungen ausführt:
+
+Lies in die Variable \texttt{note} eine Zahl (1-6) ein.
+Setze die Variable \texttt{ergebnis} auf 'bestanden', falls die Note mindestens 4 ist.
+Setze \texttt{ergebnis} auf 'nicht bestanden', falls die Note schlechter als 4 ist.
+\begin{solutionbox}{3cm}
+\begin{lstlisting}
+note = int(input("Bitte eine Note (1-6) eingeben: "))
+if note <= 4:
+    ergebnis = "bestanden"
+else:
+    ergebnis = "nicht bestanden"
+\end{lstlisting}
+\end{solutionbox}

@@ -1,0 +1,26 @@
+\question[3]
+Ein mit Vigenère verschlüsselter Geheimtext lautet:
+
+\texttt{HBWVHBWVHBWV}
+
+Man kennt weder den Klartext noch den Schlüssel. Erläutere die Grundidee 
+des Kasiski-Tests und wende sie auf das obige Beispiel an, um eine 
+wahrscheinliche Schlüssellänge zu bestimmen.
+
+\begin{solutionbox}{4.5cm}
+
+Der Kasiski-Test nutzt aus, dass sich Buchstabenfolgen im Klartext oft 
+wiederholen (z.\,B. häufige Wörter oder Silben). Trifft eine solche 
+Wiederholung im Klartext an zwei Stellen auf dieselbe Phase des 
+periodisch wiederholten Schlüssels, entsteht an beiden Stellen 
+dieselbe Geheimtextfolge. Der Abstand zwischen zwei gleichen 
+Geheimtextfolgen ist dann ein Vielfaches der Schlüssellänge.
+
+Im Beispiel wiederholt sich die Folge \texttt{HBWV} an den Positionen 
+1, 5 und 9. Die Abstände zwischen den Wiederholungen betragen 4 und 8 
+Zeichen. Der größte gemeinsame Teiler dieser Abstände ist 4. Die 
+wahrscheinliche Schlüssellänge beträgt daher \texttt{4}.
+
+\end{solutionbox}
+
+

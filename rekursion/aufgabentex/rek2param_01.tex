@@ -1,0 +1,18 @@
+\question[3]
+Gib die Abfolge der rekursiven Aufrufe an. Was erscheint auf der Konsole?
+\begin{lstlisting}
+def rek(a,b):
+    if b == 0: return a+1
+    return rek(2*b,a%b)
+
+print(rek(15,20))
+\end{lstlisting}
+\begin{solutionbox}{3cm}
+\begin{lstlisting}
+rek(15,20)
+rek(40,15)
+rek(30,10)
+rek(20,0)
+Die Ausgabe ist 21.
+\end{lstlisting}
+\end{solutionbox}

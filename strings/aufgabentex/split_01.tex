@@ -1,0 +1,27 @@
+\question[5]
+Eine Messstation speichert ihre Messwerte in einer Zeile, getrennt durch Semikolons:
+\texttt{zeile = '12;7;30;5'}
+
+Schreibe Python-Anweisungen, die
+\begin{itemize}
+\item die Zeile in die einzelnen Werte zerlegen und daraus eine Liste \texttt{werte} mit ganzen Zahlen erzeugen,
+\item die Summe und den größten Wert ausgeben,
+\item die Werte mit \texttt{' + '} verbunden ausgeben, also \texttt{12 + 7 + 30 + 5}.
+\end{itemize}
+
+\begin{solutionbox}{7cm}
+\begin{lstlisting}
+zeile = '12;7;30;5'
+teile = zeile.split(';')      # ['12', '7', '30', '5']
+werte = []
+for t in teile:
+    werte.append(int(t))
+print(sum(werte), max(werte))     # 54 30
+
+texte = []
+for w in werte:
+    texte.append(str(w))
+print(' + '.join(texte))
+\end{lstlisting}
+(Für die letzte Ausgabe geht auch \texttt{print(' + '.join(teile))}, denn \texttt{teile} enthält schon Strings.)
+\end{solutionbox}

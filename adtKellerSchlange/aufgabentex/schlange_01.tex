@@ -1,0 +1,25 @@
+\question[2]
+a. Welche Datenstruktur wird hier verwendet (Liste/Keller/Schlange)? \\
+b. Was erscheint auf der Konsole?
+ 
+\begin{lstlisting}
+from collections import deque
+ 
+a = deque([])   
+for i in range(5):
+    a.append(i)
+
+print(a.popleft(), end = ' ')
+print(a.popleft(), end = ' ')
+
+for i in range(6,9):
+    a.append(i)
+
+while a:
+    print(a.popleft(), end = ' ')
+\end{lstlisting}
+
+\begin{solutionbox}{2cm}
+ 
+a. Schlange ~~~ b. \texttt{0 1 2 3 4 6 7 8}
+\end{solutionbox}

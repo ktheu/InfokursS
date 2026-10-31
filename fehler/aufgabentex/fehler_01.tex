@@ -1,0 +1,28 @@
+\question[4]
+Die folgenden vier Codezeilen verursachen jeweils einen \texttt{SyntaxError} bzw. \texttt{IndentationError}, 
+bevor das Programm überhaupt startet. Gib jeweils den Fehlertyp an und korrigiere den Code.
+\begin{lstlisting}
+(a) print("Hello World"
+(b) s = 'Montag
+(c) def greet():
+    print("Hello")
+(d) 1x = 'Hallo'
+\end{lstlisting}
+
+\begin{solutionbox}{6cm}
+\begin{lstlisting}[language={}]
+(a) SyntaxError: schließende Klammer fehlt
+    Korrektur: print("Hello World")
+
+(b) SyntaxError: schließendes Hochkomma fehlt
+    Korrektur: s = 'Montag'
+
+(c) IndentationError: Einrückung nach dem Doppelpunkt fehlt
+    Korrektur:
+    def greet():
+        print("Hello")
+
+(d) SyntaxError: Variablenname darf nicht mit einer Ziffer beginnen
+    Korrektur: x1 = 'Hallo'
+\end{lstlisting}
+\end{solutionbox}

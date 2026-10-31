@@ -1,0 +1,25 @@
+
+\question[2]
+Schreibe eine Funktion, die sich so verhält, wie im folgenden docstring beschrieben.
+
+ 
+\begin{lstlisting}
+'''
+x: nicht leerer string
+returns: String, der nur aus dem ersten und letzten Zeichen von x besteht.
+    
+>>> teil('Hallo')
+'Ho'
+
+>>> teil('H')
+'HH'
+'''
+\end{lstlisting}
+ 
+
+\begin{solutionbox}{3cm}
+\begin{lstlisting}
+def teil(x):
+    return x[0]+x[-1]
+\end{lstlisting}
+\end{solutionbox}

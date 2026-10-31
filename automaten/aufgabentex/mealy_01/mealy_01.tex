@@ -1,0 +1,25 @@
+\question[5]
+Ein Getränk kostet 1,50\,\texteuro. Der Getränkeautomat nimmt nur 50-Cent-Münzen (Eingabe $50$) und
+1-Euro-Münzen (Eingabe $100$) an. Sobald genug Geld eingeworfen wurde, gibt er das Getränk und
+eventuell Wechselgeld aus.
+\begin{parts}
+\part Zeichne das Zustandsdiagramm eines Mealy-Automaten.
+\part Gib die Zustandsübergangstabelle an.
+\part Welche Ausgaben erzeugt der Automat bei der Eingabefolge $50, 100, 100, 100$?
+\end{parts}
+
+\begin{solutionbox}{9cm}
+\begin{parts}
+\part Der Zustand ist der bisher eingeworfene Betrag. -- bedeutet: keine Ausgabe.
+
+\includegraphics[height=3.5cm]{\pfad/mealy_01/mealy_01.png}
+\part
+\begin{tabular}[t]{r|cc}
+ & 50 & 100 \\ \hline
+$\rightarrow$ 0\,ct & 50\,ct / -- & 100\,ct / -- \\
+50\,ct & 100\,ct / -- & 0\,ct / Getränk \\
+100\,ct & 0\,ct / Getränk & 0\,ct / Getränk, 50\,ct zurück \\
+\end{tabular}
+\part --, Getränk, --, Getränk und 50\,ct zurück.
+\end{parts}
+\end{solutionbox}

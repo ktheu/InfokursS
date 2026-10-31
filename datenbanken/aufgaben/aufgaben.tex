@@ -1,0 +1,87 @@
+\documentclass[addpoints]{exam}
+\usepackage[utf8x]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{listings}
+\usepackage[top=1.5cm,bottom=0.5cm,headsep=0.5cm,headheight=3cm,%
+left=1.5cm,right=1.5cm]{geometry}
+
+\usepackage[T1]{fontenc}
+\usepackage{booktabs} % schöne Tabellen
+\usepackage{graphicx}
+\usepackage{amsmath,textcomp} %diverses
+\usepackage{enumitem}
+\usepackage{csquotes}
+
+\lstset{language=Python, tabsize=4, basicstyle=\footnotesize, showstringspaces=false, mathescape=true}
+\lstset{literate=%
+  {==}{{=\hspace{0.15em}=}}3
+  {Ö}{{\"O}}1
+  {Ä}{{\"A}}1
+  {Ü}{{\"U}}1
+  {ß}{{\ss}}1
+  {ü}{{\"u}}1
+  {ä}{{\"a}}1
+  {ö}{{\"o}}1
+}
+\begin{document}
+\pointpoints{Punkt}{Punkte}
+\bonuspointpoints{Bonuspunkt}{Bonuspunkte}                     
+\renewcommand{\solutiontitle}{\noindent\textbf{Lösung:}%
+\enspace}
+
+\newcommand{\pk}[1]{\underline{#1}}            % Unterstreichung für primary key
+\newcommand{\fk}[1]{{#1}$\uparrow$}           % Pfeil für foreign key
+\newcommand{\pfk}[1]{\underline{#1}$\uparrow$}           % Unterstreichung und Pfeil
+
+\pagestyle{headandfoot}
+\runningheadrule
+
+\newcommand{\klaubez}{Aufgaben zu Datenbanken}
+\firstpageheader{Informatik }{\klaubez} {\thepage /\numpages}
+\runningheader{Informatik }{\klaubez} {\thepage /\numpages}
+\newcommand{\pfad}{../aufgabentex}
+
+
+
+% Steuerung ueber \mitloesungen (0 = ohne Loesungen, 1 = mit Loesungen).
+\providecommand{\mitloesungen}{0}
+\ifnum\mitloesungen=1
+  \printanswers
+\fi
+
+
+% \frage{datei}: bindet eine Aufgabe ein. Fragetext und Loesungsbox werden in eine Box
+% gesetzt und damit nie ueber einen Seitenumbruch getrennt (kein manuelles \newpage noetig).
+\newsavebox{\qbox}
+\newcommand{\frage}[1]{\setbox\qbox\vbox{\hsize\linewidth\input{\pfad/#1}}\box\qbox}
+
+
+\begin{questions}
+
+
+% Aufgaben zu Datenbanken
+\frage{cur01}
+\frage{cur02}
+\frage{cur02a}
+\frage{cur03}
+\frage{cur03a}
+\frage{cur04}
+\frage{cur04c}
+\frage{cur50}
+\frage{cur50a}
+\frage{cur50b}
+\frage{cur05}
+\frage{cur06}
+\frage{cur06b}
+\frage{cur07}
+\frage{cur08}
+\frage{cur08b}
+\frage{cur09}
+\frage{cur09a}
+\frage{cur09b}
+\frage{cur10a}
+\input{\pfad/cur11a}
+
+% -------------------------------------------------
+\end{questions}
+\end{document}

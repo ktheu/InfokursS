@@ -1,0 +1,15 @@
+\question[2]
+Schreibe mit den Mikrobefehlen von Johnny das Mikroprogramm für den Assemblerbefehl
+\texttt{ADD x}.\\
+Erinnerung: \texttt{ADD x} erhöht den Akkumulator um den Inhalt von Register $x$.
+
+\begin{solutionbox}{4cm}
+\begin{verbatim}
+ADD x:
+  ins->ab
+  ram->db
+  plus
+  pc++
+  mc=0
+\end{verbatim}
+\end{solutionbox}

@@ -1,0 +1,13 @@
+\question[3]
+Die Funktion \texttt{enthaelt(node, x)} gibt True zurück, wenn der Wert x im Baum mit der Wurzel node vorkommt, sonst False.
+Implementiere die Funktion rekursiv.
+\begin{solutionbox}{3.75cm}
+\begin{lstlisting}
+def enthaelt(node, x):
+    if node is None:
+        return False
+    if node.val == x:
+        return True
+    return enthaelt(node.left, x) or enthaelt(node.right, x)
+\end{lstlisting}
+\end{solutionbox}

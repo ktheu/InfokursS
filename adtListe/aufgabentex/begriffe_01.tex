@@ -1,0 +1,15 @@
+\question[4]
+Erkläre in ein bis zwei Sätzen.
+\begin{parts}
+\part Was ist ein Abstrakter Datentyp?
+\part Warum zeigt \texttt{pos} auf den Eintrag vor dem aktuellen Element und nicht auf das aktuelle Element selbst?
+\part Wozu dient der Dummy-Eintrag am Anfang der Liste?
+\part Warum nennt man die Liste eine rekursive Datenstruktur?
+\end{parts}
+\begin{solutionbox}{5cm}
+a) Ein ADT besteht aus einer Datenstruktur und Operationen darauf. Festgelegt ist nur die Schnittstelle, nicht die Implementierung. \\
+b) Beim Einfügen und Löschen muss der next-Zeiger des Vorgängers geändert werden. Vom aktuellen Element aus kommen wir
+nicht zurück zum Vorgänger. \\
+c) Dadurch hat auch das erste Element einen Vorgänger. Einfügen und Löschen am Anfang brauchen keinen Sonderfall. \\
+d) Die Klasse Eintrag hat mit next ein Attribut vom Typ Eintrag. Sie verweist also auf sich selbst (rekursive Assoziation).
+\end{solutionbox}

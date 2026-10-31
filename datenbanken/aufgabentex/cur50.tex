@@ -1,0 +1,46 @@
+\question[4]
+Erläutere, was es bedeutet, dass eine Datenbank in der 1. Normalform vorliegt.
+Gib ein Beispiel an für eine Datenbank, die nicht in der 1. Normalform vorliegt, 
+und erkläre, wie man sie in die 1. Normalform überführen kann.
+
+
+\begin{solutionbox}{10cm}   
+Eine Datenbank befindet sich in der 1. Normalform, wenn alle Attribute nur atomare Werte enthalten.
+Das bedeutet: In einer Zelle steht genau ein Wert, keine Listen, keine mehrfachen Werte und keine zusammengesetzten Felder.
+
+\vspace{0.2cm}
+
+\textbf{Beispiel für keine 1. Normalform:}
+
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+Name & Telefonnummern \\
+\hline
+Anna Meier & 030-123456, 030-654321 \\
+Max Schulz & 040-987654 \\
+\hline
+\end{tabular}
+\end{center}
+
+Hier ist das Attribut \textit{Telefonnummern} nicht atomar, weil mehrere Werte in einer Zelle stehen.
+
+\vspace{0.2cm}
+
+\textbf{Überführung in die 1. Normalform:}
+
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+Name & Telefonnummer \\
+\hline
+Anna Meier & 030-123456 \\
+Anna Meier & 030-654321 \\
+Max Schulz & 040-987654 \\
+\hline
+\end{tabular}
+\end{center}
+
+Nun hat jede Zeile genau einen Telefonwert, also liegt die Tabelle in der 1. Normalform vor.
+
+\end{solutionbox}

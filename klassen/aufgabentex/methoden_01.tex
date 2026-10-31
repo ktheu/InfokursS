@@ -1,0 +1,44 @@
+\question[5]
+Die Klasse Parkhaus hat die Attribute plaetze (Anzahl aller Plätze) und belegt (Anzahl der belegten Plätze).
+Dem Konstruktor wird die Anzahl der Plätze übergeben, zu Beginn ist kein Platz belegt.
+\begin{itemize}
+\item \texttt{frei()} gibt die Anzahl der freien Plätze zurück.
+\item \texttt{einfahren()} belegt einen Platz und gibt True zurück. Ist kein Platz frei, wird False zurückgegeben.
+\item \texttt{ausfahren()} gibt einen Platz wieder frei, wenn mindestens ein Platz belegt ist.
+\end{itemize}
+Implementiere die Klasse Parkhaus. Folgender Dialog soll möglich sein:
+\begin{lstlisting}
+p = Parkhaus(2)
+print(p.einfahren(), p.einfahren(), p.einfahren())
+print(p.frei())
+p.ausfahren()
+print(p)
+
+True True False
+0
+1 von 2 Plätzen belegt
+\end{lstlisting}
+\begin{solutionbox}{9cm}
+\begin{lstlisting}
+class Parkhaus:
+    def __init__(self, plaetze):
+        self.plaetze = plaetze
+        self.belegt = 0
+
+    def frei(self):
+        return self.plaetze - self.belegt
+
+    def einfahren(self):
+        if self.frei() > 0:
+            self.belegt += 1
+            return True
+        return False
+
+    def ausfahren(self):
+        if self.belegt > 0:
+            self.belegt -= 1
+
+    def __str__(self):
+        return f'{self.belegt} von {self.plaetze} Plätzen belegt'
+\end{lstlisting}
+\end{solutionbox}

@@ -1,0 +1,11 @@
+\question[3]
+Ein Verein möchte Nachrichten nur noch mit asymmetrischer Verschlüsselung per email empfangen. Deshalb soll der Webmaster,
+ der Zugriff auf den Mailserver hat, den öffentlichen Schlüssel auf der Homepage des Vereins veröffentlichen. 
+Erläutere, wie der Webmaster mit Hilfe eines sogenannten \textit{Man-in-the-Middle-Angriffs} die Nachrichten manipulieren kann.
+
+\begin{solutionbox}{4cm}
+Der Webmaster veröffentlicht seinen eigenen öffentlichen Schlüssel an Stelle des öffentlichen Schlüssels
+des Vereins auf deren Homepage. Wenn ein Kunde mit Hilfe dieses Schlüssels eine Nachricht an den Verein schickt, fängt der Webmaster die Mail auf dem Mailserver ab, entschlüsselt
+sie mit Hilfe seines privaten Schlüssels, manipuliert die Nachricht und schickt sie dann mit Hilfe des
+öffentlichen Schlüssels des Vereins an den Verein weiter.
+\end{solutionbox}

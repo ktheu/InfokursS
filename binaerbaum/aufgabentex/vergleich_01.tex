@@ -1,0 +1,12 @@
+\question[3]
+Vergleiche Tiefensuche und Breitensuche.
+\begin{parts}
+\part Welche Datenstruktur nutzt die Tiefensuche, um sich die noch offenen Teilbäume zu merken, welche die Breitensuche?
+\part Warum eignet sich für die Breitensuche keine Datenstruktur, die nach dem LIFO-Prinzip arbeitet?
+\part Ein gesuchter Wert liegt nah an der Wurzel in einem sehr großen Baum. Welches Verfahren findet ihn in der Regel schneller? Begründe.
+\end{parts}
+\begin{solutionbox}{3.5cm}
+a) Die Tiefensuche nutzt einen Keller, die Breitensuche eine Schlange. \\
+b) Die Knoten sollen ebenenweise besucht werden. Wer zuerst eingereiht wurde, muss deshalb auch zuerst drankommen (FIFO). \\
+c) Die Breitensuche, denn sie besucht die Knoten Ebene für Ebene. Die Tiefensuche läuft vielleicht erst weit in einen falschen Teilbaum hinein.
+\end{solutionbox}

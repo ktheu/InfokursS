@@ -1,0 +1,9 @@
+\question[3]
+In der Variablen \texttt{G} ist ein ungewichteter Graph als Adjazenzmatrix gespeichert, die Liste \texttt{V} enthält die Knotennamen. Schreibe eine Schleife, die alle Nachbarn des Knotens mit dem Index 1 ausgibt.
+\begin{solutionbox}{2.5cm}
+\begin{lstlisting}
+for j in range(len(G)):
+    if G[1][j] == 1:
+        print(V[j])
+\end{lstlisting}
+\end{solutionbox}

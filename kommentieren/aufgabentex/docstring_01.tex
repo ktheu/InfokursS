@@ -1,0 +1,30 @@
+\question[3]
+Ergänze einen Docstring, der die Argumente und den Rückgabewert beschreibt und zwei Beispielaufrufe enthält.
+\begin{lstlisting}
+def zaehle_vokale(s):
+    z = 0
+    for c in s.lower():
+        if c in 'aeiou':
+            z += 1
+    return z
+\end{lstlisting}
+\begin{solutionbox}{7.5cm}
+\begin{lstlisting}
+def zaehle_vokale(s):
+    '''
+    s: String
+    returns: Anzahl der Vokale a, e, i, o, u in s, auch als Großbuchstaben
+
+    >>> zaehle_vokale('Hallo')
+    2
+
+    >>> zaehle_vokale('Otto')
+    2
+    '''
+    z = 0
+    for c in s.lower():
+        if c in 'aeiou':
+            z += 1
+    return z
+\end{lstlisting}
+\end{solutionbox}

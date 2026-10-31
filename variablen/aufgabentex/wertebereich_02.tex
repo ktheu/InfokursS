@@ -1,0 +1,27 @@
+\question[4]
+Gegeben ist der folgende Python-Code:
+
+\begin{lstlisting}
+summe = 0
+for i in range(10):
+    summe = summe + 0.1
+print(summe == 1.0)
+\end{lstlisting}
+
+\begin{parts}
+\part Das Programm gibt \texttt{False} aus. Erläutere, warum.
+\part Ändere die letzte Zeile so, dass geprüft wird, ob \texttt{summe} ungefähr gleich 1.0 ist.
+\end{parts}
+
+\begin{solutionbox}{5cm}
+\begin{parts}
+\part Gleitkommazahlen werden binär mit begrenzter Genauigkeit gespeichert. 0.1 lässt sich im Binärsystem nicht exakt
+darstellen. Bei jeder Addition entsteht ein kleiner Rundungsfehler, am Ende ist \texttt{summe} gleich
+\texttt{0.9999999999999999} und nicht genau 1.0.
+\part
+\begin{lstlisting}
+print(abs(summe - 1.0) < 0.000001)
+\end{lstlisting}
+oder mit \texttt{import math}: \texttt{print(math.isclose(summe, 1.0))}
+\end{parts}
+\end{solutionbox}

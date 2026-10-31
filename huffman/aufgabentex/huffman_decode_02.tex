@@ -1,0 +1,30 @@
+\question[2]
+Decodiere die Bitfolge mit dem angegebenen Huffman-Baum. Gib für jedes Zeichen die Codierung an.
+
+\texttt{101010001100111100110111011110001}
+
+Hinweis zur Darstellung des Huffman-Baums: Der Baum ergibt sich durch
+Drehen der abgebildeten Zeilen um 90 Grad nach rechts. Die Punkte
+geben die Ebenen des Baumes an. Knoten, die nur Zahlen aber keine
+Zeichen enthalten, sind mit einem \# markiert.
+\begin{lstlisting}
+...2 r
+..4 #
+...2 u
+.7 #
+...2 g
+..3 #
+...1 k
+12 #
+..3 e
+.5 #
+...1 z
+..2 #
+...1 w
+\end{lstlisting}
+\begin{solutionbox}{2cm}
+\begin{lstlisting}
+g->101, e->01, w->000, u->110, r->111, z->001, k->100
+Kodiertes Wort: gewuerzgurke
+\end{lstlisting}
+\end{solutionbox}

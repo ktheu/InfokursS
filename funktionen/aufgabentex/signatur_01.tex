@@ -1,0 +1,33 @@
+\question[4]
+Gegeben sind die Signaturen einiger Java-Methoden:
+\begin{lstlisting}[language=Java]
+static int maximum(int a, int b)
+static void begruessen(String name)
+static boolean istGerade(int n)
+static double kreisflaeche(double r)
+\end{lstlisting}
+\begin{parts}
+\part Gib für jede Methode an, welche Parameter (mit Datentyp) sie hat und ob und welchen Wert sie zurückgibt.
+\part Schreibe \texttt{maximum} und \texttt{begruessen} als Python-Funktionen mit Typhinweisen.
+\texttt{begruessen('Ida')} soll \texttt{Hallo Ida!} ausgeben.
+\end{parts}
+
+\begin{solutionbox}{6cm}
+\mbox{}\par\smallskip
+\begin{tabular}{lll}
+Methode & Parameter & Rückgabewert \\ \hline
+\texttt{maximum} & \texttt{a}, \texttt{b} vom Typ \texttt{int} & ein \texttt{int} \\
+\texttt{begruessen} & \texttt{name} vom Typ \texttt{String} & keiner (\texttt{void}) \\
+\texttt{istGerade} & \texttt{n} vom Typ \texttt{int} & ein \texttt{boolean} \\
+\texttt{kreisflaeche} & \texttt{r} vom Typ \texttt{double} & ein \texttt{double} \\
+\end{tabular}
+\begin{lstlisting}
+def maximum(a: int, b: int) -> int:
+    if a > b:
+        return a
+    return b
+
+def begruessen(name: str):
+    print(f'Hallo {name}!')
+\end{lstlisting}
+\end{solutionbox}

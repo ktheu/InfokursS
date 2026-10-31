@@ -1,0 +1,27 @@
+\question[3]
+In der Methode \texttt{insert} sind zwei Zeilen vertauscht.
+\begin{lstlisting}
+    def insert(self, x):
+        hilf = Eintrag()
+        hilf.inhalt = x
+        self.pos.next = hilf
+        hilf.next = self.pos.next
+\end{lstlisting}
+\begin{parts}
+\part Welche Zeilen müssen getauscht werden?
+\part Was passiert mit dieser falschen Methode, wenn die folgenden Anweisungen ausgeführt werden? Begründe.
+\begin{lstlisting}
+a = Liste()
+a.insert(1)
+a.insert(2)
+while not a.endpos():
+    print(a.elem())
+    a.advance()
+\end{lstlisting}
+\end{parts}
+\begin{solutionbox}{3.5cm}
+a) Die letzten beiden Zeilen. Der neue Eintrag muss zuerst den Nachfolger übernehmen. \\
+b) Die Zahl 2 wird endlos ausgegeben. \texttt{self.pos.next} ist bereits \texttt{hilf}, also zeigt \texttt{hilf.next}
+auf \texttt{hilf} selbst. Der neue Eintrag ist sein eigener Nachfolger, \texttt{endpos} wird nie True und der bisherige
+Eintrag mit der 1 ist nicht mehr erreichbar.
+\end{solutionbox}

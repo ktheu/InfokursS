@@ -1,0 +1,91 @@
+\question[8]
+In einer Datenbank sollen Informationen zu Büchern, ihren Kapiteln und den jeweiligen Autoren
+gespeichert werden. Hierzu wird zunächst das folgende relationale Datenbankschema definiert:
+
+Dabei gilt: Ein \enquote{Kapitel} gehört genau zu einem Buch. Ein \enquote{Buch} hat im
+Ausgangsmodell genau einen Autor.
+
+\begin{itemize}
+\item Kapitel ( \pk{KID}, Überschrift, \fk{BID} )
+\item Buch ( \pk{BID}, Titel, \fk{AID}, Erscheinungsjahr )
+\item Autor ( \pk{AID}, Name, Geburtsjahr )
+\end{itemize}
+
+\begin{enumerate}[label=\alph*)]
+\item Erläutere anhand dieser Relationen die Begriffe \enquote{Primärschlüssel} und
+\enquote{Fremdschlüssel}.
+
+\item Entwirf ein ER-Diagramm zum angegebenen Datenbankschema. Gib auch
+die Kardinalitäten aller vorkommenden Beziehungen an.
+
+\item Jemand schlägt vor, das Datenbankschema zu ändern und nur eine
+einzige Tabelle zu verwenden.
+\begin{verbatim}
+Kapitel(KID, Überschrift, Titel, Erscheinungsjahr, Name, Geburtsjahr)
+\end{verbatim}
+Beurteile diesen Vorschlag.
+
+\item[]\hspace*{-\leftmargin}Gib jeweils eine SQL-Anfrage an, die die folgenden Ergebnisse liefert:
+
+\item Name aller Autoren, die im Jahr 1970 geboren wurden.
+
+\item Titel und Erscheinungsjahr aller Bücher, die vom Autor \enquote{J. K. Rowling}
+veröffentlicht wurden, aufsteigend sortiert nach dem Erscheinungsjahr.
+
+\item[]\hspace*{-\leftmargin}Das Datenbankschema soll so geändert werden, dass es auch möglich ist, einem Buch mehrere
+Autoren zuzuordnen (z. B. bei Sammelbänden).
+
+\item Erläutere, welche Änderungen an der Datenbank hierzu nötig sind.
+
+\item Gib eine zu deinen Änderungen aus Teil f) passende SQL-Abfrage an, die die Titel
+aller Bücher liefert, an denen der Autor \enquote{Sebastian Fitzek} beteiligt war.
+\end{enumerate}
+
+\begin{solutionbox}{19cm}
+a) Primärschlüssel: Ein Attribut oder eine Attributkombination, das bzw. die jeden Datensatz
+einer Relation eindeutig identifiziert.
+Fremdschlüssel: Ein Attribut in einer Relation, das auf den Primärschlüssel einer anderen
+Relation verweist, um Beziehungen zwischen Datensätzen herzustellen.
+
+b) 
+
+\includegraphics[width=8cm]{\pfad/cur11a.png}
+
+
+c) Der Vorschlag ist nicht sinnvoll, da dadurch starke Redundanzen entstehen.
+Bei jedem Kapitel würden Buchdaten und Autorendaten erneut gespeichert.
+Das erhöht den Speicherbedarf und führt leichter zu Inkonsistenzen bei Änderungen.
+
+d) 
+\begin{verbatim}
+SELECT Autor.Name 
+  FROM Autor 
+  WHERE Geburtsjahr = 1970
+\end{verbatim}
+
+e)
+\begin{verbatim}
+SELECT Buch.Titel, Erscheinungsjahr
+    FROM Buch, Autor
+    WHERE Buch.AID = Autor.AID
+      AND Autor.Name = 'J. K. Rowling'
+    ORDER BY Erscheinungsjahr ASC
+\end{verbatim}
+
+f)
+Durch die Änderung entsteht eine n:m-Beziehung zwischen Buch und Autor.
+Dazu wird der Fremdschlüssel AID aus der Tabelle Buch entfernt und eine
+zusätzliche Beziehungstabelle eingeführt:
+
+\texttt{Buch\_Autor(\fk{BID}, \fk{AID})}
+
+g)
+\begin{verbatim}
+SELECT Buch.Titel
+    FROM Buch, Buch_Autor, Autor
+    WHERE Buch.BID = Buch_Autor.BID
+      AND Buch_Autor.AID = Autor.AID
+      AND Autor.Name = 'Sebastian Fitzek'
+\end{verbatim}
+
+\end{solutionbox}

@@ -1,0 +1,15 @@
+\question[4]
+Gegeben ist die Liste \texttt{a = [5, 9, 3, 12, 7, 7, 2]}. Schreibe ein Python-Programm, 
+das zählt, wie viele Zahlen der Liste einen größeren Nachfolger haben
+und die Anzahl ausgibt.
+
+\begin{solutionbox}{4cm}
+\begin{lstlisting}
+a = [5, 9, 3, 12, 7, 7, 2]
+zaehl = 0
+for i in range(len(a)-1):
+    if a[i] < a[i+1]:
+        zaehl += 1
+print(zaehl)
+\end{lstlisting}
+\end{solutionbox}

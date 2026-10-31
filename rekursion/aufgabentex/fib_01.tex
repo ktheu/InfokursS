@@ -1,0 +1,18 @@
+% in den Musteraufgaben
+\question[2]
+Die rekursive Funktion fib wird mit fib(5) aufgerufen.
+Wie heißt der 6. und 7. Aufruf von fib?
+\begin{lstlisting}
+def fib(n):
+    if n <= 2: return 1
+    return fib(n-2) + fib(n-1)
+\end{lstlisting}
+
+\begin{solutionbox}{6cm}
+
+\includegraphics[height=3cm]{\pfad/fib_01.png}
+\begin{lstlisting}
+6. fib(2)
+7. fib(3)
+\end{lstlisting}
+\end{solutionbox}

@@ -1,0 +1,21 @@
+\question[3]
+Liste ist unser selbstgebastelter Datentyp.
+\begin{lstlisting}
+a = Liste()
+a.insert(5)
+a.insert(8)
+a.advance()
+a.insert(2)
+a.advance()
+a.delete()
+\end{lstlisting}
+\begin{parts}
+\part Zeichne die Einträge der Liste a mit den Zeigern \texttt{anf} und \texttt{pos} nach diesen Anweisungen.
+\part Was liefert jetzt \texttt{a.endpos()}?
+\end{parts}
+\begin{solutionbox}{4.25cm}
+
+\includegraphics[height=2.2cm]{\pfad/eintraege_03L.png}
+
+b) True, denn der Eintrag, auf den pos zeigt, hat keinen Nachfolger.
+\end{solutionbox}

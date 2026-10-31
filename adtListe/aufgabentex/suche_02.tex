@@ -1,0 +1,14 @@
+\question[3]
+Die Funktion \texttt{ersetze(a, alt, neu)} ersetzt in der Liste a (unser Datentyp) jedes Vorkommen von alt durch neu.
+Die Reihenfolge der Elemente bleibt erhalten. Benutze nur die Methoden der Liste. Implementiere die Funktion.
+\begin{solutionbox}{4cm}
+\begin{lstlisting}
+def ersetze(a, alt, neu):
+    a.reset()
+    while not a.endpos():
+        if a.elem() == alt:
+            a.delete()
+            a.insert(neu)
+        a.advance()
+\end{lstlisting}
+\end{solutionbox}

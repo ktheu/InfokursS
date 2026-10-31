@@ -1,0 +1,29 @@
+\question[4]
+Analysiere den folgenden Python-Code und gib an, welche Ausgabe er erzeugt.
+\begin{lstlisting}
+a = [2, 4, 9, 12, 1, 5]
+b = []
+teilsumme = 0
+for x in a:
+    teilsumme += x
+    b.append(teilsumme)
+print(b)
+\end{lstlisting}
+
+\begin{solutionbox}{5cm}
+
+Bei jedem Durchlauf wird das aktuelle Element x zu teilsumme
+addiert; der aktuelle Wert von teilsumme wird danach an b
+angehängt (laufende/kumulierte Summe).
+
+\begin{lstlisting}
+x=2:  teilsumme=2  -> b=[2]
+x=4:  teilsumme=6  -> b=[2, 6]
+x=9:  teilsumme=15 -> b=[2, 6, 15]
+x=12: teilsumme=27 -> b=[2, 6, 15, 27]
+x=1:  teilsumme=28 -> b=[2, 6, 15, 27, 28]
+x=5:  teilsumme=33 -> b=[2, 6, 15, 27, 28, 33]
+
+Ausgabe: [2, 6, 15, 27, 28, 33]
+\end{lstlisting}
+\end{solutionbox}

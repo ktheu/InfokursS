@@ -1,0 +1,24 @@
+\question[3]
+Die Hilfe zu zwei String-Methoden lautet:
+\begin{lstlisting}[language={}]
+center(self, width, fillchar=' ', /)
+    Return a centered string of length width.
+    Padding is done using the specified fill character (default is a space).
+
+zfill(self, width, /)
+    Pad a numeric string with zeros on the left, to fill a field of the given width.
+    The string is never truncated.
+\end{lstlisting}
+Was erscheint auf der Konsole?
+\begin{lstlisting}
+print('Hi'.center(6, '*'))
+print('7'.zfill(3))
+print('1234'.zfill(3))
+\end{lstlisting}
+\begin{solutionbox}{2.5cm}
+\begin{lstlisting}[language={}]
+**Hi**
+007
+1234
+\end{lstlisting}
+\end{solutionbox}

@@ -1,0 +1,43 @@
+\question[5]
+Ein System kann sich zu einem Zeitpunkt in genau einem der fünf Zustände $z_1$, $z_2$, $z_3$, $z_4$ und $z_5$
+befinden. Die Folge der durchlaufenen Zustände muss über ein Jahr hinweg aufgezeichnet werden.
+Da der Wechsel in einen anderen Zustand nach 5 Millisekunden erfolgt, ist die dabei erzeugte
+Datenmenge relativ groß.
+Für die Binärdarstellung der Zustände werden die Codes A, B, C und D vorgeschlagen.
+
+
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline  Zustand & Wahrscheinlichkeit & Code A& Code B&Code C&Code D \\
+\hline $z_1$  & 0.13 & 00110001 & 000 & 0 & 100  \\
+\hline $z_2$  & 0.60 & 00110010 & 001 & 1 & 0 \\
+\hline $z_3$  & 0.12 & 00110011 & 010 & 01 & 101 \\
+\hline $z_4$  & 0.05 & 00110100 & 011 & 10 & 111 \\
+\hline $z_5$  & 0.10 & 00110101 & 100 & 11 & 110 \\
+\hline
+\end{tabular}
+
+a. Berechne den mittleren Speicherbedarf pro Jahr, wenn Code A verwendet wird.\\
+b. Beschreibe den Unterschied zwischen den Codes A und B einerseits und C und D andererseits.\\
+c. Berechne die mittlere Codewortlänge für die Codes C und D.\\
+d. Prüfe, ob die Codes C und D für die Speicherung der Zustandsfolge geeignet sind.\\
+e. Welche typische Eigenschaften eines Huffman-Codes zeigt Code D?\\
+ 
+\begin{solutionbox}{10cm}
+a. Anzahl der Zustände pro Sekunde: $1s / 0.005s = 200$ \\
+Anzahl der Zustände pro Jahr: $200 \cdot 60 \cdot 60 \cdot 24 \cdot 365 = 6307200000$ \\
+Speicherbedarf pro Zustand: 8 Bit = 1 B  \\
+Speicherbedarf pro Jahr: $6 307 200 000 \text{ B} = 6.3072 \text{ GB}$ 
+
+b. Die Codes A und B verwenden eine feste, die Codes C und D hingegen eine variable
+Codewortlänge.
+
+c. Mittlere Codewortlänge für C und D: \\
+Code C: $(0,13 + 0,60) \cdot 1 \text{ Bit} + (0,12 + 0,05 + 0,10) \cdot 2  \text{ Bit} = 1,27 \text{ Bit}$ \\
+Code D: $0,60 \cdot 1 \text{ Bit} + (0,13 + 0,12 + 0,05 + 0,10) \cdot 3 \text{ Bit} = 1,8 \text{ Bit}$
+
+d. Code C ist nicht geeignet. Beispielsweise kann die Binärdarstellung 10 nicht eindeutig decodiert werden.
+Die könnte nämlich entweder für ($z_2$, $z_1$) oder für ($z_4$) stehen. Code D hingegen ist präfixfrei und somit geeignet.
+
+e. Er ist präfixfrei und das häufigste Zeichen bekommt die kürzeste Codierung.\\
+ 
+\end{solutionbox}

@@ -1,0 +1,12 @@
+\question[4]
+Die Sicherheit des RSA-Verfahrens beruht darauf, dass das Produkt $m = p \cdot q$ zweier großer Primzahlen zwar leicht zu berechnen, aber praktisch nicht wieder in seine Primfaktoren zu zerlegen ist.
+\begin{parts}
+\part Erkläre, was man unter einer \textit{Einwegfunktion} versteht, und nenne die Einwegfunktion beim RSA-Verfahren.
+\part Das Zerlegen einer Zahl mit 16 Stellen dauert auf einem Rechner etwa 1 Sekunde. Mit je zwei Stellen mehr wird die Rechenzeit zehnmal so lang. Wie lange dauert es ungefähr bei 26 Stellen?
+\part Warum benutzt man in der Praxis Zahlen mit mehr als 600 Stellen?
+\end{parts}
+\begin{solutionbox}{4.5cm}
+a) Eine Einwegfunktion lässt sich in einer Richtung leicht berechnen, die Umkehrung gelingt aber praktisch nicht in vertretbarer Zeit. Bei RSA ist das die Multiplikation zweier Primzahlen. \\
+b) 10 Stellen mehr sind fünfmal der Faktor 10, also $10^5$ Sekunden, das ist mehr als ein Tag. \\
+c) Für alle bekannten Angriffe wächst die Laufzeit so stark mit der Stellenzahl, dass ein Angriff bei so langen Zahlen praktisch nicht gelingt.
+\end{solutionbox}

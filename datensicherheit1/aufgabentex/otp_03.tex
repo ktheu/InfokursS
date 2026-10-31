@@ -1,0 +1,41 @@
+\question[4]
+Beim One-Time-Pad wird ein Klartext mit einem zufällig erzeugten 
+Schlüssel verschlüsselt, der genauso lang wie der Klartext ist und nur 
+ein einziges Mal verwendet wird.
+
+\begin{enumerate}
+    \item Erkläre kurz, wie die Ver- und Entschlüsselung beim 
+    One-Time-Pad grundsätzlich abläuft.
+    \item Begründe, warum das One-Time-Pad als absolut sicheres 
+    Verschlüsselungsverfahren gilt, sofern der Schlüssel wirklich 
+    zufällig, geheim und nur einmal verwendet wird.
+    \item Nenne einen Grund, warum das One-Time-Pad trotz seiner 
+    absoluten Sicherheit in der Praxis kaum eingesetzt wird.
+\end{enumerate}
+
+\begin{solutionbox}{10cm}
+
+\textbf{1.} Klartext und Schlüssel bestehen aus Zeichen gleicher Länge. 
+Jedes Klartextzeichen wird mit dem an derselben Position stehenden 
+Schlüsselzeichen verknüpft, wodurch das Geheimtextzeichen 
+entsteht. Zur Entschlüsselung wird derselbe Schlüssel mit der 
+Umkehroperation angewendet.
+
+\textbf{2.} Da der Schlüssel echt zufällig, genauso lang wie der 
+Klartext und nur ein einziges Mal verwendet wird, ist für jedes 
+mögliche Geheimtextzeichen jedes Klartextzeichen gleich wahrscheinlich. 
+Ein Angreifer, der nur den Geheimtext kennt, kann somit rein rechnerisch 
+keinerlei Information über den Klartext gewinnen, egal wie viel 
+Rechenleistung ihm zur Verfügung steht -- selbst Ausprobieren aller 
+Schlüssel liefert jeden denkbaren Klartext gleicher Länge als mögliches 
+Ergebnis. 
+
+\textbf{3.} Der Schlüssel muss mindestens so lang wie der Klartext sein 
+und darf nur ein einziges Mal benutzt werden. Für einen sicheren 
+Nachrichtenaustausch müsste daher für jede Nachricht ein neuer, echt 
+zufälliger Schlüssel erzeugt und auf einem sicheren Weg zwischen Sender 
+und Empfänger ausgetauscht werden, was in der Praxis (großer 
+Schlüsselaufwand, sichere Verteilung) meist unpraktikabel ist. 
+
+
+\end{solutionbox}

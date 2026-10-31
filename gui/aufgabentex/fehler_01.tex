@@ -1,0 +1,10 @@
+\question[3]
+Der Knopf soll bei jedem Klick den Text ändern. Stattdessen passiert beim Klicken nichts, die Funktion läuft nur einmal beim Start.
+\begin{lstlisting}
+knopf = tk.Button(fenster, text='Los', command=klick())
+\end{lstlisting}
+Erkläre den Fehler und gib die richtige Zeile an.
+\begin{solutionbox}{2.5cm}
+Mit den Klammern wird \texttt{klick} sofort aufgerufen, und \texttt{command} bekommt den Rückgabewert \texttt{None}. Wir müssen die Funktion selbst übergeben:
+\texttt{command=klick}
+\end{solutionbox}

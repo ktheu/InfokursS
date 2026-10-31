@@ -1,0 +1,21 @@
+% repl-Aufgabe
+\question[3]
+Die rekursive Funktion \texttt{sternedoppelt}
+gibt einen String zurück, der jedes Zeichen des übergebenen Strings
+durch '**' ersetzt.
+
+Beispiel:
+\begin{lstlisting}
+>>> sternedoppelt('lol')
+'******'
+\end{lstlisting}
+
+\begin{solutionbox}{4cm}
+\begin{lstlisting}
+def sternedoppelt(s):
+
+    if len(s) == 0:
+        return ''
+    return '**' + sternedoppelt(s[1:])
+\end{lstlisting}
+\end{solutionbox}

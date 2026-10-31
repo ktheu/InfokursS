@@ -1,0 +1,29 @@
+\question[4]
+Das folgende Programm soll den Durchschnitt der Zahlen in der Liste \texttt{a} berechnen.
+Es läuft ohne Fehlermeldung, gibt aber \texttt{0.5} statt \texttt{5.0} aus.
+\begin{lstlisting}
+a = [4, 8, 6, 2]
+for x in a:
+    summe = 0
+    summe += x
+print(summe / len(a))
+\end{lstlisting}
+\begin{parts}
+\part Um welche Fehlerart handelt es sich?
+\part Erkläre, wie die Ausgabe \texttt{0.5} zustande kommt, und korrigiere das Programm.
+\end{parts}
+
+\begin{solutionbox}{5cm}
+a) Es ist ein logischer Fehler: Das Programm läuft bis zum Ende, liefert aber ein falsches Ergebnis.
+
+b) \texttt{summe = 0} steht in der Schleife und wird bei jedem Durchlauf zurückgesetzt.
+Am Ende enthält \texttt{summe} nur das letzte Element 2, ausgegeben wird 2 / 4 = 0.5.
+Der Startwert muss vor der Schleife gesetzt werden:
+\begin{lstlisting}
+a = [4, 8, 6, 2]
+summe = 0
+for x in a:
+    summe += x
+print(summe / len(a))     # 5.0
+\end{lstlisting}
+\end{solutionbox}

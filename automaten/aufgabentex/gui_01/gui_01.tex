@@ -1,0 +1,27 @@
+\question[5]
+Ein Medienspieler auf dem Handy hat drei Buttons: Play ($p$), Pause ($a$) und Stop ($s$).
+\begin{itemize}
+\item Nach dem Start ist der Spieler gestoppt. Mit Play beginnt die Wiedergabe von vorn.
+\item Während der Wiedergabe hält Pause an der aktuellen Stelle an. Play setzt die Wiedergabe dort fort.
+\item Stop beendet die Wiedergabe und springt zum Anfang zurück, egal ob der Spieler gerade spielt oder pausiert.
+\item Ein Button, der im aktuellen Zustand keinen Sinn ergibt (z.B. Pause im gestoppten Zustand), wird ignoriert.
+\end{itemize}
+\begin{parts}
+\part Zeichne das Zustandsdiagramm eines Mealy-Automaten. Die Ausgabe ist die Aktion, die der Spieler ausführt.
+\part Gib die Zustandsübergangstabelle an. Ignorierte Eingaben bekommen die Ausgabe --.
+\end{parts}
+
+\begin{solutionbox}{8cm}
+\begin{parts}
+\part Ignorierte Eingaben sind nicht eingezeichnet.
+
+\includegraphics[height=2.5cm]{\pfad/gui_01/gui_01.png}
+\part
+\begin{tabular}[t]{r|ccc}
+ & p & a & s \\ \hline
+$\rightarrow$ gestoppt & spielt / Wiedergabe von vorn & gestoppt / -- & gestoppt / -- \\
+spielt & spielt / -- & pausiert / anhalten & gestoppt / zum Anfang \\
+pausiert & spielt / Wiedergabe fortsetzen & pausiert / -- & gestoppt / zum Anfang \\
+\end{tabular}
+\end{parts}
+\end{solutionbox}

@@ -1,0 +1,34 @@
+
+\question[8]
+a. Implementiere eine Klasse \texttt{Buch} mit den Attributen
+\texttt{autor} und \texttt{titel}.  \\
+b. Erzeuge zwei Buch-Objekte \texttt{b1} und \texttt{b2}:
+\textit{Homo faber} von Max Frisch
+   und \textit{Buddenbrooks} von Thomas Mann. \\
+c. Erstelle eine Liste \texttt{buecher} die \texttt{b1}
+und \texttt{b2} enthält. \\
+d. Erstelle ein Dictionary \texttt{buchmap} mit dem Titel
+eines Buches als key und dem Buch-Objekt als value.
+\texttt{buchmap} soll zu Beginn Einträge für \texttt{b1} und \texttt{b2} enthalten. \\
+e. Erweitere \texttt{buchmap} um einen Eintrag: \textit{Agnes} von Peter Stamm. \\
+f. In \texttt{buchmap} seien noch mehrere Bücher eingefügt worden.
+ Welcher Ausdruck mit \texttt{buchmap}
+ liefert den Autor von \texttt{Der Prozess} (wir nehmen an,
+   dass das entsprechende Buch in \texttt{buchmap} vorhanden ist).
+
+
+\begin{solutionbox}{5.5cm}
+\begin{lstlisting}
+class Buch:
+    def __init__(self,autor,titel):
+        self.autor = autor
+        self.titel = titel
+
+b1 = Buch("Max Frisch","Homo faber")
+b2 = Buch("Thomas Mann","Buddenbrooks")
+buecher = [b1, b2]
+buchmap = {"Homo faber":b1, "Buddenbrooks":b2}
+buchmap["Agnes"] = Buch("Peter Stamm","Agnes")
+buchmap["Der Prozess"].autor
+\end{lstlisting}
+\end{solutionbox}

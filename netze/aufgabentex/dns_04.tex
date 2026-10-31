@@ -1,0 +1,21 @@
+\question[3]
+Beschreibe in eigenen Worten und in der richtigen Reihenfolge, was passiert,
+wenn ein Nutzer im Browser \texttt{www.schule-beispiel.de} eingibt, 
+bis die Webseite angezeigt wird. Gehe dabei insbesondere auf die Rolle des DNS-Servers ein.
+
+\begin{solutionbox}{6cm}
+
+1. Der Browser schickt eine Anfrage an einen DNS-Server:
+   \enquote{Welche IP-Adresse gehört zu www.schule-beispiel.de?}
+
+2. Der DNS-Server sucht den Namen in seiner Datenbank (oder
+   fragt weitere DNS-Server) und schickt die passende
+   IP-Adresse zurück.
+
+3. Der Browser baut nun mit dieser IP-Adresse eine direkte
+   Verbindung zum Webserver auf.
+
+4. Der Webserver sendet die Webseite an den Browser, der sie
+   anzeigt.
+
+\end{solutionbox}

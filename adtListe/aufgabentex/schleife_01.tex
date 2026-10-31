@@ -1,0 +1,23 @@
+\question[3]
+Die Liste a enthält die Zahlen 3 7 5. Die Schleife soll alle Elemente ausgeben.
+\begin{lstlisting}
+a.reset()
+while not a.endpos():
+    a.advance()
+    print(a.elem())
+\end{lstlisting}
+\begin{parts}
+\part Was geschieht stattdessen?
+\part Korrigiere die Schleife.
+\end{parts}
+\begin{solutionbox}{4.25cm}
+a) Ausgegeben werden 7 und 5, die 3 wird übersprungen. Nach der 5 ist das Ende erreicht und \texttt{a.elem()} wirft
+einen RuntimeError. \\
+b) Die beiden Zeilen im Schleifenrumpf werden getauscht:
+\begin{lstlisting}
+a.reset()
+while not a.endpos():
+    print(a.elem())
+    a.advance()
+\end{lstlisting}
+\end{solutionbox}

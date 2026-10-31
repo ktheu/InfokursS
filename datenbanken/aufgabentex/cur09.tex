@@ -1,0 +1,27 @@
+\question[3]
+Gegeben ist die folgende Tabelle:
+
+ Schueler \medskip
+ 
+\begin{tabular}{|c|l|c|}
+\hline
+SchuelerID & Name & Klasse \\
+\hline
+1 & Anna Meier & 10A \\
+2 & Max Schulz & 10B \\
+\hline
+\end{tabular}
+ 
+
+Formuliere eine SQL-Anweisung, um die folgende Schülerin einzufügen:
+
+\begin{itemize}
+\item SchuelerID: 3
+\item Name: Lea Weber
+\item Klasse: 10A
+\end{itemize}
+
+\begin{solutionbox}{2cm}
+\texttt{INSERT INTO Schueler}\\
+\texttt{VALUES (3, 'Lea Weber', '10A');}
+\end{solutionbox}

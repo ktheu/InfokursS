@@ -1,0 +1,18 @@
+\question[3]
+\begin{parts}
+\part Eine sortierte Liste hat 1000, 1 Million bzw. 1 Milliarde Elemente. Wie viele Schleifendurchläufe
+braucht die binäre Suche höchstens? Begründe kurz.
+\part Wie viele Elemente muss die lineare Suche bei einer Milliarde Elementen höchstens ansehen?
+\part Was liefert die binäre Suche aus dem Unterricht für die Liste \texttt{[5, 1, 4, 2, 3]} und \texttt{x = 1}?
+Warum?
+\end{parts}
+\begin{solutionbox}{5cm}
+\begin{enumerate}[label=\alph*)]
+\item 10, 20 bzw. 30. Jeder Durchlauf halbiert den Suchbereich, und $1000 \approx 2^{10}$,
+1 Million $\approx 2^{20}$, 1 Milliarde $\approx 2^{30}$.
+\item 1 Milliarde, wenn \texttt{x} am Ende steht oder nicht in der Liste ist.
+\item \texttt{-1}, obwohl 1 in der Liste steht: \texttt{mid = 2}, \texttt{a[2] = 4 > 1}, also wird links
+weitergesucht; \texttt{mid = 0}, \texttt{a[0] = 5 > 1}, dann ist \texttt{R = -1}. Die Liste ist nicht sortiert,
+die binäre Suche funktioniert nur für sortierte Listen.
+\end{enumerate}
+\end{solutionbox}

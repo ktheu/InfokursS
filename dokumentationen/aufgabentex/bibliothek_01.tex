@@ -1,0 +1,17 @@
+\question[3]
+Die Hilfe zu \texttt{random.sample} beginnt so:
+\begin{lstlisting}[language={}]
+sample(population, k, *, counts=None)
+    Chooses k unique random elements from a population sequence.
+    Returns a new list containing elements from the population while
+    leaving the original population unchanged.
+\end{lstlisting}
+Schreibe ein Programm, das sechs verschiedene Lottozahlen von 1 bis 49 aufsteigend sortiert ausgibt.
+\begin{solutionbox}{3cm}
+\begin{lstlisting}
+import random
+
+zahlen = random.sample(range(1, 50), 6)
+print(sorted(zahlen))
+\end{lstlisting}
+\end{solutionbox}

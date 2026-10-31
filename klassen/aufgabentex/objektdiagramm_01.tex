@@ -1,0 +1,35 @@
+\question[3]
+Zeichne die Objektdiagramme für die Objekte p und q nach dem Durchlaufen des Codes.
+\begin{lstlisting}
+class Punkt:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def verschieben(self, dx):
+        self.x += dx
+
+p = Punkt(2, 3)
+q = Punkt(0, 1)
+q.verschieben(4)
+p.y = q.x
+\end{lstlisting}
+\begin{solutionbox}{3cm}
+\begin{tabular}{|l|}
+\hline
+\underline{p: Punkt} \\
+\hline
+x = 2 \\
+y = 4 \\
+\hline
+\end{tabular}
+\hspace{1cm}
+\begin{tabular}{|l|}
+\hline
+\underline{q: Punkt} \\
+\hline
+x = 4 \\
+y = 1 \\
+\hline
+\end{tabular}
+\end{solutionbox}

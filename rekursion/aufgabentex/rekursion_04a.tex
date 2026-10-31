@@ -1,0 +1,12 @@
+\question[2]
+Was erscheint auf der Konsole?
+\begin{lstlisting}
+def rek(s):
+    if len(s) == 1: return s
+    return '?'+rek(s[1:])+'/'
+
+print(rek('hello'))
+\end{lstlisting}
+\begin{solutionbox}{1cm}
+????o////
+\end{solutionbox}

@@ -1,0 +1,20 @@
+%----------------------
+\question[5]
+Die Liste \texttt{a = [24, 4, 17, 88, 42, 12, 7] } wird mit dem rekursiven mergeSort-Algorithmus aus dem Unterricht sortiert. \\
+a. Wieviel mal wird \texttt{merge} aufgerufen?  \\
+b. Wieviel mal wird \texttt{mergeSort} aufgerufen? (der erste Aufruf zählt mit).
+\begin{solutionbox}{1cm}
+a. 6   ~~~ b. 13
+\end{solutionbox}
+Bei jedem Aufruf von \texttt{merge} wird eine Liste zurückgegeben.
+Notiere die Listen in der Reihenfolge, in der sie zurückgegeben werden.
+\begin{solutionbox}{4cm}
+\begin{lstlisting}
+4 17
+4 17 24
+42 88
+7 12
+7 12 42 88
+4 7 12 17 24 42 88
+\end{lstlisting}
+\end{solutionbox}

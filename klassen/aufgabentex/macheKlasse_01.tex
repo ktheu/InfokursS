@@ -1,0 +1,20 @@
+\question[3]
+Schreibe Code, der den folgenden Dialog möglich macht:
+
+\begin{lstlisting}
+a = A('H')
+b = A('C')
+print(a.aba, a.d)
+print(b.aba, b.d)
+
+17 H
+17 C
+\end{lstlisting}
+\begin{solutionbox}{3cm}
+\begin{lstlisting}
+class A:
+    def __init__(self, d):
+        self.d = d
+        self.aba = 17
+\end{lstlisting}
+\end{solutionbox}

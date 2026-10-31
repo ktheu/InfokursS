@@ -1,0 +1,22 @@
+\question[3]
+Erläutere das Problem des Routings zwischen Netzen:
+Warum reicht es nicht, dass jedes Gerät nur seine eigene lokale Netzadresse kennt,
+wenn Daten an ein Gerät in einem völlig anderen Netz (z.\,B. auf einem anderen Kontinent)
+gesendet werden sollen?
+
+\begin{solutionbox}{6cm}
+
+Ein Gerät kennt nur die Geräte in seinem eigenen lokalen Netz
+direkt. Liegt das Ziel in einem anderen Netz, muss das
+Datenpaket über mehrere Zwischenstationen (Router) transportiert
+werden, die jeweils nur einen Ausschnitt des Gesamtnetzes
+kennen.
+
+Das Problem des Routings besteht darin, für jedes Paket auf
+jedem beteiligten Router zu entscheiden, über welche
+Verbindung (welchen nächsten Knoten) das Paket weitergeleitet
+werden muss, damit es auf einem möglichst guten Weg
+schließlich sein Ziel erreicht - obwohl kein einzelner Router
+den kompletten Weg von Anfang bis Ende kennt.
+
+\end{solutionbox}

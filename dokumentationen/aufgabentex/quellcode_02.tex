@@ -1,0 +1,25 @@
+\question[5]
+Von einer Funktion ist nur der Kopf mit dem Docstring bekannt:
+\begin{lstlisting}
+def kuerze(text, n, ende='...'):
+    '''
+    text: String
+    n: ganze Zahl >= 0
+    ende: String, der an einen gekürzten Text angehängt wird
+    returns: text, falls er höchstens n Zeichen hat,
+             sonst die ersten n Zeichen von text und danach ende
+    '''
+\end{lstlisting}
+\begin{parts}
+\part Was ergeben \texttt{kuerze('Informatik', 4)}, \texttt{kuerze('Hallo', 10)} und \texttt{kuerze('Hallo', 2, '!')}?
+\part Implementiere die Funktion.
+\end{parts}
+\begin{solutionbox}{3.25cm}
+a) \texttt{'Info...'}, \texttt{'Hallo'}, \texttt{'Ha!'}
+\begin{lstlisting}
+def kuerze(text, n, ende='...'):
+    if len(text) <= n:
+        return text
+    return text[:n] + ende
+\end{lstlisting}
+\end{solutionbox}

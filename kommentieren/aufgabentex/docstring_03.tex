@@ -1,0 +1,35 @@
+\question[4]
+Ergänze Docstrings für die Klasse und für die Methoden \texttt{fahrenheit} und \texttt{erhoehen}.
+\begin{lstlisting}
+class Thermometer:
+    def __init__(self, celsius):
+        self.celsius = celsius
+
+    def fahrenheit(self):
+        return self.celsius * 9 / 5 + 32
+
+    def erhoehen(self, grad):
+        self.celsius += grad
+\end{lstlisting}
+\begin{solutionbox}{8.25cm}
+\begin{lstlisting}
+class Thermometer:
+    '''Ein Thermometer, das eine Temperatur in Grad Celsius speichert.'''
+
+    def __init__(self, celsius):
+        self.celsius = celsius
+
+    def fahrenheit(self):
+        '''
+        returns: die Temperatur in Grad Fahrenheit
+        '''
+        return self.celsius * 9 / 5 + 32
+
+    def erhoehen(self, grad):
+        '''
+        Erhöht die Temperatur.
+        grad: Zahl, um die sich die Temperatur in Grad Celsius erhöht
+        '''
+        self.celsius += grad
+\end{lstlisting}
+\end{solutionbox}

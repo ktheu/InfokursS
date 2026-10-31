@@ -1,0 +1,36 @@
+\question[5]
+Ein Geheimtext wurde mit dem Vigenère-Verfahren verschlüsselt.
+Die Schlüssellänge wurde bereits als $3$ bestimmt.
+
+Der Geheimtext lautet:
+
+\begin{center}
+\texttt{OIGORXBKXX}
+\end{center}
+
+Zur weiteren Analyse werden die Buchstaben entsprechend ihrer Position aufgeteilt:
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+1. Teiltext & 2. Teiltext & 3. Teiltext \\
+\hline
+O O B X & I R K & G X X \\
+\hline
+\end{tabular}
+\end{center}
+
+Im ersten Teiltext tritt der Buchstabe \texttt{O} am häufigsten auf.
+
+\begin{enumerate}[label=\alph*)]
+\item Erkläre, warum der Geheimtext in Teiltexte zerlegt wird.
+\item Nimm an, dass \texttt{O} für den häufigen deutschen Buchstaben \texttt{E} steht. Bestimme die zugehörige Caesar-Verschiebung für den ersten Teiltext.
+\end{enumerate}
+
+\begin{solutionbox}{5cm}
+\begin{enumerate}[label=\alph*)]
+\item Alle Buchstaben eines Teiltexts wurden mit derselben Verschiebung verschlüsselt. Jeder Teiltext kann daher wie ein Caesar-Geheimtext untersucht werden.
+\item E $\rightarrow$ O entspricht einer Verschiebung um 10 Stellen.
+Die vermutete Caesar-Verschiebung lautet daher $10$.
+\end{enumerate}
+\end{solutionbox}

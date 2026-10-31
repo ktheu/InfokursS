@@ -1,0 +1,26 @@
+\question[3]
+In unserer Implementierung des SelectionSort-Algorithmus wurde ein print-Statement eingefügt.
+Welche Zahlenfolge wird bei dem angegebenen Aufruf von SelectionSort ausgegeben?
+(Der print-Parameter end=' ' sorgt dafür, dass die Zahlen nicht in einer neuen Zeile, 
+sondern mit blank getrennt ausgegeben werden. )
+
+\begin{lstlisting}
+def selection_sort(a):
+    for i in range(len(a)-1):
+        best = i
+        best_val = a[i]
+        for j in range(i+1,len(a)):
+            if a[j] < best_val:
+                best = j
+                print(best,end= ' ')
+                best_val = a[j]
+        a[best],a[i] = a[i],a[best]
+        
+selection_sort([7,3,1,8,5,12,5,4])
+
+\end{lstlisting}
+\begin{solutionbox}{4cm}
+\begin{lstlisting}
+1 2 4 7 4 6 6 7 
+\end{lstlisting}
+\end{solutionbox}

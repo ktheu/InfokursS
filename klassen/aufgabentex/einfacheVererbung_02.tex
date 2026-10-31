@@ -1,0 +1,14 @@
+\question[3]
+Die Klasse A hat eine Methode berechne, die einen int-Wert zurückgibt.
+Die Klasse B erbt von A und überschreibt die Methode berechne. Sie addiert
+noch 10 auf das Ergebnis von A drauf. Implementiere die Methode berechne in der Klasse B.
+
+\includegraphics[height=2cm]{\pfad/einfacheVererbung_02.png}
+
+\begin{solutionbox}{2.5cm}
+\begin{lstlisting}
+class B(A):
+    def berechne(self):
+        return super().berechne() + 10
+\end{lstlisting}
+\end{solutionbox}

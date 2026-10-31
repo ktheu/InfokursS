@@ -1,0 +1,50 @@
+
+\question[4]
+Welche Ausgabe erscheint jeweils auf der Konsole?
+\begin{lstlisting}
+a.
+class Clock:
+    def __init__(self, time):
+        self.time = time
+    def print_time(self):
+        time = '6:30'
+        print(self.time)
+
+clock = Clock('5:30')
+clock.print_time()
+\end{lstlisting}
+
+\begin{lstlisting}
+b.
+class Clock:
+    def __init__(self, time):
+        self.time = time
+    def print_time(self, time):
+        print(time)
+
+clock = Clock('5:30')
+clock.print_time('10:30')
+\end{lstlisting}
+
+\begin{lstlisting}
+c.
+class Clock:
+    def __init__(self, time):
+        self.time = time
+    def print_time(self):
+        print(self.time)
+
+boston_clock = Clock('5:30')
+paris_clock = boston_clock
+paris_clock.time = '10:30'
+boston_clock.print_time()
+\end{lstlisting}
+
+
+\begin{solutionbox}{2.5cm}
+\begin{lstlisting}
+a. 5:30
+b. 10:30
+c. 10:30
+\end{lstlisting}
+\end{solutionbox}

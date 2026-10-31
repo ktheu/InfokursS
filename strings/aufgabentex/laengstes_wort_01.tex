@@ -1,0 +1,16 @@
+\question[5]
+Schreibe eine Funktion \texttt{laengstes\_wort(satz)}, die das längste Wort eines Satzes zurückgibt.
+Die Wörter sind durch Leerzeichen getrennt. Gibt es mehrere längste Wörter, soll das erste zurückgegeben werden.
+
+Beispiel: \texttt{laengstes\_wort('Heute lernen wir viele neue Methoden kennen')} liefert \texttt{'Methoden'}.
+
+\begin{solutionbox}{5cm}
+\begin{lstlisting}
+def laengstes_wort(satz):
+    best = ''
+    for wort in satz.split():
+        if len(wort) > len(best):
+            best = wort
+    return best
+\end{lstlisting}
+\end{solutionbox}

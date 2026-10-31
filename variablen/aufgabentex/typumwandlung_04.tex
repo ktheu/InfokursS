@@ -1,0 +1,18 @@
+\question[4]
+In Java wird bei einem Type Cast in einen kleineren ganzzahligen Typ einfach nur der Teil der Bits übernommen,
+der in den Zieltyp passt. Ein \texttt{byte} hat 8 Bit und wird im Zweierkomplement gespeichert.
+\begin{parts}
+\part Bestimme den Wert von \texttt{(byte) 200}. Gib die Rechnung im Binärsystem an.
+\part Bestimme den Wert von \texttt{(byte) 300}.
+\part Beschreibe das Problem, das bei solchen Typumwandlungen auftritt.
+\end{parts}
+
+\begin{solutionbox}{6cm}
+\begin{parts}
+\part $200 = 11001000_2$. Das höchste Bit ist 1, also ist die Zahl im Zweierkomplement negativ:
+$-128 + 64 + 8 = -56$.
+\part $300 = 1\,00101100_2$ hat 9 Bit. Die unteren 8 Bit \texttt{00101100} werden übernommen: $32 + 8 + 4 = 44$.
+\part Liegt der Wert außerhalb des Wertebereichs des Zieltyps, entsteht ohne Fehlermeldung ein ganz anderer Wert,
+sogar mit anderem Vorzeichen.
+\end{parts}
+\end{solutionbox}

@@ -1,0 +1,31 @@
+\question[5]
+Ein Ordner kann in einem anderen Ordner liegen.
+\begin{lstlisting}
+class Ordner:
+    def __init__(self, name, ober=None):
+        self.name = name
+        self.ober = ober
+
+c = Ordner('C:')
+s = Ordner('Schule', c)
+i = Ordner('Informatik', s)
+\end{lstlisting}
+\begin{parts}
+\part Zeichne das Klassendiagramm.
+\part Ergänze die Methode \texttt{tiefe()}, die zurückgibt, in wie vielen Ordnern ein Ordner liegt.
+\texttt{i.tiefe()} ergibt 2, \texttt{c.tiefe()} ergibt 0.
+\end{parts}
+\begin{solutionbox}{7cm}
+
+\includegraphics[height=2.5cm]{\pfad/assoziation_02.png}
+
+\begin{lstlisting}
+    def tiefe(self):
+        n = 0
+        o = self.ober
+        while o is not None:
+            n += 1
+            o = o.ober
+        return n
+\end{lstlisting}
+\end{solutionbox}

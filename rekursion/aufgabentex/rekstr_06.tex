@@ -1,0 +1,25 @@
+% repl-Aufgabe
+\question[3]
+Die rekursive Funktion \texttt{sterneDazwischen}
+fügt zwischen jedem Zeichen des übergebenen Strings das
+Zeichen '*' ein. Strings, die aus weniger als 2 Zeichen bestehen,
+bleiben unverändert. Implementiere diese Funktion.
+
+\begin{lstlisting}
+'''
+>>> sterneDazwischen('lol')
+'l*o*l'
+
+>>> sterneDazwischen('a')
+'a'
+'''
+\end{lstlisting}
+
+\begin{solutionbox}{6cm}
+\begin{lstlisting}
+def sterneDazwischen(s):
+    if len(s) <=1 :
+        return s
+    return s[0]+'*'+sterneDazwischen(s[1:])
+\end{lstlisting}
+\end{solutionbox}

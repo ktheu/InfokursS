@@ -1,0 +1,26 @@
+\question[3]
+Gegeben ist die folgende Funktion:
+\begin{lstlisting}
+def preis(netto, mwst=19, rabatt=0):
+    return netto * (100 + mwst) // 100 - rabatt
+\end{lstlisting}
+Gib an, was ausgegeben wird, bzw. ob ein Fehler auftritt.
+\begin{lstlisting}
+print(preis(100))
+print(preis(100, 7))
+print(preis(100, rabatt=10))
+print(preis(rabatt=5, netto=200))
+print(preis(50, 7, 3))
+print(preis(mwst=7))
+\end{lstlisting}
+
+\begin{solutionbox}{4cm}
+\begin{lstlisting}[language={}]
+119     mwst und rabatt haben ihre Standardwerte
+107     mwst = 7
+109     mwst = 19, rabatt = 10
+233     Schlüsselwortargumente, Reihenfolge egal: 238 - 5
+50      53 - 3
+Fehler (TypeError): für netto gibt es keinen Standardwert
+\end{lstlisting}
+\end{solutionbox}

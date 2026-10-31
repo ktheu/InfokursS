@@ -1,0 +1,20 @@
+\question[4]
+Die Funktion \texttt{doppelte\_entfernen(a)} löscht aus der sortierten Liste a (unser Datentyp) alle doppelten Elemente, sodass jeder
+Wert nur noch einmal vorkommt. Aus 1 1 2 3 3 3 5 wird 1 2 3 5. Die Liste kann leer sein.
+Benutze nur die Methoden der Liste. Implementiere die Funktion.
+\begin{solutionbox}{6cm}
+\begin{lstlisting}
+def doppelte_entfernen(a):
+    a.reset()
+    if a.endpos():
+        return
+    letztes = a.elem()
+    a.advance()
+    while not a.endpos():
+        if a.elem() == letztes:
+            a.delete()
+        else:
+            letztes = a.elem()
+            a.advance()
+\end{lstlisting}
+\end{solutionbox}

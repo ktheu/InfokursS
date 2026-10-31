@@ -1,0 +1,27 @@
+\question[4]
+Was erscheint auf der Konsole?
+\begin{lstlisting}
+class Konto:
+    def __init__(self, stand):
+        self.stand = stand
+
+def einzahlen(konto, betrag):
+    konto.stand += betrag
+    betrag = 0
+
+a = Konto(100)
+b = a
+c = Konto(150)
+x = 50
+einzahlen(b, x)
+print(a.stand, b.stand, c.stand, x)
+print(a == b, a == c, a.stand == c.stand)
+\end{lstlisting}
+\begin{solutionbox}{3cm}
+\begin{lstlisting}[language={}]
+150 150 150 50
+True False True
+\end{lstlisting}
+a und b verweisen auf dasselbe Objekt, c ist ein anderes Objekt mit demselben Kontostand.
+Die Zuweisung an den Parameter betrag ändert x nicht.
+\end{solutionbox}

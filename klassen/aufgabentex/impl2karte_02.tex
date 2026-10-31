@@ -1,0 +1,41 @@
+\question[6]
+a. Gib für die Klasse ein passendes Klassendiagramm an.
+
+b. Was erscheint auf der Konsole?
+
+
+\begin{lstlisting}
+class K:
+    def __init__(self,s):
+        self.k1 = 1
+        self.b1 = False
+        self.s = s
+
+    def m1(self, b2):
+        if b2:
+            return self.s + '#'
+        else:
+            return self.s + '?'
+
+    def bla(self):
+        return not self.b1
+
+    def m3(self, k):
+        self.k1 += k
+        self.b1 = not self.b1
+
+    def __str__(self):
+        return str(self.k1) + ' ' + str(self.b1) + ' ' + self.s
+
+k = K('hi')
+k.m3(4)
+temp = k.m1(k.bla())
+k.s = temp
+print(k)
+\end{lstlisting}
+\begin{solutionbox}{6cm}
+
+\includegraphics[height=4cm]{\pfad/impl2karte_02.png}
+
+b. 5 True hi?
+\end{solutionbox}

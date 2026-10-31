@@ -1,0 +1,16 @@
+\question[2]
+Die Hilfe zu \texttt{math.comb} beginnt so:
+\begin{lstlisting}[language={}]
+comb(n, k, /)
+    Number of ways to choose k items from n items without repetition and without order.
+    Evaluates to n! / (k! * (n - k)!) when k <= n and evaluates
+    to zero when k > n.
+\end{lstlisting}
+\begin{parts}
+\part Welche Werte haben \texttt{math.comb(5, 2)} und \texttt{math.comb(3, 5)}?
+\part Beim Lotto werden 6 aus 49 Zahlen gewählt. Mit welchem Aufruf berechnet man die Anzahl der Möglichkeiten?
+\end{parts}
+\begin{solutionbox}{2cm}
+a) 10 und 0 \\
+b) \texttt{math.comb(49, 6)}
+\end{solutionbox}

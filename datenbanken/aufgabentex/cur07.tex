@@ -1,0 +1,26 @@
+\question[3]
+Beschreibe, wie im Unterricht mit dem Datenbankmanagementsystem \texttt{SQLite} gearbeitet wurde.
+
+Gehe dabei auf die folgenden Aspekte ein:
+
+\begin{itemize}
+\item Herstellen einer Datenbankverbindung
+\item Erstellen von Tabellen
+\item Einfügen von Daten
+\item Abfragen von Daten
+\item Löschen von Daten
+\end{itemize}
+
+\begin{solutionbox}{6cm}
+Wir verwenden das Datenbankmanagementsystem (DBMS) SQLite. Der Zugriff auf die Datenbank erfolgt aus Python heraus über das Modul sqlite3, das eine Schnittstelle zu SQLite bereitstellt.
+
+\begin{itemize}
+\item Mit \texttt{sqlite3.connect()} wurde eine Verbindung zu einer Datenbank hergestellt.
+Die Verbindung zur Datenbank gibt uns einen Cursor zurück, mit dem wir unsere SQL Anweisungen
+ übermitteln.
+\item Mit dem SQL-Befehl \texttt{CREATE TABLE} wurden Tabellen angelegt.
+\item Mit \texttt{INSERT INTO} wurden Datensätze eingefügt.
+\item Mit \texttt{SELECT} wurden Daten aus Tabellen abgefragt.
+\item Mit \texttt{DELETE FROM} wurden Datensätze gelöscht.
+\end{itemize}
+\end{solutionbox}

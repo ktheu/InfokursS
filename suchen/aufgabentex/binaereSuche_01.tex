@@ -1,0 +1,25 @@
+\question[4]
+Erstelle nach dem Verfahren aus dem Unterricht eine Tabelle für die Variablen L, R, mid und den Rückgabewert
+wenn die binäre Suche auf die Liste a und das gesuchte Element x angewendet wird.
+\begin{lstlisting}
+def binaereSuche(a, x):
+    L = 0
+    R = len(a)-1
+    while L <= R:  
+        mid = (L+R)//2       
+        if a[mid] == x:
+            return mid
+        if a[mid] < x:
+            L = mid + 1
+        else:
+            R = mid - 1
+    return -1
+
+x = 32
+a = [4, 9, 13, 33, 35, 41, 46, 47, 49, 54, 58, 80, 89, 94, 97]
+\end{lstlisting}
+
+\begin{solutionbox}{5cm}
+
+\includegraphics[height=4cm]{\pfad/binaereSuche_01.png}
+\end{solutionbox}

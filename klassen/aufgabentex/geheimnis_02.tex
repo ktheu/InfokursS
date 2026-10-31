@@ -1,0 +1,20 @@
+\question[3]
+Die Klasse Person hat das Attribut alter. Dem Konstruktor von Person wird der
+Wert von alter übergeben. Implementiere die Klasse Person
+unter Wahrung des Geheimnisprinzips mit getter und setter-Methode,
+wobei allen Unterklassen von Person der direkte Zugriff auf das Attribut
+alter möglich sein soll.
+
+\begin{solutionbox}{4.75cm}
+\begin{lstlisting}
+class Person:
+    def __init__(self, alter):
+        self._alter = alter
+
+    def set_alter(self,x):
+        self._alter = x
+
+    def get_alter(self):
+        return self._alter
+\end{lstlisting}
+\end{solutionbox}

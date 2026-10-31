@@ -1,0 +1,15 @@
+\question[4]
+Berechne 25 + (-12) schriftlich in der 8-Bit Zweierkomplement-Darstellung. Gib zuerst die Codierungen beider Zahlen an.
+\begin{solutionbox}{4cm}
+\begin{lstlisting}
+  25 = 00011001
+ -12 = 11110100   (12 = 00001100, invertiert 11110011, plus 1)
+
+       00011001
+     + 11110100
+     ----------
+     1 00001101   Der Übertrag fällt weg.
+
+Ergebnis: 00001101 = 13
+\end{lstlisting}
+\end{solutionbox}

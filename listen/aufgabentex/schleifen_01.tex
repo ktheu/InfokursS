@@ -1,0 +1,23 @@
+\question[5]
+Erkläre anhand eines eigenen Python-Beispiels den Unterschied zwischen den beiden
+Möglichkeiten, eine Liste mit einer Schleife zu durchlaufen:
+
+\begin{solutionbox}{8cm}
+\begin{lstlisting}
+# Laufvariable i durchläuft die Indizes:
+a = [3, 4, 7]
+for i in range(len(a)):
+    print(i, a[i])
+
+# Laufvariable x durchläuft die Elemente:
+a = [3, 4, 7]
+for x in a:
+    print(x)
+\end{lstlisting}
+
+Unterschied: Bei der Index-Variante steht zusätzlich der
+Index zur Verfügung (z.B. um a[i] zu verändern oder um auf Nachbarn zuzugreifen), bei der
+Element-Variante erhält man direkt die Werte, der Code
+ist kürzer und übersichtlicher.
+
+\end{solutionbox}

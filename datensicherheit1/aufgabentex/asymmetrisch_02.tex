@@ -1,0 +1,21 @@
+\question[5]
+Alice möchte Bob eine vertrauliche Nachricht senden. Bob besitzt ein
+Schlüsselpaar bestehend aus einem öffentlichen und einem privaten Schlüssel.
+
+Beschreibe den Ablauf der Verschlüsselung und Entschlüsselung.
+
+Gehe dabei auf die folgenden Fragen ein:
+
+\begin{enumerate}[label=\alph*)]
+\item Welchen Schlüssel verwendet Alice zur Verschlüsselung?
+\item Welchen Schlüssel verwendet Bob zur Entschlüsselung?
+\item Warum kann eine dritte Person die Nachricht nicht lesen, obwohl der öffentliche Schlüssel bekannt ist?
+\end{enumerate}
+
+\begin{solutionbox}{5cm}
+\begin{enumerate}[label=\alph*)]
+\item Alice verschlüsselt die Nachricht mit Bobs öffentlichem Schlüssel.
+\item Bob entschlüsselt die Nachricht mit seinem privaten Schlüssel.
+\item Der öffentliche Schlüssel reicht nicht zum Entschlüsseln aus. Dazu wird der private Schlüssel benötigt, den nur Bob besitzt.
+\end{enumerate}
+\end{solutionbox}

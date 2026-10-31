@@ -1,0 +1,63 @@
+\documentclass[addpoints]{exam}
+\usepackage[utf8x]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{listings}
+\usepackage[top=1.5cm,bottom=0.5cm,headsep=0.5cm,headheight=3cm,%
+left=1.5cm,right=1.5cm]{geometry}
+
+\usepackage[T1]{fontenc}
+\usepackage{booktabs} % schöne Tabellen
+\usepackage{graphicx}
+\usepackage{amsmath,textcomp} %diverses
+\usepackage{enumitem}
+
+\lstset{language=Python, tabsize=4, basicstyle=\footnotesize, showstringspaces=false, mathescape=true}
+\lstset{literate=%
+  {==}{{=\hspace{0.15em}=}}3
+  {Ö}{{\"O}}1
+  {Ä}{{\"A}}1
+  {Ü}{{\"U}}1
+  {ß}{{\ss}}1
+  {ü}{{\"u}}1
+  {ä}{{\"a}}1
+  {ö}{{\"o}}1
+}
+\begin{document}
+\pointpoints{Punkt}{Punkte}
+\bonuspointpoints{Bonuspunkt}{Bonuspunkte}                     
+\renewcommand{\solutiontitle}{\noindent\textbf{Lösung:}%
+\enspace}
+
+\pagestyle{headandfoot}
+\runningheadrule
+
+\newcommand{\klaubez}{Aufgaben zur Einführung}
+\firstpageheader{Informatik }{\klaubez} {\thepage /\numpages}
+\runningheader{Informatik }{\klaubez} {\thepage /\numpages}
+\newcommand{\pfad}{../aufgabentex}
+
+\providecommand{\mitloesungen}{0}
+\ifnum\mitloesungen=1
+  \printanswers
+\fi
+%-------------------------------------------------------------------
+
+
+% \frage{datei}: bindet eine Aufgabe ein. Fragetext und Loesungsbox werden in eine Box
+% gesetzt und damit nie ueber einen Seitenumbruch getrennt (kein manuelles \newpage noetig).
+\newsavebox{\qbox}
+\newcommand{\frage}[1]{\setbox\qbox\vbox{\hsize\linewidth\input{\pfad/#1}}\box\qbox}
+
+
+\begin{questions}
+
+
+% Aufgaben zur Einführung
+\frage{algo_01}
+\frage{collatz_01}
+\frage{collatz_03}
+\frage{ide_01}
+
+% -------------------------------------------------
+\end{questions}
+\end{document}

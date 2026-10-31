@@ -1,0 +1,24 @@
+\question[3]
+Gegeben ist das folgende Programm.
+\begin{lstlisting}
+def a(x):
+    return b(x) + 1
+
+def b(x):
+    return c(x) * 2
+
+def c(x):
+    return x - 3
+
+print(a(5))
+\end{lstlisting}
+\begin{parts}
+\part Notiere den Aufrufstapel, während die Funktion c läuft, horizontal mit dem top-Element auf der linken Seite.
+\part Welche Funktion wird als erste vom Aufrufstapel entfernt?
+\part Welche Ausgabe erscheint auf der Konsole?
+\end{parts}
+\begin{solutionbox}{2.5cm}
+a) \texttt{c b a} \\
+b) c, denn sie wurde als letzte aufgerufen (LIFO). \\
+c) 5
+\end{solutionbox}

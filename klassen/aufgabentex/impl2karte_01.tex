@@ -1,0 +1,33 @@
+\question[6]
+a. Gib für die beiden Klassen ein passendes Klassendiagramm an.
+
+b. Was erscheint auf der Konsole?
+
+\begin{lstlisting}
+class L:
+    def __init__(self,a,d):
+        self.a = a
+        self.d = d
+
+    def m1(self):
+        self.a = self.d.x + 1
+
+    def m2(self):
+        return self.a
+
+class P:
+    def __init__(self,x):
+        self.x = x
+
+p = P(1)
+k = L(2,p)
+print(k.m1())
+print(k.m2())
+\end{lstlisting}
+
+\begin{solutionbox}{5cm}
+
+\includegraphics[height=3cm]{\pfad/impl2karte_01.png}
+
+b. None, 2
+\end{solutionbox}

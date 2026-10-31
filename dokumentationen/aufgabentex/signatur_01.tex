@@ -1,0 +1,18 @@
+\question[4]
+Die Hilfe zu \texttt{sorted} beginnt so:
+\begin{lstlisting}[language={}]
+sorted(iterable, /, *, key=None, reverse=False)
+    Return a new list containing all items from the iterable in ascending order.
+\end{lstlisting}
+Welche der folgenden Aufrufe sind für die Liste \texttt{a = [3, -1, 2]} erlaubt? Begründe die Fälle, die einen Fehler ergeben.
+\begin{lstlisting}
+sorted(a, reverse=True)      # (1)
+sorted(a, True)              # (2)
+sorted(iterable=a)           # (3)
+sorted(a, key=abs)           # (4)
+\end{lstlisting}
+\begin{solutionbox}{2cm}
+Erlaubt sind (1) und (4). \\
+(2): \texttt{reverse} steht hinter dem \texttt{*} und muss mit Namen übergeben werden. \\
+(3): \texttt{iterable} steht vor dem \texttt{/} und darf nur über die Position übergeben werden.
+\end{solutionbox}

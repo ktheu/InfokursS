@@ -1,0 +1,44 @@
+\question[5]
+Ein Online-Shop verwaltet Informationen über Kunden, Bestellungen und Produkte.
+
+\begin{itemize}
+\item Jeder Kunde besitzt eine KundenID und einen Namen.
+\item Jede Bestellung besitzt eine BestellID und ein Bestelldatum.
+\item Jedes Produkt besitzt eine ProduktID, eine Bezeichnung und einen Preis.
+\item Ein Kunde kann mehrere Bestellungen aufgeben, jede Bestellung gehört 
+jedoch genau zu einem Kunden.
+\item Eine Bestellung kann mehrere Produkte enthalten,
+ und ein Produkt kann in mehreren Bestellungen enthalten sein.
+\end{itemize}
+
+Modelliere den beschriebenen Ausschnitt der Realität als Entity-Relationship-Diagramm.
+Kennzeichne die Schlüssel und gib die Kardinalitäten an.
+
+
+\begin{solutionbox}{7cm}
+
+\includegraphics[width=9cm]{\pfad/cur04c.png}
+% Entitaeten:
+% \begin{itemize}
+% \item Kunde
+% \item Bestellung
+% \item Produkt
+% \end{itemize}
+
+% Attribute:
+% \begin{itemize}
+% \item Kunde: KundenID (Schluessel), Name
+% \item Bestellung: BestellID (Schluessel), Bestelldatum
+% \item Produkt: ProduktID (Schluessel), Bezeichnung, Preis
+% \end{itemize}
+
+% Beziehungen und Kardinalitaeten:
+% \begin{itemize}
+% \item Kunde -- gibt auf -- Bestellung: 1:n
+% \item Bestellung -- enthaelt -- Produkt: n:m
+% \end{itemize}
+
+% Hinweis:
+% Die n:m-Beziehung zwischen Bestellung und Produkt kann im relationalen Modell
+% spaeter durch eine Zwischentabelle (z. B. Bestellposition) aufgeloest werden.
+\end{solutionbox}

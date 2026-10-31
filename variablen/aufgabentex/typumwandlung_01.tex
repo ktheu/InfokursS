@@ -1,0 +1,26 @@
+\question[4]
+Gib für jede Anweisung an, was ausgegeben wird, und welchen Datentyp der ausgegebene Wert hat.
+
+\begin{lstlisting}
+print(7 / 2)
+print(7 // 2)
+print(int(7.9))
+print(int(-2.5))
+print(float(4))
+print(int('12') + 3)
+print('12' + str(3))
+print(True + True)
+\end{lstlisting}
+
+\begin{solutionbox}{5.5cm}
+\begin{lstlisting}[language={}]
+3.5    float   (/ liefert immer einen float)
+3      int     (ganzzahlige Division)
+7      int     (Nachkommastellen werden abgeschnitten)
+-2     int     (abgeschnitten in Richtung 0)
+4.0    float
+15     int     (erst str -> int, dann Addition)
+123    str     (Verkettung von zwei Strings)
+2      int     (True wird als 1 gerechnet)
+\end{lstlisting}
+\end{solutionbox}

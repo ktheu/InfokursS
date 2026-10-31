@@ -1,0 +1,24 @@
+\question[2]
+Liste ist unser selbstgebastelter Datentyp.
+Wir nummerieren die Einträge der Liste mit Zeiger \texttt{anf} an der Stelle 0.
+
+a. Welche Zahlenfolge findet sich in den Listenelementen? \\
+b. Gib den Index des Elements an, auf das der Zeiger \texttt{pos} zeigt.
+ 
+\begin{lstlisting}
+a = Liste()
+a.insert(3)
+a.advance()
+a.insert(2)
+a.insert(5)
+a.insert(3)
+a.reset()
+a.advance()
+a.delete()
+a.insert(4)
+a.advance()
+\end{lstlisting}
+\begin{solutionbox}{2cm}
+a. \texttt{3 4 5 2}  ~~~
+b. \texttt{2}
+\end{solutionbox}

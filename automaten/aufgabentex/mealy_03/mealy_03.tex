@@ -1,0 +1,36 @@
+\question[5]
+Das Drehkreuz am Eingang eines Schwimmbads wird durch den folgenden Mealy-Automaten gesteuert.
+Eingaben: $m$ (Münze eingeworfen), $d$ (Person drückt gegen das Drehkreuz).
+
+\begin{center}
+\includegraphics[height=2.8cm]{\pfad/mealy_03/mealy_03.png}
+\end{center}
+
+\begin{parts}
+\part Gib die Zustandsübergangstabelle an.
+\part Bestimme die Ausgaben und die Zustände für die Eingabefolge $m, d, d, m, m, d$.
+\part Erläutere, wie sich das Drehkreuz verhält, wenn zwei Personen hintereinander mit nur einer Münze durchgehen wollen.
+\end{parts}
+
+\begin{solutionbox}{7cm}
+\begin{parts}
+\part
+\begin{tabular}[t]{r|cc}
+ & m & d \\ \hline
+$\rightarrow$ verriegelt & offen / entriegeln & verriegelt / Alarm \\
+offen & offen / Münze zurück & verriegelt / verriegeln \\
+\end{tabular}
+\part
+\begin{tabular}[t]{lll}
+Eingabe & Ausgabe & neuer Zustand \\ \hline
+m & entriegeln & offen \\
+d & verriegeln & verriegelt \\
+d & Alarm & verriegelt \\
+m & entriegeln & offen \\
+m & Münze zurück & offen \\
+d & verriegeln & verriegelt \\
+\end{tabular}
+\part Nach der Münze ist das Drehkreuz offen. Die erste Person geht durch, danach ist es wieder verriegelt.
+Drückt die zweite Person, bleibt es verriegelt und gibt Alarm.
+\end{parts}
+\end{solutionbox}

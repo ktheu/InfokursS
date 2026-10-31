@@ -1,0 +1,18 @@
+\question[5]
+Schreibe ein Würfelprogramm. Das Fenster enthält ein Label und einen Knopf \texttt{Würfeln}. Bei jedem Klick zeigt das Label eine Zufallszahl von 1 bis 6.
+\begin{solutionbox}{6.5cm}
+\begin{lstlisting}
+import random
+import tkinter as tk
+
+def wuerfeln():
+    anzeige['text'] = random.randint(1, 6)
+
+fenster = tk.Tk()
+anzeige = tk.Label(fenster, text='-')
+anzeige.pack()
+knopf = tk.Button(fenster, text='Würfeln', command=wuerfeln)
+knopf.pack()
+fenster.mainloop()
+\end{lstlisting}
+\end{solutionbox}

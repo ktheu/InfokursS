@@ -1,0 +1,15 @@
+\question[3]
+Gegeben ist die Liste \texttt{a = [4, 18, 7, 23, 11, 6]}. 
+Schreibe ein Python-Programm, das mit linearer Suche das kleinste Element der Liste 
+findet und ausgibt (ohne die eingebaute Funktion \texttt{min} zu verwenden).
+
+\begin{solutionbox}{4cm}
+\begin{lstlisting}
+a = [4, 18, 7, 23, 11, 6]
+best = a[0]
+for x in a:
+    if x < best:
+        best = x
+print(best)
+\end{lstlisting}
+\end{solutionbox}

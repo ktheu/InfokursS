@@ -1,0 +1,26 @@
+\question[3]
+Ein kleines Büro besitzt vier Computer, einen Netzwerkdrucker und einen Switch.
+Beschreibe, wie diese Geräte miteinander verbunden werden müssen, 
+damit alle Computer den Drucker nutzen können.
+Skizziere (in Worten oder als kleine Zeichnung) den Aufbau und benenne 
+dabei die Rolle jeder Komponente.
+
+\begin{solutionbox}{7cm}
+
+Alle vier Computer und der Drucker (= Endgeräte) werden über
+je eine Verbindung (Netzwerkkabel oder WLAN) an den zentralen
+Switch (= Verteiler) angeschlossen (Sterntopologie).
+
+Der Switch empfängt die Datenpakete eines Computers und leitet
+sie gezielt an den Drucker weiter, ohne dass die anderen
+Computer die Daten ebenfalls sehen.
+
+\begin{lstlisting}
+Skizze:
+  PC1        PC2
+    \        /
+     [Switch]---- Drucker
+    /        \
+  PC3        PC4
+\end{lstlisting}
+\end{solutionbox}

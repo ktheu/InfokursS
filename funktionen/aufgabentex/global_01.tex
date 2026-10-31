@@ -1,0 +1,21 @@
+
+\question[1]
+Was wird ausgegeben?
+
+ 
+\begin{lstlisting}
+x = 10 
+def doit(k):
+    global x
+    x = 5
+    z = 7
+    w = k + z
+    return w
+
+z = doit(3) + x
+print(z) 
+\end{lstlisting}
+
+\begin{solutionbox}{1cm}
+15
+\end{solutionbox}

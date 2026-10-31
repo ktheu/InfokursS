@@ -1,0 +1,25 @@
+\question[5]
+a. Schreibe eine Klasse \texttt{Node}, die einen Knoten eines binären Baums repräsentiert.
+
+b. Schreibe eine Funktion \texttt{baum}, die den abgebildeten Baum zurückgibt.
+Nutze dazu deine Node-Klasse.
+Verschachtele die Node-Aufrufe aus Lesbarkeitsgründen
+höchstens einmal und gib den temporären Teilbäumen sprechende Namen.
+
+\includegraphics[height=4cm]{\pfad/baumdef_02.png}
+
+\begin{solutionbox}{5.5cm}
+\begin{lstlisting}
+class Node:
+    def __init__(self, val, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def baum():
+    h = Node('H',Node('B'),None)
+    c = Node('C',h,None)
+    a = Node('A',Node('D'),c)
+    return a
+\end{lstlisting}
+\end{solutionbox}

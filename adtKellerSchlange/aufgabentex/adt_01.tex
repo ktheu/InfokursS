@@ -1,0 +1,22 @@
+\question[2]
+Liste, Keller und Schlange sind Klassen mit den bekannten Operationen als Methoden.
+Welche Zahlenfolge findet sich in den Listenelementen?
+ 
+\begin{lstlisting}
+a = Liste()
+k = Keller()
+s = Schlange()
+
+for i in range(5):
+    s.enq(i)
+    k.push(5+i)
+for i in range(5):
+    a.insert(k.top())
+    a.insert(s.front())
+    k.pop()
+    s.deq()
+\end{lstlisting}
+
+\begin{solutionbox}{2cm}
+\texttt{4 5 3 6 2 7 1 8 0 9}  
+\end{solutionbox}

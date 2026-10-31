@@ -1,0 +1,11 @@
+\question[3]
+Schreibe eine Funktion \texttt{lineareSuche(a, x)}, die den Index des ersten Vorkommens von \texttt{x} in der Liste \texttt{a} zurückgibt, oder -1, wenn \texttt{x} nicht vorkommt.
+\begin{solutionbox}{3cm}
+\begin{lstlisting}
+def lineareSuche(a, x):
+    for i in range(len(a)):
+        if a[i] == x:
+            return i
+    return -1
+\end{lstlisting}
+\end{solutionbox}

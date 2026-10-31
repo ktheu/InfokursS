@@ -1,0 +1,25 @@
+\question[3]
+Gegeben ist die folgende Funktion:
+\begin{lstlisting}
+def mittelwert(a, b):
+    return (a + b) / 2
+\end{lstlisting}
+Ergänze einen docstring, der beschreibt, welche Parameter die Funktion erwartet
+und was sie zurückgibt. Gib im docstring außerdem zwei Beispielaufrufe mit ihren Ergebnissen an.
+
+\begin{solutionbox}{6cm}
+\begin{lstlisting}
+def mittelwert(a, b):
+    '''
+    a, b: zwei Zahlen
+    returns: den Mittelwert von a und b
+
+    >>> mittelwert(4, 8)
+    6.0
+
+    >>> mittelwert(3, 4)
+    3.5
+    '''
+    return (a + b) / 2
+\end{lstlisting}
+\end{solutionbox}

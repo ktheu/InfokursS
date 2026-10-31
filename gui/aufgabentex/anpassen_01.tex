@@ -1,0 +1,20 @@
+\question[4]
+Das Programm zum Zahlenraten aus dem Unterricht enthält die folgende Funktion.
+\begin{lstlisting}
+def pruefen():
+    tipp = int(eingabe.get())
+    if tipp < zahl:
+        ausgabe['text'] = 'zu klein'
+    elif tipp > zahl:
+        ausgabe['text'] = 'zu groß'
+    else:
+        ausgabe['text'] = 'richtig'
+\end{lstlisting}
+Das Programm soll zusätzlich in einem Label \texttt{versuche} die Anzahl der Versuche anzeigen. Das Label wurde mit \texttt{text='0'} erzeugt.
+Welche Zeilen ergänzen wir in der Funktion?
+\begin{solutionbox}{2.5cm}
+\begin{lstlisting}
+anzahl = int(versuche['text'])
+versuche['text'] = anzahl + 1
+\end{lstlisting}
+\end{solutionbox}

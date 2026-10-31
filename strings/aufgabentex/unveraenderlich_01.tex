@@ -1,0 +1,29 @@
+\question[4]
+Das folgende Programm soll aus \texttt{'Habicht'} den String \texttt{'KABICHT'} machen.
+
+\begin{lstlisting}
+s = 'Habicht'
+s[0] = 'K'
+s.upper()
+print(s)
+\end{lstlisting}
+
+\begin{parts}
+\part Zeile 2 führt zu einem Fehler. Erläutere, warum.
+\part Auch ohne Zeile 2 würde \texttt{Habicht} ausgegeben und nicht \texttt{HABICHT}. Erläutere, warum.
+\part Gib ein korrigiertes Programm an.
+\end{parts}
+
+\begin{solutionbox}{6cm}
+\begin{parts}
+\part Strings sind unveränderlich. Man kann einzelne Zeichen nicht durch eine Zuweisung ändern (\texttt{TypeError}).
+\part \texttt{upper()} verändert den String nicht, sondern liefert einen neuen String. Dieser wird nicht gespeichert.
+\part
+\begin{lstlisting}
+s = 'Habicht'
+s = 'K' + s[1:]
+s = s.upper()
+print(s)
+\end{lstlisting}
+\end{parts}
+\end{solutionbox}

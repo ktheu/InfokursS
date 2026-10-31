@@ -1,0 +1,15 @@
+\question[3]
+Schreibe die Funktion so um, dass sie durch gute Namen und eine Konstante ohne Kommentare verständlich ist.
+\begin{lstlisting}
+def f(a, b):
+    # a: Stunden, b: Stundenlohn, 20 Prozent gehen ab
+    return a * b * 0.8
+\end{lstlisting}
+\begin{solutionbox}{3cm}
+\begin{lstlisting}
+NETTO_ANTEIL = 0.8
+
+def nettolohn(stunden, stundenlohn):
+    return stunden * stundenlohn * NETTO_ANTEIL
+\end{lstlisting}
+\end{solutionbox}

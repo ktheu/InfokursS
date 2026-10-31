@@ -1,0 +1,19 @@
+\question[2]
+a. Welche Datenstruktur wird hier verwendet (Liste/Keller/Schlange)? \\
+b. Was erscheint auf der Konsole?
+ 
+\begin{lstlisting}
+a = []
+
+for k in range(3):
+    for i in range(3):
+        a.append(i)
+    print(a.pop(), end = ' ')
+
+while a:
+    print(a.pop(), end = ' ')
+\end{lstlisting}
+
+\begin{solutionbox}{2cm}
+\texttt{a. Keller  ~~   b. 2 2 2 1 0 1 0 1 0} 
+\end{solutionbox}

@@ -1,0 +1,17 @@
+\question[3]
+Gegeben ist der folgende Code:
+\begin{lstlisting}
+t = 'Mississippi'
+print(t.replace('ss', 's').upper()[1:6].count('S'))
+\end{lstlisting}
+Gib die Zwischenergebnisse der einzelnen Schritte und die Ausgabe an.
+
+\begin{solutionbox}{4cm}
+\begin{lstlisting}[language={}]
+t.replace('ss', 's')    'Misisippi'
+.upper()                'MISISIPPI'
+[1:6]                   'ISISI'
+.count('S')             2
+\end{lstlisting}
+Ausgabe: \texttt{2}
+\end{solutionbox}

@@ -1,0 +1,27 @@
+\question[4]
+Ein Von-Neumann-Rechner arbeitet in einem ständigen Befehlszyklus.
+\begin{enumerate}[label=\alph*)]
+\item Beschreibe die drei Phasen des Befehlszyklus.
+\item Gib die Mikrobefehle an, mit denen Johnny in der ersten Phase einen Befehl holt,
+und erkläre jeweils, was passiert.
+\end{enumerate}
+
+\begin{solutionbox}{8cm}
+\begin{enumerate}[label=\alph*)]
+\item
+\begin{itemize}
+\item \textbf{Holen} (Fetch): Der Befehl, auf den der Befehlszähler zeigt, wird aus dem Speicher
+ins Befehlsregister geholt.
+\item \textbf{Entschlüsseln} (Decode): Das Steuerwerk stellt fest, um welchen Befehl es sich handelt.
+\item \textbf{Ausführen} (Execute): Der Befehl wird ausgeführt. Der Befehlszähler wird auf den
+nächsten Befehl gesetzt (bei einem Sprung auf die Sprungadresse). Danach beginnt der Zyklus von vorn.
+\end{itemize}
+\item
+\begin{verbatim}
+pc->ab    Adresse des nächsten Befehls auf den Adressbus
+ram->db   Befehl aus dem RAM auf den Datenbus
+db->ins   Befehl ins Befehlsregister
+ins->mc   Sprung zum Mikroprogramm des Befehls (Entschlüsseln)
+\end{verbatim}
+\end{enumerate}
+\end{solutionbox}

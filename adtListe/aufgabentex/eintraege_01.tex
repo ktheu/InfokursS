@@ -1,0 +1,38 @@
+\question[5]
+Liste ist unser selbstgebastelter Datentyp.
+Das Bild zeigt die Situation der Liste a.
+
+\includegraphics[height=3cm]{\pfad/eintraege_01.png}
+
+a. Was liefern die folgenden Anweisungen: 
+\begin{lstlisting}
+print(a.elem()) 
+print(a.endpos())
+\end{lstlisting}
+b. Zeichne die Situation nach der Ausführung von a.insert(12) \\
+c. Was liefern jetzt die folgenden Anweisungen: 
+\begin{lstlisting}
+print(a.elem()) 
+print(a.endpos())
+\end{lstlisting}
+d. Wir gehen nochmal von der Anfangssituation aus. Zeichne die Situation nach Ausführung von a.delete() \\
+e. Was liefern jetzt die folgenden Anweisungen: 
+\begin{lstlisting}
+print(a.endpos())
+print(a.elem())
+\end{lstlisting}
+
+
+\begin{solutionbox}{9.25cm}
+a. 9, False \\
+b. 
+
+\includegraphics[height=3cm]{\pfad/eintraege_01L1.png}
+
+c. 12, False \\
+d.
+
+\includegraphics[height=3cm]{\pfad/eintraege_01L2.png}
+
+e. True, ein Fehler wird geworfen
+\end{solutionbox}

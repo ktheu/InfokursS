@@ -1,0 +1,18 @@
+\question[4]
+Die Klasse A hat ein Attribut zahl. Dem Konstruktor von A wird der
+Wert für das Attribut zahl übergeben. Die Klasse B erbt von A und erhält
+ein weiteres Attribut zahl2. Dem Konstruktor von B werden Werte für
+beide Attribute übergeben, der Konstruktor von B nutzt den Konstruktor von A.
+Implementiere die Klasse B.
+
+\includegraphics[height=2cm]{\pfad/einfacheVererbung_01.png}
+
+
+\begin{solutionbox}{3cm}
+\begin{lstlisting}
+class B(A):
+    def __init__(self,zahl,zahl2):
+        super().__init__(zahl)
+        self.zahl2 = zahl2
+\end{lstlisting}
+\end{solutionbox}

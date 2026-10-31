@@ -1,0 +1,26 @@
+\question[3]
+Welche Ausgabe erscheint auf der Konsole?
+\begin{lstlisting}
+class VerweisBox:
+    def __init__(self, inhalt, unten=None, oben=None):
+        self.inhalt = inhalt
+        self.unten = unten
+        self.oben = oben
+        if unten is not None: self.unten.oben = self
+        if oben  is not None: self.oben.unten = self
+
+    def __str__(self):
+        return self.inhalt
+
+a = VerweisBox('a')
+b = VerweisBox('b')
+c = VerweisBox('c',a,b)
+d = VerweisBox('d',c,a)
+print(c.unten.oben)
+print(b.unten.oben.unten.unten)
+print(d.unten.unten.unten)
+\end{lstlisting}
+
+\begin{solutionbox}{2cm}
+c, a, d
+\end{solutionbox}

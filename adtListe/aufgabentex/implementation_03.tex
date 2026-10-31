@@ -1,0 +1,27 @@
+\question[4]
+Die Klasse Eintrag und der Konstruktor unserer Klasse Liste sind gegeben.
+\begin{lstlisting}
+class Eintrag:
+    def __init__(self):
+        self.inhalt = None
+        self.next = None
+
+class Liste:
+    def __init__(self):
+        self.anf = Eintrag()
+        self.pos = self.anf
+\end{lstlisting}
+Implementiere die Methoden \texttt{elem} und \texttt{insert}. Achte dabei auf mögliche Fehlersituationen.
+\begin{solutionbox}{4.75cm}
+\begin{lstlisting}
+    def elem(self):
+        if self.endpos(): raise RuntimeError("Fehler: Liste am Ende")
+        return self.pos.next.inhalt
+
+    def insert(self, x):
+        hilf = Eintrag()
+        hilf.inhalt = x
+        hilf.next = self.pos.next
+        self.pos.next = hilf
+\end{lstlisting}
+\end{solutionbox}

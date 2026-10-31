@@ -1,0 +1,33 @@
+\question[6]
+Liste ist unser selbstgebastelter Datentyp. Benutze nur die Methoden der Liste.
+\begin{parts}
+\part Erzeuge eine Liste a mit den Zahlen von 1 bis 100 in aufsteigender Reihenfolge.
+\part Berechne die Summe der Elemente von a.
+\part Verschiebe alle durch 3 teilbaren Zahlen aus a in eine neue Liste b. Die Reihenfolge der Zahlen soll
+erhalten bleiben. Danach ist die Summe der Elemente von a gleich 3367 und die von b gleich 1683.
+\end{parts}
+\begin{solutionbox}{9.5cm}
+\begin{lstlisting}
+a = Liste()
+for i in range(1, 101):
+    a.insert(i)
+    a.advance()
+
+summe = 0
+a.reset()
+while not a.endpos():
+    summe += a.elem()
+    a.advance()
+
+b = Liste()
+a.reset()
+while not a.endpos():
+    x = a.elem()
+    if x % 3 == 0:
+        b.insert(x)
+        b.advance()
+        a.delete()
+    else:
+        a.advance()
+\end{lstlisting}
+\end{solutionbox}

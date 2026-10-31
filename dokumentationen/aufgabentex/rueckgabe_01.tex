@@ -1,0 +1,24 @@
+\question[4]
+Die Hilfe zu zwei Methoden lautet:
+\begin{lstlisting}[language={}]
+sort(self, /, *, key=None, reverse=False)
+    Sort the list in ascending order and return None.
+
+shuffle(x)
+    Shuffle list x in place, and return None.
+\end{lstlisting}
+\begin{parts}
+\part Was erscheint auf der Konsole?
+\begin{lstlisting}
+a = [3, 1, 2]
+b = a.sort()
+print(a, b)
+\end{lstlisting}
+\part Was bedeutet \texttt{in place}?
+\part Eine Liste \texttt{karten} soll gemischt werden. Warum ist \texttt{karten = random.shuffle(karten)} falsch?
+\end{parts}
+\begin{solutionbox}{2cm}
+a) \texttt{[1, 2, 3] None} \\
+b) Die Liste selbst wird verändert, es entsteht keine neue Liste. \\
+c) \texttt{shuffle} gibt \texttt{None} zurück, \texttt{karten} wäre danach \texttt{None}. Richtig ist \texttt{random.shuffle(karten)}.
+\end{solutionbox}

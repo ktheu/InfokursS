@@ -1,0 +1,22 @@
+\question[3]
+Die Funktion \texttt{anzahl} soll die Anzahl der Knoten eines Baums zurückgeben.
+\begin{lstlisting}
+def anzahl(node):
+    return 1 + anzahl(node.left) + anzahl(node.right)
+
+print(anzahl(Node(5)))
+\end{lstlisting}
+\begin{parts}
+\part Was passiert beim Aufruf? Begründe.
+\part Korrigiere die Funktion.
+\end{parts}
+\begin{solutionbox}{4.25cm}
+a) Es gibt einen AttributeError. Der Basisfall fehlt: \texttt{anzahl} wird mit dem linken Kind aufgerufen, das ist None, und None hat kein Attribut left.\\
+b)
+\begin{lstlisting}
+def anzahl(node):
+    if node is None:
+        return 0
+    return 1 + anzahl(node.left) + anzahl(node.right)
+\end{lstlisting}
+\end{solutionbox}

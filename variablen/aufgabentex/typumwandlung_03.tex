@@ -1,0 +1,28 @@
+\question[5]
+Gib für jede Anweisung an, ob eine implizite oder eine explizite Typumwandlung stattfindet, welchen Wert die
+Variable danach hat und welches Problem dabei auftritt (falls eines auftritt). Bei \texttt{e} genügt es, die
+Größenordnung des Wertes abzuschätzen.
+
+Zur Erinnerung: Ein \texttt{float} speichert höchstens etwa 16 Dezimalstellen.
+
+\begin{lstlisting}
+a = 3 + 0.5
+b = int(9.99)
+c = int('3.5')
+d = bool('False')
+e = float(2 ** 60 + 1)
+\end{lstlisting}
+
+\begin{solutionbox}{6cm}
+\mbox{}\\
+\begin{tabular}[t]{lllp{7.5cm}}
+ & Umwandlung & Wert & Problem \\ \hline
+\texttt{a} & implizit & \texttt{3.5} & keines, \texttt{int} wird zu \texttt{float} \\
+\texttt{b} & explizit & \texttt{9} & Informationsverlust: Nachkommastellen werden abgeschnitten, nicht gerundet \\
+\texttt{c} & explizit & -- & \texttt{ValueError}: \texttt{'3.5'} ist keine ganze Zahl \\
+\texttt{d} & explizit & \texttt{True} & überraschend: jeder nicht leere String ergibt \texttt{True} \\
+\texttt{e} & explizit & ca. $10^{18}$ & Genauigkeitsverlust: $2^{60} = (2^{10})^6 \approx (10^3)^6 = 10^{18}$
+hat 19 Stellen, ein \texttt{float} speichert aber höchstens etwa 16. Die letzten Stellen gehen verloren,
+die $+1$ verschwindet. (Genauer Wert: \texttt{1.152921504606847e+18}) \\
+\end{tabular}
+\end{solutionbox}

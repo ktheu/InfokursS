@@ -1,0 +1,53 @@
+%klassen  ------------------------
+\question[9]
+a. Implementiere eine Klasse \texttt{Filmmusik} mit den Attributen
+\texttt{film} und \texttt{komponist}, so dass
+die folgenden Filmmusik-Objekte erzeugt werden können:
+\begin{lstlisting}
+m1 = Filmmusik("Jurassic Park","John Williams")
+m2 = Filmmusik("Star Wars","John Williams")
+m3 = Filmmusik("Terminal","John Williams")
+m4 = Filmmusik("Inception","Hans Zimmer")
+m5 = Filmmusik("Interstellar","Hans Zimmer")
+m6 = Filmmusik("Lord of the Rings","Howard Shore")
+\end{lstlisting}
+b. Implementiere eine string-Methode, die mit \texttt{print(m1)}
+folgende Ausgabe erzeugt: \\
+\texttt{Jurassic Park - Musik: John Williams} \\
+c. Erzeuge eine Liste \texttt{fmlist} mit den Objekten m1, m2... m6.
+Die Objekte m1 bis m6 können als erzeugt vorausgesetzt werden. \\
+d. Gehe mit einer Schleife durch die \texttt{fmlist} und gib
+alle Filmtitel mit Musik von John Williams aus. \\
+e. Erzeuge für die 6 Filme in \texttt{fmlist} ein Dictionary
+\texttt{fmmap}, bei dem jedem Komponistennamen (key) eine Liste seiner
+Filmmusik-Objekte als value zugeordnet ist. \\
+
+Beispiel einer Nutzung von \texttt{fmmap}:
+\begin{lstlisting}
+>>> for f in fmmap["Hans Zimmer"]:
+  	print(f)
+
+Inception - Musik: Hans Zimmer
+Interstellar - Musik: Hans Zimmer
+\end{lstlisting}
+
+\begin{solutionbox}{7.5cm}
+\begin{lstlisting}
+class Filmmusik:
+    def __init__(self,film,komponist):
+        self.film = film
+        self.komponist = komponist
+
+    def __str__(self):
+        return self.film + " - Musik: " + self.komponist
+
+
+fmlist = [m1,m2,m3,m4,m5,m6]
+for f in fmlist:
+    if f.komponist == "John Williams":
+        print(f.film)
+
+fmmap =  {"John Williams":[m1,m2,m3],
+              "Hans Zimmer":[m4,m5],"Howard Shore":[m6]}
+\end{lstlisting}
+\end{solutionbox}

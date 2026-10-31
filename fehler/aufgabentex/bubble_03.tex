@@ -1,0 +1,16 @@
+\question[4]
+Sortiere die Liste \texttt{[6, 2, 5, 1]} von Hand mit Bubblesort.
+Gib die Liste nach jedem Durchgang der while-Schleife an.
+Wie viele Durchgänge sind nötig, und wie oft wird insgesamt getauscht?
+
+\begin{solutionbox}{5cm}
+\begin{lstlisting}[language={}]
+Durchgang 1:  [2, 5, 1, 6]    (3 Tausche: 6-2, 6-5, 6-1)
+Durchgang 2:  [2, 1, 5, 6]    (1 Tausch:  5-1)
+Durchgang 3:  [1, 2, 5, 6]    (1 Tausch:  2-1)
+Durchgang 4:  [1, 2, 5, 6]    (kein Tausch -> fertig)
+\end{lstlisting}
+Es sind 4 Durchgänge nötig, insgesamt wird 5-mal getauscht.
+Erst im 4. Durchgang, in dem nichts mehr getauscht wird, erkennt der Algorithmus,
+dass die Liste sortiert ist.
+\end{solutionbox}

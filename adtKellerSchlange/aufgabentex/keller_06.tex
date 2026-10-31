@@ -1,0 +1,25 @@
+\question[4]
+Die Dualdarstellung einer Zahl $n$ erhält man, indem man $n$ wiederholt durch 2 teilt und sich die Reste merkt. Der zuerst
+berechnete Rest ist die letzte Ziffer. Die Funktion \texttt{dualzahl(n)} bekommt eine ganze Zahl $n \geq 0$ und gibt
+die Dualdarstellung als String zurück. Benutze für die Reste eine Python-Liste als Keller.
+Die Funktion \texttt{bin} darf nicht benutzt werden.
+\begin{lstlisting}
+print(dualzahl(6), dualzahl(37), dualzahl(0))
+
+110 100101 0
+\end{lstlisting}
+\begin{solutionbox}{5.5cm}
+\begin{lstlisting}
+def dualzahl(n):
+    if n == 0:
+        return '0'
+    k = []
+    while n > 0:
+        k.append(n % 2)
+        n = n // 2
+    s = ''
+    while k:
+        s += str(k.pop())
+    return s
+\end{lstlisting}
+\end{solutionbox}

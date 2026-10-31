@@ -1,0 +1,16 @@
+\question[4]
+Berechne 18 - 30 schriftlich in der 8-Bit Zweierkomplement-Darstellung und interpretiere das Ergebnis.
+\begin{solutionbox}{4.5cm}
+\begin{lstlisting}
+  18 = 00010010
+ -30 = 11100010   (30 = 00011110, invertiert 11100001, plus 1)
+
+       00010010
+     + 11100010
+     ----------
+       11110100
+
+Das Ergebnis beginnt mit 1, ist also negativ.
+Invertiert: 00001011, plus 1: 00001100 = 12. Das Ergebnis ist -12.
+\end{lstlisting}
+\end{solutionbox}

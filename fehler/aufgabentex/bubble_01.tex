@@ -1,0 +1,23 @@
+\question[4]
+Der folgende Code soll eine Liste mit Bubblesort aufsteigend sortieren. An zwei Stellen (\texttt{\_\_\_\_}) fehlt Code. Ergänze die fehlenden Zeilen.
+\begin{lstlisting}
+def bubble_sort(a):
+    getauscht = True
+    while getauscht:
+        getauscht = ____
+        for i in range(len(a)-1):
+            if a[i] > a[i+1]:
+                a[i], a[i+1] = a[i+1], a[i]
+                ____
+\end{lstlisting}
+
+\begin{solutionbox}{3cm}
+\begin{lstlisting}
+1. Stelle: getauscht = False
+   (wird zu Beginn jedes Durchgangs zurückgesetzt)
+
+2. Stelle: getauscht = True
+   (wird nach einem Tausch gesetzt, damit noch ein weiterer
+   Durchgang stattfindet)
+\end{lstlisting}
+\end{solutionbox}

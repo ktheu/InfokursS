@@ -1,0 +1,20 @@
+\question[3]
+Gegeben ist die folgende Funktion:
+\begin{lstlisting}
+def rek(n):
+    if n == 0: return 0
+    return n + rek(n-2)
+\end{lstlisting}
+\begin{parts}
+\part Was liefert \texttt{rek(6)}?
+\part Was passiert beim Aufruf \texttt{rek(5)}? Begründe.
+\part Ändere den Basisfall so, dass auch \texttt{rek(5)} ein Ergebnis liefert. Welches?
+\end{parts}
+\begin{solutionbox}{4cm}
+\begin{enumerate}[label=\alph*)]
+\item $6 + 4 + 2 + 0 = 12$
+\item Die Aufrufe sind \texttt{rek(5)}, \texttt{rek(3)}, \texttt{rek(1)}, \texttt{rek(-1)}, \ldots{} Der Basisfall
+\texttt{n == 0} wird nie erreicht. Nach zu vielen geschachtelten Aufrufen (normalerweise 1000) bricht Python mit einem \texttt{RecursionError} ab.
+\item \texttt{if n <= 0: return 0}. Dann ist \texttt{rek(5)} $= 5 + 3 + 1 + 0 = 9$.
+\end{enumerate}
+\end{solutionbox}

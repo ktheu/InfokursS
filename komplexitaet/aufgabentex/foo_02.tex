@@ -1,0 +1,17 @@
+\question[2]
+In welcher Komplexitätsklasse ist die Laufzeit der
+   Funktion \texttt{foo} in Abhängigkeit von der Länge
+    n der übergebenen Liste a im best case und im worst case?
+\begin{lstlisting}
+def foo(a):
+    n = len(a)
+    for i in range(n-1):
+        for j in range(i+1,n):
+            if a[i] == a[j]:
+                return True
+    return False
+\end{lstlisting}
+
+\begin{solutionbox}{1cm}
+best case: $O(1)$, worst case: $O(n^2)$
+\end{solutionbox}

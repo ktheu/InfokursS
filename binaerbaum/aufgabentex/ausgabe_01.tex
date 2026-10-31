@@ -1,0 +1,19 @@
+\question[3]
+Gegeben ist das folgende Programm.
+\begin{lstlisting}
+def f(node):
+    if node is None:
+        return 0
+    return node.val + f(node.left)
+
+baum = Node(2, Node(5, Node(1), Node(9)), Node(4))
+print(f(baum))
+\end{lstlisting}
+\begin{parts}
+\part Welche Ausgabe erscheint auf der Konsole?
+\part Beschreibe in einem Satz, was die Funktion f berechnet.
+\end{parts}
+\begin{solutionbox}{2cm}
+a) 8 \\
+b) die Summe der Werte auf dem Weg, der von der Wurzel aus immer nach links führt
+\end{solutionbox}

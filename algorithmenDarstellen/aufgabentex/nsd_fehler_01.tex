@@ -1,0 +1,14 @@
+\question[3]
+Der folgende Algorithmus soll die Summe der Zahlen von 1 bis n ausgeben.
+
+\includegraphics[height=4.1cm]{\pfad/nsd_fehler_01.png}
+
+\begin{parts}
+\part Was passiert beim Ablauf für n = 3?
+\part Korrigiere den Algorithmus.
+\end{parts}
+\begin{solutionbox}{2cm}
+a) Die Schleife endet nie, weil i nicht verändert wird (Endlosschleife).
+
+b) Im Rumpf der Schleife fehlt unter \texttt{s = s + i} der Block \texttt{i = i + 1}.
+\end{solutionbox}

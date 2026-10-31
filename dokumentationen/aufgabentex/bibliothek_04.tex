@@ -1,0 +1,16 @@
+\question[3]
+Die Hilfe zu der Methode \texttt{most\_common} der Klasse \texttt{collections.Counter} beginnt so:
+\begin{lstlisting}[language={}]
+most_common(self, n=None)
+    List the n most common elements and their counts from the most
+    common to the least.  If n is None, then list all element counts.
+\end{lstlisting}
+Schreibe ein Programm, das die zwei häufigsten Buchstaben im Wort \texttt{'abrakadabra'} mit ihrer Anzahl ausgibt.
+\begin{solutionbox}{3cm}
+\begin{lstlisting}
+from collections import Counter
+
+print(Counter('abrakadabra').most_common(2))
+\end{lstlisting}
+Ausgabe: \texttt{[('a', 5), ('b', 2)]}
+\end{solutionbox}

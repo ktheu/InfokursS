@@ -1,0 +1,14 @@
+\question[3]
+Eine Python-Liste ist ein Array. Unsere Liste besteht aus verketteten Einträgen. Entscheide und begründe kurz.
+\begin{parts}
+\part Ein Programm greift sehr oft über die Position i auf ein Element zu. Welche Datenstruktur passt besser?
+\part Ein Programm geht durch eine lange Warteliste und fügt dabei oft Elemente ein oder entfernt sie.
+Welche Datenstruktur passt besser?
+\part Warum lohnt sich die binäre Suche auf unserer Liste nicht, auch wenn sie sortiert ist?
+\end{parts}
+\begin{solutionbox}{4cm}
+a) Das Array. Der Zugriff über die Position braucht dort O(1), bei unserer Liste O(n). \\
+b) Die verkettete Liste. Einfügen und Löschen an der aktuellen Stelle brauchen O(1), beim Array müssen alle
+Elemente dahinter verschoben werden. \\
+c) Die binäre Suche springt in die Mitte. Bei der verketteten Liste müsste man sich dorthin durchhangeln, jeder dieser Sprünge kostet O(n).
+\end{solutionbox}

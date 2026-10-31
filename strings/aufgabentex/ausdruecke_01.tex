@@ -1,0 +1,26 @@
+\question[4]
+Gegeben ist \texttt{s = 'Informatik'}. Gib an, welchen Wert die folgenden Ausdrücke haben.
+
+\begin{lstlisting}
+s[2:5]
+s[-4:]
+s[::3]
+s[::-1][:3]
+s.upper().count('I')
+s.lower().replace('i', '!')
+s.find('mat')
+len(s[1:-1])
+\end{lstlisting}
+
+\begin{solutionbox}{5cm}
+\begin{lstlisting}[language={}]
+'for'           Index 2 bis 4
+'atik'          die letzten 4 Zeichen
+'Ioak'          Index 0, 3, 6, 9
+'kit'           rückwärts 'kitamrofnI', davon die ersten 3 Zeichen
+2               'INFORMATIK' enthält zweimal 'I'
+'!nformat!k'    nach lower() sind beide i klein
+5               'mat' beginnt an Index 5
+8               ohne das erste und das letzte Zeichen
+\end{lstlisting}
+\end{solutionbox}

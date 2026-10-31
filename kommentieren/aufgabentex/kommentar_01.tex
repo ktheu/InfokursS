@@ -1,0 +1,18 @@
+\question[3]
+Gegeben ist das folgende Programm mit vier Kommentaren.
+\begin{lstlisting}
+a = [3, -1, 4]         # (1) Liste a
+s = 0                  # (2) setze s auf 0
+# (3) von hinten, weil pop die Indizes der folgenden Elemente verschiebt
+for i in range(len(a)-1, -1, -1):
+    if a[i] < 0:
+        a.pop(i)       # (4) entferne das Element
+\end{lstlisting}
+\begin{parts}
+\part Welcher Kommentar ist sinnvoll?
+\part Begründe, warum die anderen Kommentare nicht sinnvoll sind.
+\end{parts}
+\begin{solutionbox}{2cm}
+a) Kommentar (3). \\
+b) Die Kommentare (1), (2) und (4) wiederholen nur, was im Code steht. Kommentar (3) erklärt, warum die Schleife rückwärts läuft.
+\end{solutionbox}

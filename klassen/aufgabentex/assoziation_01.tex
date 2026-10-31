@@ -1,0 +1,45 @@
+\question[6]
+Implementiere die beiden Klassen. \texttt{laengstes()} gibt das Lied mit der größten Dauer zurück.
+
+\includegraphics[height=3cm]{\pfad/assoziation_01.png}
+
+Folgender Dialog soll möglich sein:
+\begin{lstlisting}
+p = Playlist('Sport')
+p.hinzufuegen(Lied('Thunderstruck', 292))
+p.hinzufuegen(Lied('Eye of the Tiger', 246))
+print(p.gesamtdauer())
+print(p.laengstes().titel)
+
+538
+Thunderstruck
+\end{lstlisting}
+\begin{solutionbox}{9.5cm}
+\begin{lstlisting}
+class Lied:
+    def __init__(self, titel, dauer):
+        self.titel = titel
+        self.dauer = dauer
+
+class Playlist:
+    def __init__(self, name):
+        self.name = name
+        self.lieder = []
+
+    def hinzufuegen(self, lied):
+        self.lieder.append(lied)
+
+    def gesamtdauer(self):
+        summe = 0
+        for lied in self.lieder:
+            summe += lied.dauer
+        return summe
+
+    def laengstes(self):
+        bestes = self.lieder[0]
+        for lied in self.lieder:
+            if lied.dauer > bestes.dauer:
+                bestes = lied
+        return bestes
+\end{lstlisting}
+\end{solutionbox}

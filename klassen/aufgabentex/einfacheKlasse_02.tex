@@ -1,0 +1,22 @@
+\question[3]
+Die Klasse Zutat hat die Attribute bezeichnung und menge. Implementiere die Klasse
+Zutat. Folgender Dialog soll möglich sein:
+
+\begin{lstlisting}
+z = Zutat(800,"Mehl")
+print(z)
+
+Es werden 800g Mehl benötigt.
+\end{lstlisting}
+
+\begin{solutionbox}{4cm}
+\begin{lstlisting}
+class Zutat:
+    def __init__(self,menge,bezeichnung):
+        self.menge = menge
+        self.bezeichnung = bezeichnung
+
+    def __str__(self):
+        return f"Es werden {self.menge}g {self.bezeichnung} benötigt." 
+\end{lstlisting}
+\end{solutionbox}

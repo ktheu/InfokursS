@@ -1,0 +1,28 @@
+\question[4]
+Gegeben ist die Zustandsübergangstabelle eines Mealy-Automaten mit Eingabe- und Ausgabealphabet $\{0,1\}$.
+In jeder Zelle steht \enquote{Folgezustand / Ausgabe}.
+
+\begin{center}
+\begin{tabular}{r|cc}
+ & 0 & 1 \\ \hline
+$\rightarrow s_0$ & $s_0$ / 0 & $s_1$ / 1 \\
+$s_1$ & $s_0$ / 1 & $s_1$ / 0 \\
+\end{tabular}
+\end{center}
+
+\begin{parts}
+\part Zeichne das Zustandsdiagramm.
+\part Bestimme die Ausgabe für die Eingabe $0011101$.
+\part Beschreibe, wann der Automat eine 1 ausgibt.
+\end{parts}
+
+\begin{solutionbox}{6cm}
+\begin{parts}
+\part \mbox{}\\
+\includegraphics[height=2.5cm]{\pfad/mealy_02/mealy_02.png}
+\part $0010011$
+\part Der Automat gibt eine 1 aus, wenn sich das Eingabesymbol gegenüber dem vorherigen ändert
+(am Anfang wird eine 0 als vorheriges Symbol angenommen). Im Zustand $s_0$ war das letzte Symbol eine 0,
+im Zustand $s_1$ eine 1.
+\end{parts}
+\end{solutionbox}

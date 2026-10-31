@@ -1,0 +1,13 @@
+\question[4]
+Gegeben ist die Liste \texttt{a = [14, 21, 8, 33, 12, 5, 40]}. Schreibe ein Python-Programm, 
+das zählt, wie viele Zahlen der Liste durch 4 teilbar sind, und die Anzahl ausgibt.
+
+\begin{solutionbox}{4cm}
+\begin{lstlisting}
+zaehl = 0
+for x in a:
+    if x % 4 == 0:
+        zaehl += 1
+print(zaehl)
+\end{lstlisting}
+\end{solutionbox}

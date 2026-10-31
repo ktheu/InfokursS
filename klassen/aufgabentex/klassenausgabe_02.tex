@@ -1,0 +1,43 @@
+\question[8]
+Was erscheint auf der Konsole?
+\begin{lstlisting}
+class Spell:
+    def __init__(self, incantation, name):
+        self.name = name
+        self.incantation = incantation
+    def __str__(self):
+        return self.name+' '+self.incantation+'\n'+self.getDescription()
+    def getDescription(self):
+        return 'No description'
+    def execute(self):
+        print(self.incantation)
+
+class Accio(Spell):
+    def __init__(self):
+        super().__init__('Accio', 'Summoning Charm')
+
+class Confundo(Spell):
+    def __init__(self):
+        super().__init__('Confundo', 'Confundus Charm')
+    def getDescription(self):
+        return 'Causes the victim to become confused and befuddled.'
+
+def studySpell(spell):
+    print(spell)
+
+spell = Accio()
+spell.execute()
+studySpell(spell)
+studySpell(Confundo())
+\end{lstlisting}
+
+
+\begin{solutionbox}{3.25cm}
+\begin{lstlisting}
+Accio
+Summoning Charm Accio
+No description
+Confundus Charm Confundo
+Causes the victim to become confused and befuddled.
+\end{lstlisting}
+\end{solutionbox}

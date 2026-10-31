@@ -1,0 +1,13 @@
+% Quizfrage
+\question[3]
+Was erscheint auf der Konsole?
+\begin{lstlisting}
+def rek(s):
+    if len(s) == 0: return ''
+    return '('+s[0]+')'+rek(s[1:])
+
+print(rek('hal'))
+\end{lstlisting}
+\begin{solutionbox}{1cm}
+(h)(a)(l)
+\end{solutionbox}

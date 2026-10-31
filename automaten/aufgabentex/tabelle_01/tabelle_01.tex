@@ -1,0 +1,28 @@
+\question[4]
+Gegeben ist der folgende DEA über $\Sigma = \{a,b\}$:
+
+\begin{center}
+\includegraphics[height=3cm]{\pfad/tabelle_01/tabelle_01.png}
+\end{center}
+
+\begin{parts}
+\part Gib die Zustandsübergangstabelle an. Markiere den Startzustand mit $\rightarrow$ und Endzustände mit $*$.
+\part Untersuche, ob die Wörter $abab$, $abba$ und $bbab$ akzeptiert werden. Gib jeweils die Folge der Zustände an.
+\part Beschreibe, welche Wörter der Automat akzeptiert.
+\end{parts}
+
+\begin{solutionbox}{6cm}
+\begin{parts}
+\part
+\begin{tabular}[t]{r|cc}
+ & a & b \\ \hline
+$\rightarrow q_0$ & $q_1$ & $q_0$ \\
+$q_1$ & $q_1$ & $q_2$ \\
+$*\,q_2$ & $q_1$ & $q_0$ \\
+\end{tabular}
+\part $abab$: $q_0, q_1, q_2, q_1, q_2$ -- akzeptiert. \\
+$abba$: $q_0, q_1, q_2, q_0, q_1$ -- nicht akzeptiert. \\
+$bbab$: $q_0, q_0, q_0, q_1, q_2$ -- akzeptiert.
+\part Der Automat akzeptiert alle Wörter, die auf $ab$ enden.
+\end{parts}
+\end{solutionbox}

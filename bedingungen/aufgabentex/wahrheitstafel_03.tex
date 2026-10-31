@@ -1,0 +1,17 @@
+\question[6]
+Gib die Wahrheitstafel für den Ausdruck \texttt{(A and not B) or C} für alle acht
+Kombinationen von A, B und C (jeweils 0 für \texttt{False} und 1 für \texttt{True}) an.
+
+\begin{solutionbox}{5cm}
+\begin{lstlisting}
+A       B       C       not B   (A and not B)   (A and not B) or C
+0       0       0       1       0               0
+0       0       1       1       0               1
+0       1       0       0       0               0
+0       1       1       0       0               1
+1       0       0       1       1               1
+1       0       1       1       1               1
+1       1       0       0       0               0
+1       1       1       0       0               1
+\end{lstlisting}
+\end{solutionbox}

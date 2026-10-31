@@ -1,0 +1,21 @@
+\question[3]
+Die Hilfe zu \texttt{int} enthält den folgenden Text:
+\begin{lstlisting}[language={}]
+int(x, base=10) -> integer
+Convert a number or string to an integer, or return 0 if no arguments
+are given.  If x is a number, return x.__int__().  For floating-point
+numbers, this truncates towards zero.
+\end{lstlisting}
+Was erscheint auf der Konsole?
+\begin{lstlisting}
+print(int('101', 2))
+print(int('ff', 16))
+print(int(3.9), int(-3.9))
+\end{lstlisting}
+\begin{solutionbox}{2.5cm}
+\begin{lstlisting}[language={}]
+5
+255
+3 -3
+\end{lstlisting}
+\end{solutionbox}

@@ -1,0 +1,24 @@
+
+Die Mikrobefehle der Registermaschine Johnny sind:
+
+\begin{verbatim}
+    db->ram  : Inhalt des Datenbus im RAM speichern
+    ram->db  : Inhalt des RAM auf den Datenbus legen
+    db->ins  : Inhalt des Datenbus ins Befehlsregister übernehmen
+    db->acc  : Inhalt des Datenbus in den Akkumulator übernehmen
+    acc->db  : Inhalt des Akkumulators auf den Datenbus legen
+    plus     : Akkumulator um Inhalt des Datenbus erhöhen
+    minus    : Akkumulator um Inhalt des Datenbus erniedrigen
+    acc++    : Akkumulator um 1 erhöhen
+    acc--    : Akkumulator um 1 erniedrigen
+    acc=0    : Akkumulator auf 0 setzen
+    pc->ab   : Befehlszähler auf den Adressbus legen
+    pc++     : Befehlszähler um 1 erhöhen
+    =0:pc++  : falls Akkumulator = 0, Befehlszähler um 1 erhöhen
+    ins->ab  : Adressteil des Befehlsregisters auf den Adressbus legen
+    ins->pc  : Adressteil des Befehlsregisters in den Befehlszähler schreiben
+    ins->mc  : zum Mikroprogramm des Befehls im Befehlsregister springen
+    mc=0     : zurück zum Anfang des Mikrocodes (FETCH)
+    stop     : Programm beenden
+\end{verbatim}
+

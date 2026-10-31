@@ -1,0 +1,26 @@
+\question[4]
+Gegeben ist der folgende Python-Code:
+
+\begin{lstlisting}
+preis = 4.50                 # Zeile 1
+anzahl = 3                   # Zeile 2
+anzahl = anzahl + 2          # Zeile 3
+gesamt = preis * anzahl      # Zeile 4
+\end{lstlisting}
+
+\begin{parts}
+\part Gib alle Bezeichner an.
+\part Gib für jede Zeile an, ob es sich um eine Initialisierung oder um eine (erneute) Wertzuweisung handelt.
+\part Gib nach Zeile 4 für jede Variable ihren Wert und ihren Datentyp an.
+\part Erläutere, warum Zeile 3 sinnvoll ist, obwohl sie als mathematische Gleichung keinen Sinn ergibt.
+\end{parts}
+
+\begin{solutionbox}{6cm}
+\begin{parts}
+\part \texttt{preis}, \texttt{anzahl}, \texttt{gesamt}
+\part Zeile 1, 2 und 4: Initialisierung (erste Wertzuweisung). Zeile 3: erneute Wertzuweisung an \texttt{anzahl}.
+\part \texttt{preis}: 4.5 (\texttt{float}), \texttt{anzahl}: 5 (\texttt{int}), \texttt{gesamt}: 22.5 (\texttt{float})
+\part Eine Wertzuweisung wird von rechts nach links ausgeführt: Zuerst wird \texttt{anzahl + 2} mit dem alten Wert 3
+ausgewertet, dann wird das Ergebnis 5 der Variable \texttt{anzahl} zugewiesen. Der alte Wert geht dabei verloren.
+\end{parts}
+\end{solutionbox}

@@ -1,0 +1,24 @@
+\question[3]
+Gegeben ist die folgende Tabelle:
+
+Produkt \medskip
+
+\begin{tabular}{|c|l|c|}
+\hline
+ProduktID & Produktname & Preis \\
+\hline
+1 & Maus & 20 \\
+2 & Tastatur & 50 \\
+\hline
+\end{tabular}
+
+
+Der Preis der Tastatur soll auf 55 geändert werden.
+
+Formuliere die passende SQL-Anweisung.
+
+\begin{solutionbox}{2cm}
+\texttt{UPDATE Produkt}\\
+\texttt{SET Preis = 55}\\
+\texttt{WHERE ProduktID = 2;}
+\end{solutionbox}

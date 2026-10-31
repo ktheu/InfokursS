@@ -1,0 +1,10 @@
+\question[4]
+Wir addieren zwei positive Zahlen.
+\begin{parts}
+\part Berechne 100 + 50 schriftlich in der 8-Bit Zweierkomplement-Darstellung. Welche Zahl ergibt sich?
+\part Warum ist das Ergebnis falsch, und woran erkennen wir das, ohne dezimal nachzurechnen?
+\end{parts}
+\begin{solutionbox}{4cm}
+a) \texttt{01100100} + \texttt{00110010} = \texttt{10010110}. Das ist die Zahl -106, denn invertiert ergibt sich \texttt{01101001}, plus 1 ist \texttt{01101010} = 106. \\
+b) 150 liegt außerhalb des Wertebereichs von -128 bis 127, es gibt einen Überlauf. Wir erkennen ihn daran, dass die Summe zweier positiver Zahlen negativ ist.
+\end{solutionbox}

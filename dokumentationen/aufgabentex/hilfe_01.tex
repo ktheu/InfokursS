@@ -1,0 +1,23 @@
+\question[3]
+Die Hilfe zu \texttt{str.replace} lautet:
+\begin{lstlisting}[language={}]
+replace(self, old, new, count=-1, /)
+    Return a copy with all occurrences of substring old replaced by new.
+      count
+        Maximum number of occurrences to replace.
+        -1 (the default value) means replace all occurrences.
+\end{lstlisting}
+Was erscheint auf der Konsole?
+\begin{lstlisting}
+s = 'banane'
+print(s.replace('an', 'xy', 1))
+print(s.replace('a', ''))
+print(s)
+\end{lstlisting}
+\begin{solutionbox}{2.5cm}
+\begin{lstlisting}[language={}]
+bxyane
+bnne
+banane
+\end{lstlisting}
+\end{solutionbox}

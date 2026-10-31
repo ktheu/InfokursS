@@ -1,0 +1,34 @@
+\question[4]
+Gegeben ist die folgende Tabelle einer Schule:
+
+\begin{center}
+\begin{tabular}{|c|l|l|l|}
+\hline
+SchuelerID & Schuelername & Klassenname & Klassenlehrer \\
+\hline
+1 & Anna Meier & 10A & Herr Müller \\
+2 & Max Schulz & 10A & Herr Müller \\
+3 & Lea Weber & 10B & Frau Schmidt \\
+\hline
+\end{tabular}
+\end{center}
+
+Erläutere, warum die Tabelle Redundanzen enthält.
+Überführe die Tabelle anschließend in ein relationales Datenbankschema in der 3. Normalform.
+
+\begin{solutionbox}{5cm}
+Die Information, wer der Klassenlehrer eine Klasse ist, wird mehrfach gespeichert. Die Information 
+„10A -- Herr Müller“ erscheint in mehreren Datensätzen.
+Dadurch können Redundanzen und Inkonsistenzen entstehen.
+
+\vspace{0.3cm}
+
+\textbf{Relationales Schema:}
+
+\begin{itemize}
+\item Schueler(\pk{SchuelerID}, Schuelername, \fk{KlassenID})
+\item Klasse(\pk{KlassenID}, Klassenname, Klassenlehrer)
+\end{itemize}
+
+Die Informationen über Klassen werden nun nur noch einmal gespeichert.
+\end{solutionbox}

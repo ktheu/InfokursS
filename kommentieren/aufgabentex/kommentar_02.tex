@@ -1,0 +1,17 @@
+\question[3]
+Gegeben ist die folgende Funktion.
+\begin{lstlisting}
+def endpreis(preis):
+    # ab 100 Euro gibt es 10 Prozent Rabatt
+    if preis > 50:
+        return preis * 0.8
+    return preis
+\end{lstlisting}
+\begin{parts}
+\part Der Kommentar passt nicht zum Code. Nenne die beiden Abweichungen.
+\part Warum ist ein falscher Kommentar schlimmer als gar kein Kommentar?
+\end{parts}
+\begin{solutionbox}{2cm}
+a) Im Kommentar steht ab 100 Euro, im Code ab mehr als 50 Euro. Im Kommentar stehen 10 Prozent, im Code werden 20 Prozent abgezogen. \\
+b) Wer den Kommentar liest, verlässt sich darauf und wird in die Irre geführt.
+\end{solutionbox}

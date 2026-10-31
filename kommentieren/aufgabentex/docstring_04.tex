@@ -1,0 +1,21 @@
+\question[3]
+Beim Ausführen von \texttt{doctest} meldet Python für die folgende Funktion einen Fehler.
+\begin{lstlisting}
+def mittelwert(a):
+    '''
+    a: nichtleere Liste von Zahlen
+    returns: Mittelwert der Zahlen in a
+
+    >>> mittelwert([1, 2, 4])
+    2.3333333333333335
+    '''
+    return sum(a) // len(a)
+\end{lstlisting}
+\begin{parts}
+\part Welches Ergebnis liefert die Funktion für das Beispiel?
+\part Was ist falsch, der Docstring oder der Code? Gib die Korrektur an.
+\end{parts}
+\begin{solutionbox}{2cm}
+a) 2 \\
+b) Der Code. \texttt{//} ist die ganzzahlige Division, richtig ist \texttt{return sum(a) / len(a)}.
+\end{solutionbox}

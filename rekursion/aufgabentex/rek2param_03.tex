@@ -1,0 +1,12 @@
+\question[2]
+Was erscheint auf der Konsole?
+\begin{lstlisting}
+def rek(a,b):
+    if b == 0: return a+1
+    return rek(2*b+3,a//b)
+
+print(rek(20,10))
+\end{lstlisting}
+\begin{solutionbox}{1cm}
+26
+\end{solutionbox}

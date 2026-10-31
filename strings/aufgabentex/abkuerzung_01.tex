@@ -1,0 +1,16 @@
+\question[4]
+Schreibe eine Funktion \texttt{abkuerzung(text)}, die aus den Anfangsbuchstaben der Wörter von \texttt{text}
+eine Abkürzung in Großbuchstaben bildet und zurückgibt. Die Wörter sind durch Leerzeichen getrennt.
+
+Beispiele: \texttt{abkuerzung('portable network graphics')} liefert \texttt{'PNG'}, \\
+\texttt{abkuerzung('Hypertext Transfer Protocol')} liefert \texttt{'HTP'}.
+
+\begin{solutionbox}{5cm}
+\begin{lstlisting}
+def abkuerzung(text):
+    ergebnis = ''
+    for wort in text.split():
+        ergebnis = ergebnis + wort[0].upper()
+    return ergebnis
+\end{lstlisting}
+\end{solutionbox}

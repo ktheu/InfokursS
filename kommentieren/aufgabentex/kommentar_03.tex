@@ -1,0 +1,19 @@
+\question[2]
+Ergänze an der markierten Stelle einen Kommentar, der erklärt, warum die Schleife nur bis zur Wurzel von n läuft.
+\begin{lstlisting}
+def ist_prim(n):
+    if n < 2:
+        return False
+    t = 2
+    # Kommentar
+    while t * t <= n:
+        if n % t == 0:
+            return False
+        t = t + 1
+    return True
+\end{lstlisting}
+\begin{solutionbox}{2cm}
+\begin{lstlisting}
+# Zu einem Teiler über der Wurzel gehört immer ein Teiler unter der Wurzel.
+\end{lstlisting}
+\end{solutionbox}

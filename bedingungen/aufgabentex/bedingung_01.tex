@@ -1,0 +1,23 @@
+\question[4]
+Schreibe ein Python-Programm, das die folgenden Anweisungen ausführt:
+\begin{lstlisting}
+
+Lies eine ganze Zahl x ein.
+
+Gib aus:
+'positiv', wenn x größer als 0 ist,
+'null', wenn x gleich 0 ist,
+'negativ', wenn x kleiner als 0 ist.
+\end{lstlisting}
+\begin{solutionbox}{4cm}
+\begin{lstlisting}
+x = int(input("Bitte eine ganze Zahl eingeben: "))
+
+if x > 0:
+    print("positiv")
+elif x == 0:
+    print("null")
+else:
+    print("negativ")
+\end{lstlisting}
+\end{solutionbox}

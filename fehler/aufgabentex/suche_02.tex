@@ -1,0 +1,17 @@
+\question[4]
+Gegeben ist die Liste \texttt{a = [8, 15, 22, 6, 19, 30]}. Schreibe ein Python-Programm, 
+das mit linearer Suche das Element findet, das den größten Rest bei der Division durch 5 hat, 
+und dieses ausgibt.
+
+\begin{solutionbox}{4cm}
+\begin{lstlisting}
+a = [8, 15, 22, 6, 19, 30]
+best = a[0]
+best_val = a[0] % 5
+for x in a:
+    if x % 5 > best_val:
+        best_val = x % 5
+        best = x
+print(best)
+\end{lstlisting}
+\end{solutionbox}

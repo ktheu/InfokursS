@@ -1,0 +1,23 @@
+
+\question[2]
+Schreibe eine Funktion, die sich so verhält, wie im folgenden docstring beschrieben.
+
+ 
+\begin{lstlisting}
+'''
+s string, k >= 0, k optional mit default 1
+returns: string, die ersten k zeichen von s
+ 
+>>> make('Hallo')
+'H'
+>>> make('Hallo',3)
+'Hal'
+'''
+\end{lstlisting}
+
+\begin{solutionbox}{3cm}
+\begin{lstlisting}
+def make(s, k=1):
+    return s[:k]
+\end{lstlisting}
+\end{solutionbox}

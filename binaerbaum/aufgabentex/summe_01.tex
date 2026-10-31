@@ -1,0 +1,11 @@
+\question[3]
+Die Funktion \texttt{summe(node)} gibt die Summe aller Werte im Baum mit der Wurzel node zurück. Für einen leeren Baum ist
+das Ergebnis 0. Implementiere die Funktion rekursiv.
+\begin{solutionbox}{3cm}
+\begin{lstlisting}
+def summe(node):
+    if node is None:
+        return 0
+    return node.val + summe(node.left) + summe(node.right)
+\end{lstlisting}
+\end{solutionbox}

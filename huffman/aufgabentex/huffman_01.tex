@@ -1,0 +1,37 @@
+\question[4]
+Konstruiere nach dem Verfahren aus dem Unterricht einen Huffman-Baum
+für das Wort \texttt{kabelleger}. Gib für jeden Buchstaben die Codierung an.
+Wieviele Bits werden gegenüber einer 8-Bit ASCII Codierung eingespart?
+
+\begin{solutionbox}{12cm}
+\begin{lstlisting}
+Huffmanbaum für: kabelleger
+...2 l
+..3 #
+...1 r
+.6 #
+..3 e
+10 #
+...1 g
+..2 #
+...1 b
+.4 #
+...1 a
+..2 #
+...1 k
+
+Codierung:
+k -> 000
+a -> 001
+b -> 010
+e -> 10
+l -> 111
+g -> 011
+r -> 110
+
+kabelleger: 000 001 010 10 111 111 10 011 10 110
+000001010101111111001110110  -  27 Bits
+Ausgangstext mit 8 Bits pro Zeichen: 80 Bits
+Einsparung: 53 Bits
+\end{lstlisting}
+\end{solutionbox}

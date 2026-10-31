@@ -1,0 +1,22 @@
+\question[4]
+Die Datei \texttt{input1.txt} hat folgenden Inhalt:
+\begin{lstlisting}
+Fahrrad
+25
+\end{lstlisting}
+Schreibe ein Python-Programm, das die Datei öffnet, in der ersten Zeile den Namen
+(ohne Zeilenvorschub) in die Variable \texttt{artikel} und in der zweiten Zeile den
+Preis als Ganzzahl in die Variable \texttt{preis} einliest. Schließe die Datei
+anschließend und gib beide Variablen aus.
+
+\begin{solutionbox}{4cm}
+\begin{lstlisting}
+f = open('input1.txt')
+artikel = f.readline().strip()
+preis = int(f.readline())
+f.close()
+
+print(artikel)
+print(preis)
+\end{lstlisting}
+\end{solutionbox}

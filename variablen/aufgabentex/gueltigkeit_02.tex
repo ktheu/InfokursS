@@ -1,0 +1,27 @@
+\question[3]
+Gegeben ist der folgende Python-Code:
+
+\begin{lstlisting}
+x = 1
+
+def f():
+    x = 2
+    print(x)
+
+f()
+print(x)
+\end{lstlisting}
+
+\begin{parts}
+\part Gib an, was das Programm ausgibt.
+\part Erläutere die Ausgabe.
+\end{parts}
+
+\begin{solutionbox}{4.5cm}
+\begin{parts}
+\part \texttt{2} und danach \texttt{1}
+\part Durch die Wertzuweisung \texttt{x = 2} in der Funktion entsteht eine neue lokale Variable \texttt{x}.
+Sie hat zufällig denselben Bezeichner wie die globale Variable, ist aber eine andere Variable.
+In der Funktion wird die lokale Variable ausgegeben, außerhalb die globale. Die globale Variable bleibt unverändert.
+\end{parts}
+\end{solutionbox}

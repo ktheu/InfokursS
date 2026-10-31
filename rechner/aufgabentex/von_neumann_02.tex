@@ -1,0 +1,14 @@
+\question[3]
+In einer Speicherzelle von Johnny steht der Wert \texttt{02.015}.
+Erläutere, ob es sich dabei um eine Zahl oder um einen Befehl handelt.
+Gehe dabei auf das Von-Neumann-Prinzip ein, nach dem Programm und Daten im selben Speicher liegen.
+
+\begin{solutionbox}{5cm}
+Das lässt sich am Wert allein nicht entscheiden. Beim Von-Neumann-Rechner liegen
+Programm und Daten im selben Speicher, und einer Speicherzelle sieht man nicht an,
+was sie enthält.
+
+Wird die Zelle über den Befehlszähler geholt und ins Befehlsregister übernommen,
+wird sie als Befehl \texttt{ADD 15} ausgeführt. Wird sie dagegen von einem Befehl wie
+\texttt{TAKE} gelesen, wird sie als Zahl (2015) verwendet.
+\end{solutionbox}

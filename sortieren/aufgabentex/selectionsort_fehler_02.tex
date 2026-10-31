@@ -1,0 +1,23 @@
+\question[2]
+Unsere Implementierung des SelectionSort-Algorithmus wurde mit anderen Variablennamen
+neu aufgeschrieben. Dabei haben sich Fehler eingeschlichen. Korrigiere die fehlerhaften Stellen.
+\begin{lstlisting}
+def selection_sort(hugo):
+    for kai in range(len(hugo)):
+        otto = kai
+        lena = hugo[kai]
+        for j in range(kai+1,len(hugo)):
+            otto = j
+            lena = hugo[j]
+        hugo[otto],hugo[kai] = hugo[kai],hugo[otto]
+
+\end{lstlisting}
+\begin{solutionbox}{4cm}
+\begin{lstlisting}
+In Zeile 2: for kai in range(len(hugo)-1):
+Nach Zeile 5 fehlt eine Zeile:
+if hugo[j] < lena:
+die beiden nächsten Zeilen müssen eingerückt werden,
+so dass sie zu diesem if gehören.
+\end{lstlisting}
+\end{solutionbox}

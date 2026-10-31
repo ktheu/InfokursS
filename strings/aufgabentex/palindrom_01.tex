@@ -1,0 +1,14 @@
+\question[3]
+Ein Palindrom ist ein Wort, das vorwärts und rückwärts gelesen gleich ist, z.B. \texttt{'Rentner'} oder \texttt{'Anna'}.
+Groß- und Kleinschreibung soll keine Rolle spielen.
+
+Schreibe eine Funktion \texttt{ist\_palindrom(wort)}, die \texttt{True} zurückgibt, wenn \texttt{wort} ein Palindrom ist,
+sonst \texttt{False}.
+
+\begin{solutionbox}{4cm}
+\begin{lstlisting}
+def ist_palindrom(wort):
+    w = wort.lower()
+    return w == w[::-1]
+\end{lstlisting}
+\end{solutionbox}

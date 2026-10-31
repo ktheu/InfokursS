@@ -1,0 +1,26 @@
+\question[5]
+In einem Programm sollen folgende Daten gespeichert werden. Gib jeweils einen geeigneten Python-Datentyp
+(\texttt{int}, \texttt{float}, \texttt{bool} oder \texttt{str}) an und begründe kurz.
+\begin{parts}
+\part die Anzahl der Schüler eines Kurses
+\part die Körpergröße in Metern
+\part ob ein Schüler volljährig ist
+\part ein Kontostand, mit dem exakt gerechnet werden soll
+\part die Postleitzahl, z.B. 01067
+\end{parts}
+In Java soll die Einwohnerzahl der Erde (etwa 8 Milliarden) gespeichert werden.
+Zur Erinnerung: In Java speichert \texttt{int} eine ganze Zahl mit 32 Bit und \texttt{long} mit 64 Bit,
+beide im Zweierkomplement. Welcher der beiden Typen ist nötig? Begründe mit einer Abschätzung des Wertebereichs.
+
+\begin{solutionbox}{7cm}
+\begin{parts}
+\part \texttt{int}: eine Anzahl ist immer ganzzahlig.
+\part \texttt{float}: eine Größe hat Nachkommastellen.
+\part \texttt{bool}: es gibt nur die zwei Möglichkeiten ja und nein.
+\part \texttt{int}, und zwar in Cent: Mit \texttt{float} entstehen Rundungsfehler, mit ganzen Zahlen nicht.
+\part \texttt{str}: Mit einer Postleitzahl wird nicht gerechnet, und als \texttt{int} ginge die führende 0 verloren.
+\end{parts}
+\texttt{long}: Der größte \texttt{int}-Wert ist $2^{31} - 1$. Mit $2^{10} \approx 10^3$ ist
+$2^{31} = 2 \cdot (2^{10})^3 \approx 2 \cdot 10^9$, also nur etwa 2 Milliarden. Das reicht nicht.
+Bei \texttt{long} ist $2^{63} = 8 \cdot (2^{10})^6 \approx 8 \cdot 10^{18}$, das reicht.
+\end{solutionbox}

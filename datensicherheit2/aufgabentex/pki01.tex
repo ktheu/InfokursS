@@ -1,0 +1,21 @@
+\question[5]
+Beim asymmetrischen Verfahren muss sichergestellt sein, dass ein öffentlicher Schlüssel wirklich zu
+der Person (oder dem Server) gehört, die ihn präsentiert. Dazu dient eine
+\textit{Public-Key-Infrastruktur} (PKI) mit Zertifikaten, die von einem Trust-Center ausgestellt werden. \\
+a. Erläutere, welches Problem ein Zertifikat löst und wie ein Trust-Center dabei vorgeht. \\
+b. Nenne zwei Anwendungsbereiche von Public-Key-Infrastrukturen aus dem Alltag. \\
+c. Bewerte einen Sicherheitsaspekt: Was passiert, wenn der private Schlüssel eines Trust-Centers
+in falsche Hände gerät?
+
+\begin{solutionbox}{6cm}
+a. Ein Zertifikat bestätigt die \textit{Authentizität} eines öffentlichen Schlüssels, also die
+Zuordnung Schlüssel $\leftrightarrow$ Inhaber. Das Trust-Center prüft die Identität des Antragstellers
+und signiert dann dessen öffentlichen Schlüssel zusammen mit den Inhaberdaten mit seinem eigenen
+privaten Schlüssel. Wer dem Trust-Center vertraut und dessen öffentlichen Schlüssel kennt, kann
+das Zertifikat prüfen. \\
+b. Zum Beispiel: Transportverschlüsselung im Web (HTTPS / TLS-Zertifikate), Mailverschlüsselung
+(S/MIME), digitaler Personalausweis, Signaturkarten. \\
+c. Dann kann der Angreifer beliebige gefälschte Zertifikate ausstellen und sich als jede beliebige
+Stelle ausgeben (Man-in-the-Middle). Das Vertrauen in alle von diesem Trust-Center ausgestellten
+Zertifikate ist zerstört; sie müssen zurückgezogen werden.
+\end{solutionbox}

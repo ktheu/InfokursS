@@ -1,0 +1,30 @@
+
+\question[1]
+Schreibe eine Funktion, die sich so verhält, wie im folgenden docstring beschrieben.
+
+ 
+\begin{lstlisting}
+'''
+x: int
+returns 'A' falls x < 20
+        'B' falls 20 <= x < 30
+        'C' falls 30 <= x
+
+>>> func(15)
+'A'
+>>> func(25)
+'B'
+>>> func(35)
+'C'
+'''
+
+\end{lstlisting}
+
+\begin{solutionbox}{3cm}
+\begin{lstlisting}
+def func(x):
+    if x < 20: return 'A'
+    if 20 <= x < 30: return 'B'
+    return 'C'
+\end{lstlisting}
+\end{solutionbox}

@@ -1,0 +1,20 @@
+\question[3]
+Übersetze den folgenden Pseudocode in eine Python-Funktion.
+\begin{lstlisting}[language={}]
+algorithmus anzahl_gerade(a):
+    z = 0
+    für jedes x in a:
+        wenn x gerade:
+            z = z + 1
+    gib z zurück
+\end{lstlisting}
+\begin{solutionbox}{3.75cm}
+\begin{lstlisting}
+def anzahl_gerade(a):
+    z = 0
+    for x in a:
+        if x % 2 == 0:
+            z = z + 1
+    return z
+\end{lstlisting}
+\end{solutionbox}

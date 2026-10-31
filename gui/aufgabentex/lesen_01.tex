@@ -1,0 +1,26 @@
+\question[4]
+Gegeben ist das folgende Programm.
+\begin{lstlisting}
+import tkinter as tk
+
+def klick():
+    zahl = int(anzeige['text'])
+    anzeige['text'] = zahl * 2
+
+fenster = tk.Tk()
+anzeige = tk.Label(fenster, text='3')
+anzeige.pack()
+knopf = tk.Button(fenster, text='Mal 2', command=klick)
+knopf.pack()
+fenster.mainloop()
+\end{lstlisting}
+\begin{parts}
+\part Was steht im Fenster, bevor geklickt wird?
+\part Was zeigt das Label nach drei Klicks auf den Knopf?
+\part Warum steht in der Funktion \texttt{int(anzeige['text'])}?
+\end{parts}
+\begin{solutionbox}{3cm}
+a) das Label mit 3 und der Knopf \texttt{Mal 2} \\
+b) 24 \\
+c) Das Label enthält Text. Zum Rechnen muss er in eine ganze Zahl umgewandelt werden.
+\end{solutionbox}

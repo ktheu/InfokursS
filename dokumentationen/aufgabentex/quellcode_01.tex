@@ -1,0 +1,31 @@
+\question[4]
+Von der Klasse \texttt{Notenbuch} ist nur die Ausgabe von \texttt{help(Notenbuch)} bekannt:
+\begin{lstlisting}[language={}]
+class Notenbuch
+ |  Notenbuch(fach)
+ |  Ein Notenbuch für ein Fach.
+ |
+ |  hinzufuegen(self, note)
+ |      note: ganze Zahl von 1 bis 6
+ |
+ |  schnitt(self)
+ |      returns: Mittelwert der Noten, bei leerem Notenbuch None
+ |
+ |  beste(self)
+ |      returns: die beste (kleinste) Note, bei leerem Notenbuch None
+\end{lstlisting}
+\begin{parts}
+\part Erzeuge ein Notenbuch für das Fach Mathe, trage die Noten 2, 3 und 1 ein und gib den Schnitt und die beste Note aus.
+\part Was ergibt \texttt{Notenbuch('Bio').schnitt()}?
+\end{parts}
+\begin{solutionbox}{4.25cm}
+\begin{lstlisting}
+n = Notenbuch('Mathe')
+n.hinzufuegen(2)
+n.hinzufuegen(3)
+n.hinzufuegen(1)
+print(n.schnitt())
+print(n.beste())
+\end{lstlisting}
+b) \texttt{None}
+\end{solutionbox}

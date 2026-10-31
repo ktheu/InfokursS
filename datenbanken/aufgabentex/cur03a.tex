@@ -1,0 +1,61 @@
+\question[4]
+Eine Datenbank einer Schule enthält die folgenden Tabellen:
+
+
+
+\begin{center}
+\begin{minipage}[t]{0.45\textwidth}
+
+
+Schueler \\
+
+\begin{tabular}{|c|l|}
+\hline
+SchuelerID & Name \\
+\hline
+1 & Anna Meier \\
+2 & Max Schulz \\
+3 & Lea Weber \\
+\hline
+\end{tabular}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+
+
+Kurs \\
+
+\begin{tabular}{|c|l|c|}
+\hline
+KursID & Kursname & SchuelerID \\
+\hline
+10 & Informatik & 1 \\
+11 & Mathematik & 1 \\
+12 & Physik & 2 \\
+\hline
+\end{tabular}
+\end{minipage}
+\end{center}
+
+\begin{enumerate}[label=\alph*)]
+\item Bestimme die Primärschlüssel beider Tabellen.
+\item Bestimme den Fremdschlüssel.
+\item Erläutere die Funktion eines Fremdschlüssels.
+\end{enumerate}
+
+\begin{solutionbox}{5cm}
+\begin{enumerate}
+\item Primärschlüssel:
+    \begin{itemize}
+    \item Tabelle Schueler: SchuelerID
+    \item Tabelle Kurs: KursID
+    \end{itemize}
+
+\item Fremdschlüssel:     
+    SchuelerID in der Tabelle Kurs
+
+\item Ein Fremdschlüssel verweist auf den Primärschlüssel einer anderen Tabelle.    
+    Dadurch können Datensätze verschiedener Tabellen miteinander verknüpft werden.    
+    In diesem Beispiel zeigt die SchuelerID in der Tabelle Kurs auf einen Schüler in der Tabelle Schueler.
+\end{enumerate}
+\end{solutionbox}

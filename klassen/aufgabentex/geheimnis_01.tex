@@ -1,0 +1,18 @@
+\question[3]
+Die Klasse Konto hat das Attribut kontostand. Beim Erstellen
+eines Kontos wird der Wert von Kontostand auf 0 gesetzt. Implementiere die Klasse
+Konto unter Wahrung des Geheimnisprinzips mit getter und setter-Methode.
+
+\begin{solutionbox}{4.75cm}
+\begin{lstlisting}
+class Konto:
+    def __init__(self):
+        self.__kontostand = 0
+
+    def set_kontostand(self,x):
+        self.__kontostand = x
+
+    def get_kontostand(self):
+        return self.__kontostand
+\end{lstlisting}
+\end{solutionbox}

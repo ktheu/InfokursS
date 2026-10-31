@@ -1,0 +1,13 @@
+\question[3]
+Schreibe ein Python-Programm, das 5-mal hintereinander eine Zufallszahl zwischen 1 und 100
+erzeugt und alle fünf Zahlen ausgibt.
+
+\begin{solutionbox}{3cm}
+\begin{lstlisting}
+import random
+
+for i in range(5):
+    zahl = random.randint(1, 100)
+    print(zahl)
+\end{lstlisting}
+\end{solutionbox}

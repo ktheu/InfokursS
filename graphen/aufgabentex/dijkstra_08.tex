@@ -1,0 +1,14 @@
+\question[3]
+Gegeben ist ein Graph mit einem negativen Kantengewicht.
+
+\includegraphics[height=2.5cm]{\pfad/dijkstra_08.png}
+\begin{parts}
+\part In welcher Reihenfolge werden die Knoten endgültig markiert, wenn der Algorithmus von Dijkstra bei a startet?
+\part Welchen Wert hat dist(b) am Ende, welche Länge hat der kürzeste Weg von a nach b wirklich?
+\part Warum liefert der Algorithmus hier ein falsches Ergebnis?
+\end{parts}
+\begin{solutionbox}{3.5cm}
+a) a, b, c \\
+b) dist(b) ist 2, der kürzeste Weg a-c-b hat die Länge 1. \\
+c) b wird endgültig, weil er der billigste vorläufige Knoten ist. Das ist nur richtig, wenn kein Umweg billiger sein kann. Die negative Kante macht den späteren Umweg billiger.
+\end{solutionbox}

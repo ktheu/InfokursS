@@ -1,0 +1,20 @@
+\question[3]
+a. Benenne im folgenden Code alle Beispiele für die folgenden Begriffe: 
+globale Variable, lokale Variable, Parameter und Argument. \\
+b. Was wird ausgegeben?
+\begin{lstlisting}
+k = 10       
+def doit(y):
+    r = 5
+    w = k + y + r
+    return w
+
+z = doit(3) + k 
+print(z)
+\end{lstlisting}
+\begin{solutionbox}{4cm}
+ 
+a. k, z sind globale Variablen, y, r, w sind lokale Variablen, 3 ist Argument, y ist Parameter. \\
+b. 28
+ 
+\end{solutionbox}

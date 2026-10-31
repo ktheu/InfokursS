@@ -1,0 +1,36 @@
+\question[3]
+a. Gib für die beteiligten Verweisboxen die Attributwerte nach Ablauf der untenstehenden Anweisungen an.
+(Angabe in der Form:  inhalt = 'e', oben = a, unten = b) \\
+b. Welche Ausgabe erscheint auf der Konsole?  
+\begin{lstlisting}
+class VerweisBox:
+    def __init__(self, inhalt, unten=None, oben=None):
+        self.inhalt = inhalt
+        self.unten = unten
+        self.oben = oben
+        if unten is not None: self.unten.oben = self
+        if oben  is not None: self.oben.unten = self
+
+    def __str__(self):
+        return self.inhalt
+
+a = VerweisBox('a')
+b = VerweisBox('b')
+c = VerweisBox('c',a,b)
+d = VerweisBox('d',b,c)
+print(a.unten, b.unten.oben, b.oben.oben.oben, c.unten, c.oben.oben.unten.unten.unten)
+
+\end{lstlisting}
+
+\begin{solutionbox}{4.5cm}
+\begin{lstlisting}
+   Die Werte der Attribute:
+   inhalt = 'a', unten = None, oben = c
+   inhalt = 'b', unten = c, oben = d
+   inhalt = 'c', unten = d, oben = b
+   inhalt = 'd', unten = b, oben = c
+   
+   Die print-Ausgabe:
+   None b b d d
+\end{lstlisting}
+\end{solutionbox}

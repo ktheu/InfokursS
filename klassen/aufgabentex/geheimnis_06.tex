@@ -1,0 +1,26 @@
+\question[3]
+Was erscheint auf der Konsole? Begründe.
+\begin{lstlisting}
+class Box:
+    def __init__(self, wert):
+        self.__wert = wert
+
+    def get_wert(self):
+        return self.__wert
+
+b = Box(3)
+b.__wert = 8
+print(b.get_wert())
+print(b.__wert)
+c = Box(5)
+print(c.__wert)
+\end{lstlisting}
+\begin{solutionbox}{3.5cm}
+\begin{lstlisting}[language={}]
+3
+8
+AttributeError
+\end{lstlisting}
+\texttt{b.\_\_wert = 8} legt von außen ein neues öffentliches Attribut an, das private Attribut bleibt 3.
+Bei c gibt es dieses neue Attribut nicht, von außen ist das private Attribut nicht erreichbar.
+\end{solutionbox}

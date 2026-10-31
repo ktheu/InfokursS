@@ -1,0 +1,21 @@
+\question[2]
+In unserer Implementierung des Bubblesort-Algorithmus wurden Variablennamen geändert. 
+Dabei haben sich Fehler eingeschlichen. Gib die Zeilennummern mit den Fehlern an und korrigiere die fehlerhaften Stellen.
+(Wir zählen Zeilennummern mit 1 beginnend).
+\begin{lstlisting}
+def bubble_sort(alpha):
+    beta = True
+    while beta:
+        beta = False
+        for delta in range(len(alpha)-1):
+            if alpha[gamma] > alpha[gamma+1]:
+                alpha[gamma],alpha[gamma+1]=alpha[gamma+1],alpha[gamma]
+            beta = True
+
+\end{lstlisting}
+\begin{solutionbox}{4cm}
+\begin{lstlisting}
+In Zeile 5: for gamma in range(len(alpha)-1):
+In Zeile 8: beta = True  muss weiter eingerückt werden (wie Zeile 7)
+\end{lstlisting}
+\end{solutionbox}

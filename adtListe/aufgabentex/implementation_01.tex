@@ -1,0 +1,24 @@
+\question[4]
+Das Bild zeigt das UML-Diagramm unseres Datentyps Liste. Implementiere in Python die Klassen Eintrag und die Klasse Liste 
+(nur Konstruktor und Methode delete). Achte dabei auf mögliche Fehlersituationen.
+
+\includegraphics[height=3.5cm]{\pfad/liste_uml.png}
+
+
+\begin{solutionbox}{6.5cm}
+\begin{lstlisting}
+class Eintrag:
+    def __init__(self):
+        self.inhalt = None
+        self.next = None
+
+class Liste:
+    def __init__(self):
+        self.anf = Eintrag()
+        self.pos = self.anf
+           
+    def delete(self):       
+        if self.endpos(): raise RuntimeError("Fehler: Liste am Ende")
+        self.pos.next = self.pos.next.next
+\end{lstlisting}
+\end{solutionbox}

@@ -1,0 +1,23 @@
+\question[3]
+Gegeben ist die Funktion für die binäre Suche und eine sortierte Liste:
+\begin{lstlisting}
+def binaereSuche(a,x,L=0,R=None):
+    if R is None: R = len(a)-1
+    if L > R: return -1
+    mid = L + (R - L) // 2
+    if a[mid] == x: return mid
+    if x < a[mid]:
+        return binaereSuche(a,x,L,mid-1)
+    else:
+        return binaereSuche(a,x,mid+1,R)
+
+a = [3, 8, 15, 21, 30, 42, 57, 64, 71]
+\end{lstlisting}
+Gib für die Aufrufe \texttt{binaereSuche(a,64)} und \texttt{binaereSuche(a,10)} jeweils die Werte von
+\texttt{L} und \texttt{R} bei allen Aufrufen und den Rückgabewert an.
+\begin{solutionbox}{4cm}
+\begin{lstlisting}[language={}]
+binaereSuche(a,64):  L=0 R=8,  L=5 R=8,  L=7 R=8           Rückgabe 7
+binaereSuche(a,10):  L=0 R=8,  L=0 R=3,  L=2 R=3,  L=2 R=1  Rückgabe -1
+\end{lstlisting}
+\end{solutionbox}

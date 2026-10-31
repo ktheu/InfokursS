@@ -1,0 +1,33 @@
+\question[5]
+Die Klasse Temperatur hat das Attribut celsius. Dem Konstruktor wird der Wert von celsius übergeben.
+Implementiere die Klasse Temperatur unter Wahrung des Geheimnisprinzips mit getter- und setter-Methode.
+Der Setter lehnt Werte unter -273.15 ab, das Attribut behält dann seinen Wert. Auch der Konstruktor benutzt
+den Setter, der Startwert des Attributs ist 0. Folgender Dialog soll möglich sein:
+\begin{lstlisting}
+t = Temperatur(20)
+t.set_celsius(-300)
+print(t.get_celsius())
+t.set_celsius(-10)
+print(t.get_celsius())
+u = Temperatur(-500)
+print(u.get_celsius())
+
+20
+-10
+0
+\end{lstlisting}
+\begin{solutionbox}{5.5cm}
+\begin{lstlisting}
+class Temperatur:
+    def __init__(self, celsius):
+        self.__celsius = 0
+        self.set_celsius(celsius)
+
+    def get_celsius(self):
+        return self.__celsius
+
+    def set_celsius(self, celsius):
+        if celsius >= -273.15:
+            self.__celsius = celsius
+\end{lstlisting}
+\end{solutionbox}

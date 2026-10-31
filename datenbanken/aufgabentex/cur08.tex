@@ -1,0 +1,38 @@
+\question[3]
+Gegeben ist die folgende Tabelle:
+
+Schueler  \medskip
+ 
+\begin{tabular}{|c|l|c|}
+\hline
+SchuelerID & Name & Klasse \\
+\hline
+1 & Anna Meier & 10A \\
+2 & Max Schulz & 10B \\
+3 & Lea Weber & 10A \\
+\hline
+\end{tabular}
+
+
+Formuliere jeweils eine SQL-Abfrage für die folgenden Aufgaben:
+
+\begin{enumerate}
+\item Gib alle Daten aller Schülerinnen und Schüler aus.
+\item Gib nur die Namen aller Schülerinnen und Schüler aus.
+\item Gib alle Schülerinnen und Schüler der Klasse 10A aus.
+\end{enumerate}
+
+\begin{solutionbox}{5cm}
+\begin{enumerate}
+\item
+\texttt{SELECT * FROM Schueler;}
+
+\item
+\texttt{SELECT Name FROM Schueler;}
+
+\item
+\texttt{SELECT * FROM Schueler}\\
+\texttt{WHERE Klasse = '10A';}
+\end{enumerate}
+
+\end{solutionbox}

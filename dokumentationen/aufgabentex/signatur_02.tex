@@ -1,0 +1,24 @@
+\question[3]
+Die Hilfe zu \texttt{print} beginnt so:
+\begin{lstlisting}[language={}]
+print(*args, sep=' ', end='\n', file=None, flush=False)
+    Prints the values to a stream, or to sys.stdout by default.
+    sep
+      string inserted between values, default a space.
+    end
+      string appended after the last value, default a newline.
+\end{lstlisting}
+\begin{parts}
+\part Was erscheint auf der Konsole?
+\begin{lstlisting}
+print(1, 2, 3, sep='-', end='!')
+print('x')
+\end{lstlisting}
+\part Schreibe einen Aufruf von \texttt{print} mit den drei Argumenten \texttt{'a'}, \texttt{'b'}, \texttt{'c'}, der \texttt{a:b:c} ausgibt.
+\end{parts}
+\begin{solutionbox}{2cm}
+\begin{lstlisting}[language={}]
+a) 1-2-3!x
+b) print('a', 'b', 'c', sep=':')
+\end{lstlisting}
+\end{solutionbox}

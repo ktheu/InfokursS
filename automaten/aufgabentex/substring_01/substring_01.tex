@@ -1,0 +1,26 @@
+\question[5]
+Ein Programm soll prüfen, ob in einem Text über $\Sigma = \{a,b\}$ das Muster $aba$ vorkommt.
+\begin{parts}
+\part Konstruiere einen DEA, der genau die Wörter akzeptiert, in denen $aba$ vorkommt.
+Beschreibe, was die einzelnen Zustände bedeuten.
+\part Gib die Zustandsübergangstabelle an.
+\part Gib die Folge der Zustände für das Wort $abbaba$ an.
+\end{parts}
+
+\begin{solutionbox}{8cm}
+\begin{parts}
+\part \mbox{}\\
+\includegraphics[height=2.5cm]{\pfad/substring_01/substring_01.png}
+
+$A$: noch nichts vom Muster gefunden, $B$: $a$ gelesen, $C$: $ab$ gelesen, $D$: $aba$ gefunden.
+\part
+\begin{tabular}[t]{r|cc}
+ & a & b \\ \hline
+$\rightarrow A$ & $B$ & $A$ \\
+$B$ & $B$ & $C$ \\
+$C$ & $D$ & $A$ \\
+$*\,D$ & $D$ & $D$ \\
+\end{tabular}
+\part $A, B, C, A, B, C, D$ -- das Muster ist enthalten.
+\end{parts}
+\end{solutionbox}

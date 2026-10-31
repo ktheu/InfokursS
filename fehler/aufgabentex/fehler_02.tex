@@ -1,0 +1,27 @@
+\question[4]
+Die folgenden fünf Codeausschnitte laufen zunächst an, brechen aber mit einem Laufzeitfehler ab. \\
+(a) IndexError, (b) TypeError, (c) NameError, (d) ValueError, (e) ZeroDivisionError.  \\
+Erkläre kurz, warum der Fehler auftritt.
+
+\begin{lstlisting}
+(a) a = [1, 2, 3]
+    print(a[3])
+
+(b) x = 5 + "10"
+
+(c) print(message)
+
+(d) x = int("abc")
+
+(e) x = 5 / 0
+\end{lstlisting}
+
+\begin{solutionbox}{5cm}
+\begin{lstlisting}[language={}]
+(a) IndexError: Index 3 existiert nicht (gueltige Indizes: 0-2)
+(b) TypeError: int und str koennen nicht mit + verknuepft werden
+(c) NameError: Variable message wurde nicht definiert
+(d) ValueError: "abc" kann nicht in eine Ganzzahl umgewandelt werden
+(e) ZeroDivisionError: Division durch 0
+\end{lstlisting}
+\end{solutionbox}

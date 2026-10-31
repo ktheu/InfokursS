@@ -1,0 +1,20 @@
+\question[4]
+Automaten im Alltag.
+\begin{parts}
+\part Nenne vier Geräte oder Programme, deren Verhalten man mit einem Automatenmodell beschreiben kann.
+\part Wähle einen Getränkeautomaten. Beschreibe, was bei ihm die Zustände, die Eingaben und die Ausgaben sind.
+\part Erläutere, warum ein Automat für die Suche eines Wortes in einem Text geeignet ist.
+\end{parts}
+
+\begin{solutionbox}{6cm}
+\begin{parts}
+\part z.B. Ampel, Getränke-/Snack-/Ticketautomat, Leergutautomat, Aufzug, Waschmaschine,
+Login-Dialog oder Buttons einer grafischen Oberfläche, Netzwerkprotokolle (TCP), Textsuche.
+\part Zustände: bisher eingeworfener Betrag (z.B. 0\,ct, 50\,ct, 100\,ct).
+Eingaben: eingeworfene Münzen, Tastendruck für die Getränkewahl, Abbruchtaste.
+Ausgaben: Getränk, Wechselgeld, Anzeige auf dem Display.
+\part Der Automat liest den Text Zeichen für Zeichen. Er muss sich nur merken, wie viel vom Suchwort er
+gerade schon gefunden hat. Das sind endlich viele Möglichkeiten, also endlich viele Zustände.
+Der Text muss nur einmal von vorne nach hinten gelesen werden.
+\end{parts}
+\end{solutionbox}

@@ -1,0 +1,19 @@
+% repl-Aufgabe
+\question[3]
+Die rekursive Funktion \texttt{tausche} vertauscht je zwei
+Zeichen eines Strings. Falls die Anzahl der Zeichen
+ungerade ist, bleibt das letzte Zeichen an seinem Platz.
+Implementiere diese Funktion.
+\begin{lstlisting}
+>>> tausche('abcde')
+'badce'
+>>> tausche('a')
+'a'
+\end{lstlisting}
+\begin{solutionbox}{4cm}
+\begin{lstlisting}
+def tausche(s):
+    if len(s) <= 1: return s
+    return s[1]+s[0]+tausche(s[2:])
+\end{lstlisting}
+\end{solutionbox}

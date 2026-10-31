@@ -1,0 +1,34 @@
+
+Der Befehlssatz der Registermaschine Johnny umfasst die folgenden Befehle:
+
+% \begin{itemize}
+%     \item \texttt{TAKE x} kopiert den Wert aus Speicherzelle $x$ in den Akkumulator
+%     \item \texttt{ADD x} Akkumulator um Inhalt des Registers $x$ erhöhen
+%     \item \texttt{SUB x} Akkumulator um Inhalt des Registers $x$ erniedrigen
+%     \item \texttt{SAVE x} Inhalt des Akkumulators im Register $x$ speichern
+%     \item \texttt{JMP x} springe zu Register $x$
+%     \item \texttt{TST x} fals Register $x$ = 0, springe ins übernächste Register
+%     \item \texttt{INC x} Erhöhe Inhalt des Registers $x$ um 1
+%     \item \texttt{DEC x} Erniedrige Inhalt des Registers $x$ um 1
+%     \item \texttt{NULL x} Setze Inhalt des Registers $x$ auf 0
+%     \item \texttt{HLT x} Das Programm hält an.
+% \end{itemize}
+
+\begin{verbatim}
+    TAKE x : kopiert den Wert aus Speicherzelle x in den Akkumulator
+    ADD x : Akkumulator um Inhalt des Registers x erhöhen
+    SUB x : Akkumulator um Inhalt des Registers x erniedrigen
+    SAVE x : Inhalt des Akkumulators im Register x speichern
+    JMP x : springe zu Register x
+    TST x : fals Register x = 0, springe ins übernächste Register
+    INC x : Erhöhe Inhalt des Registers x um 1
+    DEC x : Erniedrige Inhalt des Registers x um 1
+    NULL x : Setze Inhalt des Registers x auf 0
+    HLT x : Das Programm hält an.
+\end{verbatim}
+
+Schreibweise: Wir schreiben [10] wenn wir die Zahl an der Speicherstelle (=Register) 10 meinen.
+
+Johnny arbeitet nur mit nicht-negativen Zahlen: Ist ein Ergebnis kleiner als 0, steht dort 0.
+
+

@@ -1,0 +1,12 @@
+\question[3]
+Was erscheint auf der Konsole?
+\begin{lstlisting}
+def rek(s):
+    if len(s) <= 2: return s
+    return s[0]+s[-1]+'*'+rek(s[1:-1])
+
+print(rek('abcdef'))
+\end{lstlisting}
+\begin{solutionbox}{1cm}
+af*be*cd
+\end{solutionbox}

@@ -1,0 +1,25 @@
+\question[4]
+Schreibe ein Programm für folgenden Ablauf:
+\begin{verbatim}
+    [14] = [12] + [13]
+    [12] = [12] - 1
+    [13] = [13] + 1
+    [15] = [12] + [13]
+\end{verbatim}
+
+\begin{solutionbox}{7cm}
+\begin{verbatim}
+1  TAKE 12
+2  ADD 13
+3  SAVE 14
+
+4  DEC 12
+5  INC 13
+
+6  TAKE 12
+7  ADD 13
+8  SAVE 15
+
+9  HLT 0
+\end{verbatim}
+\end{solutionbox}

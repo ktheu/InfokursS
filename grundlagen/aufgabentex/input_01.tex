@@ -1,0 +1,19 @@
+\question[3]
+Schreibe ein Python-Programm, das zwei ganze Zahlen über \texttt{input()} einliest
+und deren Summe und Produkt mit f-Strings ausgibt.
+
+Beispieldialog:  (Inputs sind mit \lstinline|>>>| markiert.)
+\begin{lstlisting}
+>>> Zahl1: 14
+>>> Zahl2: 15
+Die Summe von 14 und 15 ist 29.
+Das Produkt von 14 und 15 ist 210.
+\end{lstlisting}
+\begin{solutionbox}{3cm}
+\begin{lstlisting}
+a = int(input("Zahl1: "))
+b = int(input("Zahl2: "))
+print(f"Die Summe von {a} und {b} ist {a + b}.")
+print(f"Das Produkt von {a} und {b} ist {a * b}.")
+\end{lstlisting}
+\end{solutionbox}

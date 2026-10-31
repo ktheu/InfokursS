@@ -1,0 +1,17 @@
+\question[4]
+Schreibe eine Python-Funktion \texttt{maximum(a, b, c)}, die von drei übergebenen Zahlen
+die größte zurückgibt, ohne die eingebaute Funktion \texttt{max()} zu verwenden.
+
+\begin{solutionbox}{5cm}
+\begin{lstlisting}
+def maximum(a, b, c):
+    groesste = a
+    if b > groesste:
+        groesste = b
+    if c > groesste:
+        groesste = c
+    return groesste
+
+print(maximum(3, 9, 5))
+\end{lstlisting}
+\end{solutionbox}

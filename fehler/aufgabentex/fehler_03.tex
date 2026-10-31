@@ -1,0 +1,23 @@
+\question[5]
+Erkläre die drei Fehlerarten Syntaxfehler, Laufzeitfehler und logischer Fehler. 
+Gib jeweils an, wann der Fehler auftritt (vor dem Start, während der Ausführung oder gar nicht als Absturz erkennbar) 
+und nenne ein kurzes Beispiel.
+
+\begin{solutionbox}{6cm}
+\begin{lstlisting}
+Syntaxfehler:
+Das Programm verstößt gegen die Grammatik der Sprache und kann
+gar nicht erst gestartet werden.
+Beispiel: print("Hallo"      (Klammer fehlt)
+
+Laufzeitfehler:
+Das Programm startet, bricht aber während der Ausführung mit
+einer Fehlermeldung (Traceback) ab.
+Beispiel: x = 5 / 0          (ZeroDivisionError)
+
+Logischer Fehler:
+Das Programm startet, läuft bis zum Ende durch und stürzt nicht
+ab, liefert aber ein falsches Ergebnis.
+Beispiel: durchschnitt = 10 + 20 / 2   (statt (10 + 20) / 2)
+\end{lstlisting}
+\end{solutionbox}

@@ -1,0 +1,25 @@
+\question[3]
+Ein Keller k ist zu Beginn leer. Notiere nach jeder Operation den Inhalt des Kellers horizontal mit dem top-Element
+auf der linken Seite. Welche Ausgabe erscheint auf der Konsole?
+\begin{lstlisting}
+k.push(4)
+k.push(9)
+print(k.top())
+k.pop()
+k.push(2)
+k.push(7)
+k.pop()
+print(k.top())
+\end{lstlisting}
+\begin{solutionbox}{4.5cm}
+\begin{lstlisting}[language={}]
+k.push(4)       4
+k.push(9)       9 4
+print(k.top())  9 4     Ausgabe 9
+k.pop()         4
+k.push(2)       2 4
+k.push(7)       7 2 4
+k.pop()         2 4
+print(k.top())  2 4     Ausgabe 2
+\end{lstlisting}
+\end{solutionbox}

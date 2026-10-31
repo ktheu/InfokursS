@@ -1,0 +1,18 @@
+\question[3]
+Die Hilfe zu der Methode \texttt{weekday} der Klasse \texttt{datetime.date} lautet:
+\begin{lstlisting}[language={}]
+weekday(...)
+    Return the day of the week represented by the date.
+    Monday == 0 ... Sunday == 6
+\end{lstlisting}
+\begin{parts}
+\part Der 30.10.2026 ist ein Freitag. Was ergibt \texttt{datetime.date(2026, 10, 30).weekday()}?
+\part Schreibe eine Funktion \texttt{ist\_wochenende(d)}, die für ein Datum \texttt{d} prüft, ob es auf einen Samstag oder Sonntag fällt.
+\end{parts}
+\begin{solutionbox}{2.5cm}
+a) 4
+\begin{lstlisting}
+def ist_wochenende(d):
+    return d.weekday() >= 5
+\end{lstlisting}
+\end{solutionbox}

@@ -1,0 +1,24 @@
+\question[4]
+Der folgende Code berechnet die Summe aller Zahlen einer Liste. Passe den Code so an, 
+dass zusätzlich gezählt wird, wie viele negative Zahlen in der Liste vorkommen.
+\begin{lstlisting}
+a = [15, 23, 4, 16, 8, 42]
+summe = 0
+for x in a:
+    summe += x
+print(summe)
+\end{lstlisting}
+
+\begin{solutionbox}{4cm}
+\begin{lstlisting}
+a = [15, 23, 4, 16, 8, 42]
+summe = 0
+anzahl_negativ = 0
+for x in a:
+    summe += x
+    if x < 0:
+        anzahl_negativ += 1
+print(summe)
+print(anzahl_negativ)
+\end{lstlisting}
+\end{solutionbox}

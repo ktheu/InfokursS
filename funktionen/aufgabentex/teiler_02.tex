@@ -1,0 +1,23 @@
+\question[3]
+Eine natürliche Zahl heißt \emph{vollkommen}, wenn sie gleich der Summe ihrer echten Teiler ist,
+z.B. $6 = 1 + 2 + 3$. Verwende die Funktion \texttt{echteTeilerSumme} aus der vorigen Aufgabe.
+\begin{parts}
+\part Schreibe eine Funktion \texttt{ist\_vollkommen(n)}, die \texttt{True} zurückgibt, wenn \texttt{n}
+vollkommen ist, sonst \texttt{False}.
+\part Schreibe eine Funktion \texttt{vollkommene\_zahlen(bis)}, die eine Liste aller vollkommenen Zahlen
+von 1 bis \texttt{bis} zurückgibt. \texttt{vollkommene\_zahlen(500)} liefert \texttt{[6, 28, 496]}.
+\end{parts}
+
+\begin{solutionbox}{5cm}
+\begin{lstlisting}
+def ist_vollkommen(n):
+    return echteTeilerSumme(n) == n
+
+def vollkommene_zahlen(bis):
+    ergebnis = []
+    for k in range(1, bis + 1):
+        if ist_vollkommen(k):
+            ergebnis.append(k)
+    return ergebnis
+\end{lstlisting}
+\end{solutionbox}

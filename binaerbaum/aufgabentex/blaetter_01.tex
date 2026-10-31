@@ -1,0 +1,13 @@
+\question[4]
+Die Funktion \texttt{blaetter(node)} gibt die Anzahl der Blätter im Baum mit der Wurzel node zurück. Implementiere
+die Funktion rekursiv.
+\begin{solutionbox}{3.75cm}
+\begin{lstlisting}
+def blaetter(node):
+    if node is None:
+        return 0
+    if node.left is None and node.right is None:
+        return 1
+    return blaetter(node.left) + blaetter(node.right)
+\end{lstlisting}
+\end{solutionbox}

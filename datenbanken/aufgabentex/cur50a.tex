@@ -1,0 +1,60 @@
+\question[4]
+Erläutere, was es bedeutet, dass eine Datenbank in der 2. Normalform vorliegt.
+Gib ein Beispiel an für eine Datenbank, die nicht in der 2. Normalform vorliegt,
+und erkläre, wie man sie in die 2. Normalform überführen kann.
+
+
+\begin{solutionbox}{12cm}
+Eine Datenbank befindet sich in der 2. Normalform, wenn sie in der 1. Normalform vorliegt
+und jedes Nicht-Schlüsselattribut voll vom gesamten Schlüssel abhängt.
+
+\vspace{0.2cm}
+
+\textbf{Beispiel für keine 2. Normalform:}
+
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+KursID & SchülerID & SchülerName \\
+\hline
+10 & 1 & Anna Meier \\
+10 & 2 & Max Schulz \\
+11 & 1 & Anna Meier \\
+\hline
+\end{tabular}
+\end{center}
+
+Hier ist der Schlüssel zusammengesetzt aus \textit{KursID} und \textit{SchülerID}.
+Das Attribut \textit{SchülerName} hängt aber nur von \textit{SchülerID} ab und damit nicht vom ganzen Schlüssel.
+
+\vspace{0.2cm}
+
+\textbf{Überführung in die 2. Normalform:}
+
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+SchülerID & SchülerName \\
+\hline
+1 & Anna Meier \\
+2 & Max Schulz \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+KursID & SchülerID \\
+\hline
+10 & 1 \\
+10 & 2 \\
+11 & 1 \\
+\hline
+\end{tabular}
+\end{center}
+
+Nun sind alle Nicht-Schlüsselattribute voll vom gesamten Schlüssel abhängig.
+Die Tabellen liegen damit in der 2. Normalform vor.
+
+\end{solutionbox}

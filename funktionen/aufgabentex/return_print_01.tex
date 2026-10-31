@@ -1,0 +1,27 @@
+\question[3]
+Gib an, was ausgegeben wird. Tritt ein Fehler auf, gib an, in welcher Zeile und warum.
+\begin{lstlisting}
+def f(x):
+    print(x + 1)
+
+def g(x):
+    return x + 1
+
+a = f(3)            # Zeile 7
+b = g(3)            # Zeile 8
+print(a, b)         # Zeile 9
+print(g(g(1)))      # Zeile 10
+f(g(1))             # Zeile 11
+print(f(1) + 1)     # Zeile 12
+\end{lstlisting}
+
+\begin{solutionbox}{4cm}
+\begin{lstlisting}[language={}]
+4           Zeile 7: f gibt 4 aus, a bekommt None
+None 4      Zeile 9
+3           Zeile 10: g(1) = 2, g(2) = 3
+3           Zeile 11: g(1) = 2, f gibt 3 aus
+2           Zeile 12: f(1) gibt 2 aus und liefert None,
+            danach Fehler (TypeError): None + 1 ist nicht möglich
+\end{lstlisting}
+\end{solutionbox}

@@ -1,0 +1,30 @@
+\question[4]
+Schreibe ein Python-Programm, das die folgenden Anweisungen mit Kurzformen
+für die Zuweisungen (zum Beispiel \texttt{+=}) umsetzt:
+\begin{lstlisting}
+
+Setze a auf 5.
+Setze b auf 2.
+Verdopple a.
+Erhöhe b um 10.
+Erhöhe a um b.
+Teile a ganzzahlig durch 3.
+Gib a und b aus.
+\end{lstlisting}
+
+Was erscheint auf der Konsole, wenn das Programm ausgeführt wird?
+\begin{solutionbox}{5cm}
+\begin{lstlisting}
+a = 5
+b = 2
+a *= 2
+b += 10
+a += b
+a //= 3
+print(a, b)
+\end{lstlisting}
+Ausgabe auf der Konsole:
+\begin{lstlisting}
+7 12
+\end{lstlisting}
+\end{solutionbox}

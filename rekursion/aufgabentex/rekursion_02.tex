@@ -1,0 +1,17 @@
+\question[3]
+Gib einen geeigneten Rekursionsbaum zur Ermittlung der Zwischenergebnisse an.
+Was erscheint auf der Konsole? 
+\begin{lstlisting}
+def rek(n):
+    if n <= 2: return n
+    return 2+rek(n-2)*rek(n-1)
+
+print(rek(5))
+\end{lstlisting}
+\begin{solutionbox}{6cm}
+
+\includegraphics[height=4cm]{\pfad/rekursion_02.png}
+
+Die Ausgabe ist 42.
+ 
+\end{solutionbox}

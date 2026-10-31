@@ -1,0 +1,20 @@
+\question[4]
+Der Befehlssatz von Johnny soll um einen neuen Befehl \texttt{DBL x} erweitert werden,
+der den Inhalt von Register $x$ verdoppelt:
+\begin{verbatim}
+    DBL 10   bedeutet   [10] = 2 * [10]
+\end{verbatim}
+Schreibe das Mikroprogramm für \texttt{DBL x} und erläutere die einzelnen Schritte.
+
+\begin{solutionbox}{6.5cm}
+\begin{verbatim}
+ins->ab     Adresse x auf den Adressbus
+ram->db     [x] auf den Datenbus
+db->acc     ACC = [x]
+plus        ACC = 2 * [x]   ([x] steht noch auf dem Datenbus)
+acc->db     Ergebnis auf den Datenbus
+db->ram     [x] = 2 * [x]   (x steht noch auf dem Adressbus)
+pc++        Befehlszähler auf den nächsten Befehl
+mc=0        zurück zum Holen
+\end{verbatim}
+\end{solutionbox}

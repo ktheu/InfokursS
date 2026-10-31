@@ -1,0 +1,19 @@
+\question[2]
+Schreibe ein Python-Programm, das mit einer Laufvariablen über den Index 
+jedes Element der Liste \texttt{zahlen} um 1 erhöht (die Liste soll anschließend die
+erhöhten Werte enthalten).
+
+\texttt{zahlen = [4, 7, 2, 9]}
+
+Erwartete Ausgabe: \texttt{[5, 8, 3, 10]}
+
+\begin{solutionbox}{3cm}
+\begin{lstlisting}
+zahlen = [4, 7, 2, 9]
+
+for i in range(len(zahlen)):
+    zahlen[i] = zahlen[i] + 1
+
+print(zahlen)
+\end{lstlisting}
+\end{solutionbox}

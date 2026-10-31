@@ -1,0 +1,45 @@
+\question[3]
+Gegeben sind die folgenden Tabellen:
+
+\begin{center}
+\begin{minipage}[t]{0.45\textwidth}
+
+Lehrer \\
+
+\begin{tabular}{|c|l|}
+\hline
+LehrerID & Name \\
+\hline
+1 & Herr Müller \\
+2 & Frau Schmidt \\
+\hline
+\end{tabular}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+
+Kurs \\
+
+\begin{tabular}{|c|l|c|}
+\hline
+KursID & Bezeichnung & LehrerID \\
+\hline
+10 & Informatik & 1 \\
+11 & Mathematik & 2 \\
+12 & Physik & 1 \\
+\hline
+\end{tabular}
+\end{minipage}
+\end{center}
+
+Formuliere eine SQL-Abfrage, die die Namen der Lehrkräfte und die von ihnen unterrichteten Kurse ausgibt.
+
+\begin{solutionbox}{3cm}
+
+\texttt{SELECT Lehrer.Name, Kurs.Bezeichnung}\\
+\texttt{FROM Lehrer, Kurs}\\
+\texttt{WHERE Lehrer.LehrerID = Kurs.LehrerID;}
+
+\vspace{0.3cm}
+
+\end{solutionbox}

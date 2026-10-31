@@ -1,0 +1,25 @@
+\question[3]
+Eine Schlange s ist zu Beginn leer. Notiere nach jeder Operation den Inhalt der Schlange horizontal mit dem Kopf der
+Schlange auf der linken Seite. Welche Ausgabe erscheint auf der Konsole?
+\begin{lstlisting}
+s.enq(4)
+s.enq(9)
+print(s.front())
+s.deq()
+s.enq(2)
+s.enq(7)
+s.deq()
+print(s.front())
+\end{lstlisting}
+\begin{solutionbox}{4.5cm}
+\begin{lstlisting}[language={}]
+s.enq(4)          4
+s.enq(9)          4 9
+print(s.front())  4 9     Ausgabe 4
+s.deq()           9
+s.enq(2)          9 2
+s.enq(7)          9 2 7
+s.deq()           2 7
+print(s.front())  2 7     Ausgabe 2
+\end{lstlisting}
+\end{solutionbox}

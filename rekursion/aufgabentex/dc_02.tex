@@ -1,0 +1,10 @@
+\question[4]
+Schreibe eine rekursive Funktion \texttt{summe(a)}, die nach dem Prinzip Divide and Conquer die Summe aller Zahlen einer nicht leeren Liste \texttt{a} berechnet.
+\begin{solutionbox}{3.5cm}
+\begin{lstlisting}
+def summe(a):
+    if len(a) == 1: return a[0]
+    mitte = len(a) // 2
+    return summe(a[:mitte]) + summe(a[mitte:])
+\end{lstlisting}
+\end{solutionbox}

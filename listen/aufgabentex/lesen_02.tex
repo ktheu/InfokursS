@@ -1,0 +1,14 @@
+\question[3]
+Die Datei \texttt{input2.txt} enthält den Text \texttt{Grüße aus München}
+(inklusive Umlauten). Schreibe ein Python-Programm, das die Datei mit dem
+passenden Parameter öffnet, damit die Umlaute korrekt gelesen werden, die
+Zeile einliest, den Zeilenvorschub entfernt und den Inhalt ausgibt.
+
+\begin{solutionbox}{3cm}
+\begin{lstlisting}
+f = open('input2.txt', encoding='utf-8')
+s = f.readline().strip()
+f.close()
+print(s)
+\end{lstlisting}
+\end{solutionbox}

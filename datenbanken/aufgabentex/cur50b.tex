@@ -1,0 +1,60 @@
+\question[4]
+Erläutere, was es bedeutet, dass eine Datenbank in der 3. Normalform vorliegt.
+Gib ein Beispiel an für eine Datenbank, die nicht in der 3. Normalform vorliegt,
+und erkläre, wie man sie in die 3. Normalform überführen kann.
+
+
+\begin{solutionbox}{12cm}
+Eine Datenbank befindet sich in der 3. Normalform, wenn sie in der 2. Normalform vorliegt
+und kein Nicht-Schlüsselattribut von einem anderen Nicht-Schlüsselattribut abhängt.
+
+\vspace{0.2cm}
+
+\textbf{Beispiel für keine 3. Normalform:}
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+MitarbeiterID & Name & AbteilungsID & AbteilungsName \\
+\hline
+1 & Anna Meier & 10 & Buchhaltung \\
+2 & Max Schulz & 20 & IT \\
+3 & Lea Weber & 10 & Buchhaltung \\
+\hline
+\end{tabular}
+\end{center}
+
+Hier ist \textit{MitarbeiterID} der Schlüssel. Das Attribut \textit{AbteilungsName} hängt aber nicht direkt vom Schlüssel ab,
+sondern von \textit{AbteilungsID}. 
+
+\vspace{0.2cm}
+
+\textbf{Überführung in die 3. Normalform:}
+
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+MitarbeiterID & Name & AbteilungsID \\
+\hline
+1 & Anna Meier & 10 \\
+2 & Max Schulz & 20 \\
+3 & Lea Weber & 10 \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+AbteilungsID & AbteilungsName \\
+\hline
+10 & Buchhaltung \\
+20 & IT \\
+\hline
+\end{tabular}
+\end{center}
+
+Nun hängt jedes Nicht-Schlüsselattribut nur noch direkt vom Schlüssel ab.
+Die Tabellen liegen damit in der 3. Normalform vor.
+
+\end{solutionbox}
